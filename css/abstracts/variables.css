@@ -1,0 +1,21 @@
+/* =============================================
+   CSS CUSTOM PROPERTIES
+============================================= */
+
+:root {
+    --color-primary: #31BCBC;
+    --color-primary-rgb: 49, 188, 188;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --shadow-3xl: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+    --shadow-focus: 0 0 0 3px rgba(49, 188, 188, 0.2);
+
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.8s cubic-bezier(0.5, 0, 0, 1);
+    --transition-tilt: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --perspective-tilt: 1200px;
+}

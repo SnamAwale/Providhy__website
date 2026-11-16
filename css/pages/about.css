@@ -1,0 +1,16 @@
+/* =============================================
+   ABOUT PAGE — Specific Overrides
+============================================= */
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (float, shimmer, pulse-slow)
+   - components/reveal.css      (reveal, reveal-left, reveal-right)
+   - components/team.css        (team card hover)
+   - components/timeline.css    (timeline pseudo-elements)
+   - components/cards.css       (value card hover)
+   - utilities/text.css         (stat-number gradient)
+
+   Add about-page-only styles below
+   as the page grows.
+*/

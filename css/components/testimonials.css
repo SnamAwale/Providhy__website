@@ -1,0 +1,16 @@
+/* =============================================
+   TESTIMONIALS
+============================================= */
+
+.testimonial-scroll {
+    display: flex;
+    width: fit-content;
+}
+
+.testimonial-scroll:hover .animate-scroll-left {
+    animation-play-state: paused;
+}
+
+.pause-hover:hover .animate-scroll-slow {
+    animation-play-state: paused;
+}

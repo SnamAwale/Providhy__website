@@ -1,0 +1,11 @@
+/* =============================================
+   COLOR SWATCHES
+============================================= */
+
+.color-swatch {
+    transition: transform 0.2s ease;
+}
+
+.color-swatch:hover {
+    transform: scale(1.05);
+}

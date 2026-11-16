@@ -1,0 +1,26 @@
+/* =============================================
+   VIDEO CARDS
+============================================= */
+
+.video-card:hover .play-icon {
+    transform: scale(1.1);
+}
+
+.video-card:hover .thumbnail {
+    transform: scale(1.05);
+}
+
+/* ✅ NEW — Play ring pulse on card hover */
+.video-card:hover .play-ring {
+    animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+
+/* =============================================
+   VIDEO MODAL
+============================================= */
+
+/* ✅ NEW — Backdrop blur for video modal */
+.video-modal {
+    backdrop-filter: blur(8px);
+}

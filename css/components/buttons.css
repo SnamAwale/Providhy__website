@@ -1,0 +1,32 @@
+/* =============================================
+   BUTTONS
+============================================= */
+
+.user-quick-btn {
+    transition: all 0.15s ease;
+}
+
+.user-quick-btn:active {
+    transform: scale(0.95);
+}
+
+.share-btn {
+    transition: transform 0.2s ease;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ✅ NEW — Copy button */
+.copy-btn {
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: rgba(49, 188, 188, 0.2);
+}
+
+.copy-btn.copied {
+    color: #10b981;
+}

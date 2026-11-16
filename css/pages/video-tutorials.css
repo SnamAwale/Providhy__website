@@ -1,0 +1,16 @@
+/* =============================================
+   VIDEO TUTORIALS PAGE
+============================================= */
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (blob, shimmer, pulse-ring)
+   - components/reveal.css      (scroll reveal + delays)
+   - components/video.css       (video card hover + modal)
+   - components/pills.css       (category pill active)
+   - layout/spotlight.css       (spotlight effect)
+   - utilities/scrollbar.css    (custom-scrollbar)
+
+   Add video-tutorials-page-only styles below
+   as the page grows.
+*/

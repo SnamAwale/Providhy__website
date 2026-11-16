@@ -1,0 +1,15 @@
+/* =============================================
+   LEGAL PAGES (Terms, Privacy, etc.)
+============================================= */
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (shimmer, float particles)
+   - components/reveal.css      (scroll reveal)
+   - components/toc.css         (table of contents active)
+   - components/legal.css       (legal content typography)
+   - layout/footer.css          (footer links)
+
+   Add legal-page-only styles below
+   as the page grows.
+*/

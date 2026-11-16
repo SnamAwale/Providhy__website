@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Providhy ERP </title>
+    <meta name="description"
+        content="Providhy is Nepal's most intuitive cloud ERP for trading businesses. Manage inventory, billing, and accounting — all in one place.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts & Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="inventory-page">
+
+    <body class="bg-white text-slate-900 selection:bg-blue-500/20 selection:text-blue-900 overflow-x-hidden">
+
+        <!-- Spotlight -->
+        <div id="spotlight" class="fixed inset-0 pointer-events-none"></div>
+
+
+        <!-- Floating Capsule Navbar with Responsive Mobile Menu -->
+        <div class="fixed top-0 left-0 right-0 z-[90] flex flex-col items-center w-full pt-6 px-4 font-sans">
+            <nav
+                class="relative w-full max-w-5xl bg-white/80 backdrop-blur-lg rounded-full shadow-2xl shadow-[#1D4F50]/5 border border-[#1D4F50]/10 px-3 py-2.5 flex items-center justify-between transition-all duration-300 z-[90]">
+
+                <a href="/" class="flex items-center pl-3 group">
+                    <img src="./logo.svg" alt="Providhy Logo"
+                        class="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+
+                    <!-- Features Dropdown (Clickable + Hover) -->
+                    <div class="relative group/features">
+                        <a href="./features.html"
+                            class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                            Features
+                            <span class="iconify text-xs transition-transform group-hover/features:rotate-180"
+                                data-icon="lucide:chevron-down"></span>
+                        </a>
+
+                        <!-- Features Dropdown Panel -->
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/features:opacity-100 group-hover/features:visible transition-all duration-300 transform translate-y-2 group-hover/features:translate-y-0">
+                            <div
+                                class="w-[600px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                                <div class="p-6">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Core
+                                            Modules</p>
+                                        <a href="./features.html"
+                                            class="text-xs font-medium text-[#31BCBC] hover:underline">View All Features
+                                            →</a>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <!-- Inventory -->
+                                        <a href="./inventory.html"
+                                            class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-colors group/item border border-transparent hover:border-blue-100">
+                                            <div
+                                                class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/20 group-hover/item:scale-110 transition-transform">
+                                                <span class="iconify text-white text-xl"
+                                                    data-icon="lucide:package"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 group-hover/item:text-blue-600 transition-colors">
+                                                    Inventory</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Stock tracking, godowns,
+                                                    barcode & alerts</p>
+                                            </div>
+                                        </a>
+                                        <!-- Sales -->
+                                        <a href="./sales.html"
+                                            class="flex items-start gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors group/item border border-transparent hover:border-emerald-100">
+                                            <div
+                                                class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover/item:scale-110 transition-transform">
+                                                <span class="iconify text-white text-xl"
+                                                    data-icon="lucide:receipt"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 group-hover/item:text-emerald-600 transition-colors">
+                                                    Sales & Billing</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">VAT invoices, quotations &
+                                                    payments</p>
+                                            </div>
+                                        </a>
+                                        <!-- Purchase -->
+                                        <a href="./purchase.html"
+                                            class="flex items-start gap-4 p-4 rounded-xl hover:bg-amber-50 transition-colors group/item border border-transparent hover:border-amber-100">
+                                            <div
+                                                class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20 group-hover/item:scale-110 transition-transform">
+                                                <span class="iconify text-white text-xl"
+                                                    data-icon="lucide:truck"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 group-hover/item:text-amber-600 transition-colors">
+                                                    Purchase</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Orders, suppliers & goods
+                                                    received</p>
+                                            </div>
+                                        </a>
+                                        <!-- Accounting -->
+                                        <a href="./accounting.html"
+                                            class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-colors group/item border border-transparent hover:border-purple-100">
+                                            <div
+                                                class="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/20 group-hover/item:scale-110 transition-transform">
+                                                <span class="iconify text-white text-xl"
+                                                    data-icon="lucide:calculator"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 group-hover/item:text-purple-600 transition-colors">
+                                                    Accounting</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Ledgers, reports & financial
+                                                    statements</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Bottom CTA - Gradient Style -->
+                                <div
+                                    class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                            <span class="iconify text-white" data-icon="lucide:play-circle"></span>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-medium text-sm">See it in action</p>
+                                            <p class="text-white/70 text-xs">Watch a 2-minute demo</p>
+                                        </div>
+                                    </div>
+                                    <button onclick="openVideoModal('home-demo')"
+                                        class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">
+                                        Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="./pricing.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                        Pricing
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                    </a>
+
+                    <!-- Resources Dropdown (Clickable + Hover) -->
+                    <div class="relative group/resources">
+                        <a href="./resources.html"
+                            class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                            Resources
+                            <span class="iconify text-xs transition-transform group-hover/resources:rotate-180"
+                                data-icon="lucide:chevron-down"></span>
+                        </a>
+
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/resources:opacity-100 group-hover/resources:visible transition-all duration-300 transform translate-y-2 group-hover/resources:translate-y-0">
+                            <div
+                                class="w-[520px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                                <div class="grid grid-cols-2 gap-0">
+                                    <div class="p-5 space-y-1">
+                                        <div class="flex items-center justify-between mb-3 px-3">
+                                            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                                Learn</p>
+                                        </div>
+                                        <a href="./documentation.html"
+                                            class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                            <div
+                                                class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                <span class="iconify text-blue-600 text-lg"
+                                                    data-icon="lucide:book-open"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                    Documentation</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Detailed guides and references
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a href="./tutorials.html"
+                                            class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                            <div
+                                                class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                <span class="iconify text-red-600 text-lg"
+                                                    data-icon="lucide:play-circle"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                    Video Tutorials</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Step-by-step video guides</p>
+                                            </div>
+                                        </a>
+                                        <a href="./help.html"
+                                            class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                            <div
+                                                class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                <span class="iconify text-emerald-600 text-lg"
+                                                    data-icon="lucide:life-buoy"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                    Help Center</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">FAQs and troubleshooting</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="p-5 space-y-1 bg-slate-50/50">
+                                        <div class="flex items-center justify-between mb-3 px-3">
+                                            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                                Explore</p>
+                                            <a href="./resources.html"
+                                                class="text-xs font-medium text-[#31BCBC] hover:underline">View All
+                                                →</a>
+                                        </div>
+                                        <a href="./blog.html"
+                                            class="flex items-start gap-3 p-3 rounded-xl hover:bg-white transition-colors group/item">
+                                            <div
+                                                class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                <span class="iconify text-purple-600 text-lg"
+                                                    data-icon="lucide:pen-line"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                    Blog</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Tips, news & insights</p>
+                                            </div>
+                                        </a>
+                                        <a href="./changelog.html"
+                                            class="flex items-start gap-3 p-3 rounded-xl hover:bg-white transition-colors group/item">
+                                            <div
+                                                class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                <span class="iconify text-amber-600 text-lg"
+                                                    data-icon="lucide:sparkles"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 text-sm flex items-center gap-2 group-hover/item:text-[#31BCBC] transition-colors">
+                                                    What's New
+                                                    <span
+                                                        class="px-1.5 py-0.5 bg-amber-500 text-white text-[10px] font-bold rounded">v2.5</span>
+                                                </p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Latest features & updates</p>
+                                            </div>
+                                        </a>
+                                        <a href="./api.html"
+                                            class="flex items-start gap-3 p-3 rounded-xl hover:bg-white transition-colors group/item">
+                                            <div
+                                                class="w-10 h-10 bg-slate-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                <span class="iconify text-slate-600 text-lg"
+                                                    data-icon="lucide:code-2"></span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                    API Reference</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">For developers</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Bottom CTA - Gradient Style (Consistent with Features) -->
+                                <div
+                                    class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                            <span class="iconify text-white" data-icon="lucide:headphones"></span>
+                                        </div>
+                                        <div>
+                                            <p class="text-white font-medium text-sm">Need help?</p>
+                                            <p class="text-white/70 text-xs">Talk to our support team</p>
+                                        </div>
+                                    </div>
+                                    <a href="./contact.html"
+                                        class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">Contact
+                                        Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="./contact.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                        Contact
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-5 pr-1">
+                    <a href="./login.html"
+                        class="text-sm font-semibold text-[#1D4F50] hover:text-[#31BCBC] transition-colors">Log in</a>
+                    <a href="./signup.html"
+                        class="group relative inline-flex items-center justify-center p-[2px] overflow-hidden rounded-full shadow-md shadow-[#31BCBC]/20 hover:shadow-lg hover:shadow-[#31BCBC]/30 transition-all">
+                        <span
+                            class="absolute inset-0 bg-gradient-to-r from-[#1D4F50] via-[#31BCBC] to-[#1D4F50] bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]"></span>
+                        <span
+                            class="relative flex items-center gap-2 rounded-full bg-white px-6 py-2 transition-all duration-300 group-hover:bg-opacity-95">
+                            <span
+                                class="text-sm font-bold text-[#1D4F50] group-hover:text-[#31BCBC] transition-colors">Get
+                                Started</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="md:hidden pr-2">
+                    <button id="mobile-menu-btn"
+                        class="p-2 text-[#1D4F50] hover:bg-[#31BCBC]/10 rounded-full transition-colors">
+                        <span class="iconify w-6 h-6" data-icon="lucide:menu"></span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="hidden absolute top-[calc(100%+10px)] w-[calc(100%-2rem)] max-w-5xl bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-[#1D4F50]/10 border border-[#1D4F50]/10 p-6 flex-col gap-4 z-40">
+                <div class="flex flex-col gap-1">
+                    <!-- Features - Clickable header + expandable -->
+                    <details class="group">
+                        <summary
+                            class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                            <a href="./features.html" class="flex-1" onclick="event.stopPropagation();">Features</a>
+                            <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                                data-icon="lucide:chevron-down"></span>
+                        </summary>
+                        <div class="pl-4 mt-2 space-y-1">
+                            <a href="./inventory.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-blue-500" data-icon="lucide:package"></span>
+                                Inventory
+                            </a>
+                            <a href="./sales.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-emerald-500" data-icon="lucide:receipt"></span>
+                                Sales & Billing
+                            </a>
+                            <a href="./purchase.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-amber-500" data-icon="lucide:truck"></span>
+                                Purchase
+                            </a>
+                            <a href="./accounting.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-purple-500" data-icon="lucide:calculator"></span>
+                                Accounting
+                            </a>
+                            <a href="./features.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                                <span class="iconify" data-icon="lucide:arrow-right"></span>
+                                View All Features
+                            </a>
+                        </div>
+                    </details>
+
+                    <a href="./pricing.html"
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Pricing</a>
+
+                    <!-- Resources - Clickable header + expandable -->
+                    <details class="group">
+                        <summary
+                            class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                            <a href="./resources.html" class="flex-1" onclick="event.stopPropagation();">Resources</a>
+                            <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                                data-icon="lucide:chevron-down"></span>
+                        </summary>
+                        <div class="pl-4 mt-2 space-y-1">
+                            <a href="./documentation.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-blue-500" data-icon="lucide:book-open"></span>
+                                Documentation
+                            </a>
+                            <a href="./tutorials.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-red-500" data-icon="lucide:play-circle"></span>
+                                Video Tutorials
+                            </a>
+                            <a href="./help.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-emerald-500" data-icon="lucide:life-buoy"></span>
+                                Help Center
+                            </a>
+                            <a href="./blog.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-purple-500" data-icon="lucide:pen-line"></span>
+                                Blog
+                            </a>
+                            <a href="./changelog.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-amber-500" data-icon="lucide:sparkles"></span>
+                                What's New
+                            </a>
+                            <a href="./api.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                                <span class="iconify text-slate-500" data-icon="lucide:code-2"></span>
+                                API Reference
+                            </a>
+                            <a href="./resources.html"
+                                class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                                <span class="iconify" data-icon="lucide:arrow-right"></span>
+                                View All Resources
+                            </a>
+                        </div>
+                    </details>
+
+                    <a href="./contact.html"
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Contact</a>
+                </div>
+                <hr class="border-[#1D4F50]/10">
+                <div class="flex flex-col gap-3">
+                    <a href="./login.html"
+                        class="w-full py-3 text-center font-semibold text-[#1D4F50] border border-[#1D4F50]/20 rounded-xl hover:bg-slate-50 transition-colors">Log
+                        in</a>
+                    <a href="./signup.html"
+                        class="w-full py-3 text-center font-bold text-white bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] rounded-xl hover:opacity-90 transition-opacity">Get
+                        Started</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================== -->
+        <!-- HERO SECTION -->
+        <!-- ============================================== -->
+        <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-blue-50 via-white to-white relative overflow-hidden">
+
+            <!-- Background Elements -->
+            <div
+                class="absolute top-20 right-0 w-[600px] h-[600px] bg-blue-400 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-400 rounded-full mix-blend-multiply filter blur-[128px] opacity-15 pointer-events-none">
+            </div>
+
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-[0.02]"
+                style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%233b82f6&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+            </div>
+
+            <div class="max-w-6xl mx-auto relative z-10">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                    <!-- Left Content -->
+                    <div>
+                        <!-- Breadcrumb -->
+                        <nav class="reveal flex items-center gap-2 text-sm text-slate-500 mb-6">
+                            <a href="/features" class="hover:text-blue-600 transition-colors">Features</a>
+                            <span class="iconify text-slate-400" data-icon="lucide:chevron-right"></span>
+                            <span class="text-blue-600 font-medium">Inventory</span>
+                        </nav>
+
+                        <!-- Module Badge -->
+                        <div
+                            class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
+                            <span class="iconify" data-icon="lucide:package"></span>
+                            <span>Inventory Management</span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h1
+                            class="reveal delay-100 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1]">
+                            Know Exactly<br>
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">What’s
+                                In Stock</span>
+                        </h1>
+
+                        <!-- Subheadline -->
+                        <p class="reveal delay-200 text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
+                            Real-time tracking that updates with every sale and purchase. Always know your current stock
+                            levels and never lose a sale to a stockout again.
+                        </p>
+
+                        <!-- Key Stats -->
+                        <!-- <div class="reveal delay-300 flex flex-wrap items-center gap-6 mb-10">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+                                    <span class="iconify text-blue-600 text-xl" data-icon="lucide:trending-down"></span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">80%</p>
+                                    <p class="text-xs text-slate-500">Less stockouts</p>
+                                </div>
+                            </div>
+                            <div class="w-px h-10 bg-slate-200"></div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                    <span class="iconify text-emerald-600 text-xl" data-icon="lucide:clock"></span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">5 hrs</p>
+                                    <p class="text-xs text-slate-500">Saved weekly</p>
+                                </div>
+                            </div>
+                            <div class="w-px h-10 bg-slate-200"></div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
+                                    <span class="iconify text-amber-600 text-xl" data-icon="lucide:percent"></span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">99.9%</p>
+                                    <p class="text-xs text-slate-500">Accuracy</p>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- CTAs -->
+                        <div class="reveal delay-400 flex flex-col sm:flex-row items-start gap-4">
+                            <a href="/signup"
+                                class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all flex items-center justify-center gap-2">
+                                <span>Start Free Trial</span>
+                                <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            </a>
+                            <button onclick="openVideoModal('demo')"
+                                class="w-full sm:w-auto px-8 py-4 bg-white border-2 border-slate-200 text-slate-700 font-semibold rounded-xl hover:border-blue-300 hover:text-blue-600 transition-all flex items-center justify-center gap-2">
+                                <span class="iconify" data-icon="lucide:play-circle"></span>
+                                <span>Watch Demo</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual -->
+                    <div class="reveal delay-200 relative">
+                        <!-- Main Dashboard Preview -->
+                        <div class="relative">
+                            <!-- Screenshot Frame -->
+                            <div class="screenshot-frame rounded-2xl p-3 shadow-2xl shadow-blue-500/20">
+                                <!-- Browser Chrome -->
+                                <div class="flex items-center gap-2 mb-3">
+                                    <div class="flex gap-1.5">
+                                        <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-amber-400 rounded-full"></div>
+                                        <div class="w-3 h-3 bg-emerald-400 rounded-full"></div>
+                                    </div>
+                                    <div
+                                        class="flex-1 bg-slate-800 rounded-lg px-3 py-1 text-xs text-slate-400 text-center">
+                                        app.providhy.com/inventory
+                                    </div>
+                                </div>
+                                <!-- Screenshot Placeholder -->
+                                <div
+                                    class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-xl aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+                                    <!-- Mock UI Elements -->
+                                    <div class="absolute inset-4 grid grid-cols-3 gap-3">
+                                        <!-- Sidebar -->
+                                        <div class="bg-white rounded-lg shadow-sm p-3 space-y-2">
+                                            <div class="h-6 bg-blue-500 rounded w-full"></div>
+                                            <div class="h-4 bg-slate-100 rounded w-3/4"></div>
+                                            <div class="h-4 bg-slate-100 rounded w-full"></div>
+                                            <div class="h-4 bg-slate-100 rounded w-5/6"></div>
+                                        </div>
+                                        <!-- Main Content -->
+                                        <div class="col-span-2 bg-white rounded-lg shadow-sm p-3 space-y-3">
+                                            <div class="flex gap-2">
+                                                <div class="h-8 bg-blue-100 rounded flex-1"></div>
+                                                <div class="h-8 bg-blue-500 rounded w-24"></div>
+                                            </div>
+                                            <div class="grid grid-cols-3 gap-2">
+                                                <div
+                                                    class="h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded p-2">
+                                                    <div class="h-3 bg-blue-200 rounded w-1/2 mb-1"></div>
+                                                    <div class="h-5 bg-blue-500 rounded w-3/4"></div>
+                                                </div>
+                                                <div
+                                                    class="h-16 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded p-2">
+                                                    <div class="h-3 bg-emerald-200 rounded w-1/2 mb-1"></div>
+                                                    <div class="h-5 bg-emerald-500 rounded w-3/4"></div>
+                                                </div>
+                                                <div
+                                                    class="h-16 bg-gradient-to-br from-amber-50 to-amber-100 rounded p-2">
+                                                    <div class="h-3 bg-amber-200 rounded w-1/2 mb-1"></div>
+                                                    <div class="h-5 bg-amber-500 rounded w-3/4"></div>
+                                                </div>
+                                            </div>
+                                            <div class="space-y-2">
+                                                <div class="h-8 bg-slate-50 rounded"></div>
+                                                <div class="h-8 bg-slate-50 rounded"></div>
+                                                <div class="h-8 bg-slate-50 rounded"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Cards -->
+                            <div
+                                class="absolute -left-8 top-1/4 bg-white rounded-xl shadow-xl shadow-slate-200/50 p-4 border border-slate-100 animate-float hidden lg:block">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-emerald-600" data-icon="lucide:package-check"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500">Stock Updated</p>
+                                        <p class="font-semibold text-slate-900">+150 units</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="absolute -right-4 bottom-1/4 bg-white rounded-xl shadow-xl shadow-slate-200/50 p-4 border border-slate-100 animate-float-delayed hidden lg:block">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-amber-600" data-icon="lucide:alert-triangle"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-slate-500">Low Stock Alert</p>
+                                        <p class="font-semibold text-slate-900">Reorder now</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- KEY FEATURES GRID -->
+        <!-- ============================================== -->
+        <section class="py-20 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Section Header -->
+                <div class="text-center mb-16 reveal">
+                    <span
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full mb-4">
+                        <span class="iconify" data-icon="lucide:layers"></span>
+                        Core Features
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                        The Tools to Master <br class="hidden md:block">Your Stock Control
+                    </h2>
+                    <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                        From expiry management essential for local businesses to advanced stock reports, these are the
+                        features built to solve the real-world challenges of businesses in Nepal.
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+
+                    <!-- Feature 1: Real-time Stock -->
+                    <div
+                        class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50 transition-all group">
+                        <div
+                            class="feature-icon w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-blue-500/20 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:chart-line"></span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            Real-Time Stock Tracking</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">See exact stock levels as they happen. Every
+                            sale and purchase, instantly across all devices.</p>
+                    </div>
+
+                    <!-- Feature 2: Smart Stock Alert -->
+                    <div
+                        class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50 transition-all group">
+                        <div
+                            class="feature-icon w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-cyan-500/20 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:bell-ring"></span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            Smart Stock Alert</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Set reorder points and get notified before
+                            running out. Never miss a sale due to stockouts again.</p>
+                    </div>
+
+                    <!-- Feature 3: Batch & Lot Tracking -->
+                    <div
+                        class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50 transition-all group">
+                        <div
+                            class="feature-icon w-14 h-14 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-indigo-500/20 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:layers-3"></span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            Batch & Lot Tracking</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Track products by batch number and
+                            manufacturing date. Essential for expiry management.</p>
+                    </div>
+
+                    <!-- Feature 4: Physical Stock Audit -->
+                    <div
+                        class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50 transition-all group">
+                        <div
+                            class="feature-icon w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-amber-500/20 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:clipboard-check"></span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            Physical Stock Audit</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Conduct stock counts easily. Compare physical
+                            vs system stock and adjust discrepancies with notes.</p>
+                    </div>
+
+                    <!-- Feature 5: Expiry Date Management -->
+                    <div
+                        class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50 transition-all group">
+                        <div
+                            class="feature-icon w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/20 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:calendar-clock"></span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            Expiry Date Management</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Track expiry dates and get alerts before
+                            products expire.</p>
+                    </div>
+
+                    <!-- Feature 6: Inventory Reports -->
+                    <div
+                        class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-100/50 transition-all group">
+                        <div
+                            class="feature-icon w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-purple-500/20 transition-transform">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:bar-chart-3"></span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            Inventory Reports</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">Real-time stock report, stock valuation, and
+                            more. Export to Excel anytime.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- FEATURE DEEP DIVE 1: REAL-TIME TRACKING -->
+        <!-- ============================================== -->
+        <section class="py-20 px-6 bg-gradient-to-b from-slate-50 to-white">
+            <div class="max-w-6xl mx-auto">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                    <!-- Left: Screenshot -->
+                    <div class="reveal order-2 lg:order-1">
+                        <div class="relative">
+                            <div
+                                class="bg-gradient-to-br from-blue-600 to-cyan-500 rounded-3xl p-8 shadow-2xl shadow-blue-500/20">
+                                <!-- Mock Dashboard -->
+                                <div class="bg-white rounded-2xl p-6 space-y-4">
+                                    <!-- Header -->
+                                    <div class="flex items-center justify-between">
+                                        <h4 class="font-bold text-slate-900">Stock Overview</h4>
+                                        <span
+                                            class="text-xs text-emerald-600 bg-emerald-100 px-2 py-1 rounded-full flex items-center gap-1">
+                                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                                            Live
+                                        </span>
+                                    </div>
+                                    <!-- Stats -->
+                                    <div class="grid grid-cols-3 gap-3">
+                                        <div class="bg-blue-50 rounded-xl p-4 text-center">
+                                            <p class="text-2xl font-bold text-blue-600">1,247</p>
+                                            <p class="text-xs text-slate-500">Products</p>
+                                        </div>
+                                        <div class="bg-emerald-50 rounded-xl p-4 text-center">
+                                            <p class="text-2xl font-bold text-emerald-600">NPR 24L</p>
+                                            <p class="text-xs text-slate-500">Stock Value</p>
+                                        </div>
+                                        <div class="bg-amber-50 rounded-xl p-4 text-center">
+                                            <p class="text-2xl font-bold text-amber-600">12</p>
+                                            <p class="text-xs text-slate-500">Low Stock</p>
+                                        </div>
+                                    </div>
+                                    <!-- Recent Activity -->
+                                    <div class="space-y-2">
+                                        <p class="text-xs font-medium text-slate-400 uppercase">Recent Activity</p>
+                                        <div class="flex items-center gap-3 p-2 bg-slate-50 rounded-lg">
+                                            <div
+                                                class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
+                                                <span class="iconify text-emerald-600 text-sm"
+                                                    data-icon="lucide:plus"></span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="text-sm font-medium text-slate-900">Stock received</p>
+                                                <p class="text-xs text-slate-500">Samsung TV 55" • +20 units</p>
+                                            </div>
+                                            <span class="text-xs text-slate-400">2m ago</span>
+                                        </div>
+                                        <div class="flex items-center gap-3 p-2 bg-slate-50 rounded-lg">
+                                            <div
+                                                class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                                <span class="iconify text-blue-600 text-sm"
+                                                    data-icon="lucide:minus"></span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="text-sm font-medium text-slate-900">Sold</p>
+                                                <p class="text-xs text-slate-500">Wireless Mouse • -5 units</p>
+                                            </div>
+                                            <span class="text-xs text-slate-400">5m ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Decorative element -->
+                            <div
+                                class="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan-200 rounded-full blur-2xl opacity-50">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="reveal order-1 lg:order-2">
+                        <span
+                            class="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full mb-4">
+                            <span class="iconify" data-icon="lucide:activity"></span>
+                            Real-Time Updates
+                        </span>
+
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                            Your Stock, Updated<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Every
+                                Second</span>
+                        </h2>
+
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            No more manual updates or spreadsheet chaos. Every sale, purchase, and movement reflects
+                            instantly. Know your exact stock position at any moment.
+                        </p>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <div
+                                    class="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <span class="iconify text-blue-600 text-sm" data-icon="lucide:check"></span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-slate-900">Instant sync across all devices</p>
+                                    <p class="text-sm text-slate-500">Changes appear immediately for your entire team
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div
+                                    class="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <span class="iconify text-blue-600 text-sm" data-icon="lucide:check"></span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-slate-900">Live stock value tracking</p>
+                                    <p class="text-sm text-slate-500">Watch your inventory value update in real-time</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div
+                                    class="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <span class="iconify text-blue-600 text-sm" data-icon="lucide:check"></span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-slate-900">Accurate Stock Levels</p>
+                                    <p class="text-sm text-slate-500">Always know the exact quantity available at any
+                                        moment
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- FEATURE DEEP DIVE 2: BARCODE SCANNING -->
+        <!-- ============================================== -->
+        <section class="py-20 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                    <!-- Left: Content -->
+                    <div class="reveal">
+                        <span
+                            class="inline-flex items-center gap-2 px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-medium rounded-full mb-4">
+                            <span class="iconify" data-icon="lucide:bar-chart-3"></span>
+                            Data & Insights
+                        </span>
+
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                            Clarity in Every<br>
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-500">Number</span>
+                        </h2>
+
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            Generate real-time reports in one click. Access stock valuation, expiry tracking, and
+                            batch-wise insights to stay in control of your inventory. Export to Excel anytime.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-slate-50 rounded-xl p-4">
+                                <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                                    <span class="iconify text-indigo-600" data-icon="lucide:circle-dollar-sign"></span>
+                                </div>
+                                <p class="font-medium text-slate-900 mb-1">Stock Valuation Report</p>
+                                <p class="text-xs text-slate-500">Know the exact financial value of all your inventory,
+                                    instantly.</p>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl p-4">
+                                <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                                    <span class="iconify text-indigo-600" data-icon="lucide:calendar-clock"></span>
+                                </div>
+                                <p class="font-medium text-slate-900 mb-1">Expiry Inventory Report</p>
+                                <p class="text-xs text-slate-500">Track what's about to expire before it turns into a
+                                    loss.</p>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl p-4">
+                                <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                                    <span class="iconify text-indigo-600" data-icon="lucide:layers-3"></span>
+                                </div>
+                                <p class="font-medium text-slate-900 mb-1">Batch-wise Inventory Valuation</p>
+                                <p class="text-xs text-slate-500">Stay informed about the exact value of your inventory,
+                                    batch by batch.</p>
+                            </div>
+                            <div class="bg-slate-50 rounded-xl p-4">
+                                <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                                    <span class="iconify text-indigo-600" data-icon="lucide:package-search"></span>
+                                </div>
+                                <p class="font-medium text-slate-900 mb-1">Reorder Inventory Report</p>
+                                <p class="text-xs text-slate-500">Identify which items need restocking so you can plan
+                                    purchases on time.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Visual -->
+                    <div class="reveal">
+                        <div class="relative">
+                            <!-- Scanner Visual -->
+                            <div
+                                class="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-3xl p-8 shadow-2xl shadow-indigo-500/20">
+                                <div class="bg-slate-900 rounded-2xl p-6 relative overflow-hidden">
+                                    <!-- Barcode Display -->
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-full bg-white rounded-xl p-6 mb-4 relative">
+                                            <!-- Barcode Image -->
+                                            <div class="flex justify-center gap-0.5 mb-2">
+                                                <div class="w-1 h-16 bg-slate-900"></div>
+                                                <div class="w-0.5 h-16 bg-slate-900"></div>
+                                                <div class="w-1.5 h-16 bg-slate-900"></div>
+                                                <div class="w-0.5 h-16 bg-slate-900"></div>
+                                                <div class="w-1 h-16 bg-slate-900"></div>
+                                                <div class="w-2 h-16 bg-slate-900"></div>
+                                                <div class="w-0.5 h-16 bg-slate-900"></div>
+                                                <div class="w-1 h-16 bg-slate-900"></div>
+                                                <div class="w-1.5 h-16 bg-slate-900"></div>
+                                                <div class="w-0.5 h-16 bg-slate-900"></div>
+                                                <div class="w-1 h-16 bg-slate-900"></div>
+                                                <div class="w-0.5 h-16 bg-slate-900"></div>
+                                                <div class="w-2 h-16 bg-slate-900"></div>
+                                                <div class="w-1 h-16 bg-slate-900"></div>
+                                                <div class="w-0.5 h-16 bg-slate-900"></div>
+                                                <div class="w-1.5 h-16 bg-slate-900"></div>
+                                                <div class="w-1 h-16 bg-slate-900"></div>
+                                            </div>
+                                            <p class="text-center font-mono text-slate-700 text-sm">8 901234 567890</p>
+
+                                            <!-- Scanner Line -->
+                                            <div class="scanner-line"></div>
+                                        </div>
+
+                                        <!-- Product Info -->
+                                        <div class="w-full bg-slate-800 rounded-xl p-4">
+                                            <div class="flex items-center gap-3 mb-3">
+                                                <div
+                                                    class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                                                    <span class="iconify text-slate-400 text-xl"
+                                                        data-icon="lucide:box"></span>
+                                                </div>
+                                                <div>
+                                                    <p class="text-white font-semibold">Wireless Mouse Pro</p>
+                                                    <p class="text-slate-400 text-sm">SKU: WM-PRO-001</p>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-cols-2 gap-3">
+                                                <div class="bg-slate-700 rounded-lg p-2 text-center">
+                                                    <p class="text-slate-400 text-xs">In Stock</p>
+                                                    <p class="text-emerald-400 font-bold">45 units</p>
+                                                </div>
+                                                <div class="bg-slate-700 rounded-lg p-2 text-center">
+                                                    <p class="text-slate-400 text-xs">Price</p>
+                                                    <p class="text-white font-bold">NPR 1,500</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- FEATURE DEEP DIVE 3: MULTI-LOCATION -->
+        <!-- ============================================== -->
+        <section class="py-20 px-6 bg-gradient-to-b from-slate-50 to-white">
+            <div class="max-w-6xl mx-auto">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                    <!-- Left: Visual -->
+                    <div class="reveal order-2 lg:order-1">
+                        <div class="relative">
+                            <div
+                                class="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-8 shadow-2xl shadow-cyan-500/20">
+
+                                <!-- Map-like visualization -->
+                                <div class="bg-white rounded-2xl p-6">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h4 class="font-bold text-slate-900">All Locations</h4>
+                                        <span class="text-sm text-slate-500">3 Warehouses</span>
+                                    </div>
+
+                                    <!-- Location Cards -->
+                                    <div class="space-y-3">
+                                        <div
+                                            class="flex items-center gap-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
+                                            <div
+                                                class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                                                <span class="iconify text-white" data-icon="lucide:warehouse"></span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-semibold text-slate-900">Main Warehouse</p>
+                                                <p class="text-xs text-slate-500">Kathmandu • 847 products</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <p class="font-bold text-blue-600">NPR 18.5L</p>
+                                                <p class="text-xs text-slate-500">Stock value</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center gap-4 p-3 bg-slate-50 rounded-xl">
+                                            <div
+                                                class="w-10 h-10 bg-slate-400 rounded-lg flex items-center justify-center">
+                                                <span class="iconify text-white" data-icon="lucide:store"></span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-semibold text-slate-900">Retail Store</p>
+                                                <p class="text-xs text-slate-500">Lalitpur • 234 products</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <p class="font-bold text-slate-700">NPR 4.2L</p>
+                                                <p class="text-xs text-slate-500">Stock value</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center gap-4 p-3 bg-slate-50 rounded-xl">
+                                            <div
+                                                class="w-10 h-10 bg-slate-400 rounded-lg flex items-center justify-center">
+                                                <span class="iconify text-white" data-icon="lucide:package"></span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <p class="font-semibold text-slate-900">Storage Unit</p>
+                                                <p class="text-xs text-slate-500">Bhaktapur • 166 products</p>
+                                            </div>
+                                            <div class="text-right">
+                                                <p class="font-bold text-slate-700">NPR 1.8L</p>
+                                                <p class="text-xs text-slate-500">Stock value</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Transfer indicator -->
+                                    <div
+                                        class="mt-4 p-3 bg-amber-50 rounded-xl border border-amber-100 flex items-center gap-3">
+                                        <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center">
+                                            <span class="iconify text-amber-600" data-icon="lucide:truck"></span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium text-slate-900">Transfer in progress</p>
+                                            <p class="text-xs text-slate-500">Main → Retail • 15 items</p>
+                                        </div>
+                                        <span
+                                            class="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">In
+                                            Transit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="reveal order-1 lg:order-2">
+                        <span
+                            class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-100 text-cyan-700 text-xs font-medium rounded-full mb-4">
+                            <span class="iconify" data-icon="lucide:warehouse"></span>
+                            Smart Stock Alert
+                        </span>
+
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                            Never Run Out <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-500">
+                                Again.</span>
+                        </h2>
+
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            Receive timely alerts based on your custom reorder points. It's the simplest way to prevent
+                            stockouts and protect your sales.
+                        </p>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3">
+                                <div
+                                    class="w-6 h-6 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <span class="iconify text-cyan-600 text-sm" data-icon="lucide:check"></span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-slate-900">1. Custom Reorder Points</p>
+                                    <p class="text-sm text-slate-500">Set unique low-stock thresholds for every product
+                                        or variant.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div
+                                    class="w-6 h-6 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <span class="iconify text-cyan-600 text-sm" data-icon="lucide:check"></span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-slate-900">2. Instant Notifications</p>
+                                    <p class="text-sm text-slate-500">Get alerted via in-app notifications the moment
+                                        stock gets low.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div
+                                    class="w-6 h-6 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <span class="iconify text-cyan-600 text-sm" data-icon="lucide:check"></span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-slate-900">3. No More Stockouts</p>
+                                    <p class="text-sm text-slate-500">Get better visibility on stock levels so you can
+                                        act early and avoid missed sales.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- NEPAL-SPECIFIC FEATURES -->
+        <!-- ============================================== -->
+        <section class="py-20 px-6 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] relative overflow-hidden">
+
+            <!-- Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0"
+                    style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+                </div>
+            </div>
+
+            <div class="max-w-6xl mx-auto relative z-10">
+
+                <!-- Header -->
+                <div class="text-center mb-12 reveal">
+                    <span
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 text-white text-xs font-medium rounded-full mb-4">
+                        Made for Nepal
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Built for How Nepal Does Business
+                    </h2>
+                    <p class="text-lg text-white/70 max-w-2xl mx-auto">
+                        We understand the unique needs of Nepali trading businesses.
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+
+                    <!-- Feature 1 -->
+                    <div
+                        class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:scale-3d"></span>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Local Units</h3>
+                        <p class="text-white/60 text-sm">
+                            Supports dozens, packets, cartons, and custom unit conversions.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div
+                        class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:headphones"></span>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Local Support</h3>
+                        <p class="text-white/60 text-sm">
+                            Nepali-speaking support team available 365 days via phone & major social media platforms
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div
+                        class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:globe"></span>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Access Anytime, Anywhere</h3>
+                        <p class="text-white/60 text-sm">
+                            Works from anywhere, anytime, as long as you have the internet and a smart device.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div
+                        class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 hover:bg-white/15 transition-colors">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:users"></span>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Easy for Your Team</h3>
+                        <p class="text-white/60 text-sm">
+                            Simple interface that your staff can learn and use quickly
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- INTEGRATION WITH OTHER MODULES -->
+        <!-- ============================================== -->
+        <section class="py-20 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Header -->
+                <div class="text-center mb-16 reveal">
+                    <span
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-full mb-4">
+                        <span class="iconify" data-icon="lucide:link"></span>
+                        Seamless Integration
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                        Inventory That Works <br class="hidden md:block">With Everything
+                    </h2>
+                    <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                        No double entry. Your stock updates automatically with sales, purchases, and accounts.
+                    </p>
+                </div>
+
+                <!-- Flow Diagram -->
+                <div class="reveal">
+                    <div class="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-0">
+
+                        <!-- Purchase -->
+                        <a href="/features/purchase" class="w-full lg:w-auto group">
+                            <div
+                                class="bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-amber-300 hover:shadow-xl transition-all text-center lg:text-left">
+                                <div
+                                    class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mx-auto lg:mx-0 mb-4 group-hover:scale-110 transition-transform">
+                                    <span class="iconify text-amber-600 text-2xl"
+                                        data-icon="lucide:package-plus"></span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 mb-1">Purchase</h3>
+                                <p class="text-sm text-slate-500">Goods received updates stock automatically</p>
+                            </div>
+                        </a>
+
+                        <!-- Arrow -->
+                        <div class="hidden lg:flex items-center px-4">
+                            <div class="w-16 h-0.5 bg-gradient-to-r from-amber-400 to-blue-400"></div>
+                            <span class="iconify text-blue-400" data-icon="lucide:chevron-right"></span>
+                        </div>
+                        <div class="lg:hidden py-2">
+                            <span class="iconify text-slate-300 text-2xl" data-icon="lucide:chevron-down"></span>
+                        </div>
+
+                        <!-- Inventory (Center) -->
+                        <div class="w-full lg:w-auto">
+                            <div
+                                class="bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl p-6 text-white text-center shadow-xl shadow-blue-500/20">
+                                <div
+                                    class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                                    <span class="iconify text-white text-2xl" data-icon="lucide:package"></span>
+                                </div>
+                                <h3 class="font-bold mb-1">Inventory</h3>
+                                <p class="text-sm text-white/70">Central hub for all stock data</p>
+                            </div>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div class="hidden lg:flex items-center px-4">
+                            <span class="iconify text-blue-400" data-icon="lucide:chevron-left"></span>
+                            <div class="w-16 h-0.5 bg-gradient-to-r from-blue-400 to-emerald-400"></div>
+                        </div>
+                        <div class="lg:hidden py-2">
+                            <span class="iconify text-slate-300 text-2xl" data-icon="lucide:chevron-down"></span>
+                        </div>
+
+                        <!-- Sales -->
+                        <a href="/features/sales" class="w-full lg:w-auto group">
+                            <div
+                                class="bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all text-center lg:text-left">
+                                <div
+                                    class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto lg:mx-0 mb-4 group-hover:scale-110 transition-transform">
+                                    <span class="iconify text-emerald-600 text-2xl" data-icon="lucide:receipt"></span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 mb-1">Sales</h3>
+                                <p class="text-sm text-slate-500">Stock deducts instantly on the invoice</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- Bottom: Accounting -->
+                    <div class="flex justify-center mt-4 lg:mt-8">
+                        <div class="hidden lg:block">
+                            <div class="w-0.5 h-8 bg-gradient-to-b from-blue-400 to-purple-400 mx-auto"></div>
+                            <span class="iconify text-purple-400" data-icon="lucide:chevron-down"></span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-2">
+                        <a href="/features/accounting" class="w-full lg:w-auto max-w-sm group">
+                            <div
+                                class="bg-white rounded-2xl p-6 border-2 border-slate-200 hover:border-purple-300 hover:shadow-xl transition-all text-center">
+                                <div
+                                    class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <span class="iconify text-purple-600 text-2xl" data-icon="lucide:calculator"></span>
+                                </div>
+                                <h3 class="font-bold text-slate-900 mb-1">Accounting</h3>
+                                <p class="text-sm text-slate-500">Stock value reflects in your books automatically</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+        <!-- ============================================== -->
+        <!-- OTHER MODULES CTA -->
+        <!-- ============================================== -->
+        <section class="py-20 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Header -->
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Explore Other Modules</h2>
+                    <p class="text-slate-500">See how all modules work together to run your complete business.</p>
+                </div>
+
+                <!-- Module Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+
+                    <!-- Sales -->
+                    <a href="/features/sales"
+                        class="group bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border border-emerald-100 hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-100/50 transition-all">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-500/20">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:receipt"></span>
+                        </div>
+                        <h3
+                            class="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                            Sales & Invoicing</h3>
+                        <p class="text-slate-500 mb-4">Create VAT bills, manage customers, and track payments
+                            effortlessly.</p>
+                        <div class="flex items-center gap-2 text-emerald-600 font-medium text-sm">
+                            <span>Learn more</span>
+                            <span class="iconify group-hover:translate-x-1 transition-transform"
+                                data-icon="lucide:arrow-right"></span>
+                        </div>
+                    </a>
+
+                    <!-- Purchase -->
+                    <a href="/features/purchase"
+                        class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-100 hover:border-amber-200 hover:shadow-xl hover:shadow-amber-100/50 transition-all">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-amber-500/20">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:package-plus"></span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                            Purchase Management</h3>
+                        <p class="text-slate-500 mb-4">Manage suppliers, purchase orders, and track what you owe.</p>
+                        <div class="flex items-center gap-2 text-amber-600 font-medium text-sm">
+                            <span>Learn more</span>
+                            <span class="iconify group-hover:translate-x-1 transition-transform"
+                                data-icon="lucide:arrow-right"></span>
+                        </div>
+                    </a>
+
+                    <!-- Accounting -->
+                    <a href="/features/accounting"
+                        class="group bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 border border-purple-100 hover:border-purple-200 hover:shadow-xl hover:shadow-purple-100/50 transition-all">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/20">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:calculator"></span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
+                            Accounting</h3>
+                        <p class="text-slate-500 mb-4">Complete books of accounts, reports, and built-in tax compliance.
+                        </p>
+                        <div class="flex items-center gap-2 text-purple-600 font-medium text-sm">
+                            <span>Learn more</span>
+                            <span class="iconify group-hover:translate-x-1 transition-transform"
+                                data-icon="lucide:arrow-right"></span>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- FINAL CTA -->
+        <!-- ============================================== -->
+        <section class="py-20 px-6 bg-gradient-to-r from-blue-600 to-cyan-500">
+            <div class="max-w-4xl mx-auto text-center reveal">
+
+                <div
+                    class="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="iconify text-white text-3xl" data-icon="lucide:package"></span>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Ready to Take Full Control of Your Inventory?
+                </h2>
+
+                <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                    Start your free 14-day trial and manage your stock with clarity from day one.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/signup"
+                        class="w-full sm:w-auto px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-slate-100 transition-colors flex items-center justify-center gap-2 shadow-lg">
+                        <span>Start Free Trial</span>
+                        <span class="iconify" data-icon="lucide:arrow-right"></span>
+                    </a>
+                    <a href="/contact"
+                        class="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur text-white font-semibold rounded-xl hover:bg-white/20 transition-colors border border-white/20 flex items-center justify-center gap-2">
+                        <span class="iconify" data-icon="lucide:calendar"></span>
+                        <span>Book a Demo</span>
+                    </a>
+                </div>
+
+                <p class="text-white/60 text-sm mt-6 flex items-center justify-center gap-4">
+                    <span class="flex items-center gap-1">
+                        <span class="iconify" data-icon="lucide:check"></span>
+                        14-day trial
+                    </span>
+                    <span class="flex items-center gap-1">
+                        <span class="iconify" data-icon="lucide:check"></span>
+                        Free Setup Assistance
+                    </span>
+                    <span class="flex items-center gap-1">
+                        <span class="iconify" data-icon="lucide:check"></span>
+                        Cancel anytime
+                    </span>
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- ============================================== -->
+        <!-- FOOTER -->
+        <!-- ============================================== -->
+        <footer class="bg-[#0C2425] text-white relative overflow-hidden">
+
+            <!-- Subtle Background Pattern -->
+            <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+                <div class="absolute inset-0"
+                    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+                </div>
+            </div>
+
+            <!-- Top Glow -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#31BCBC]/10 rounded-full blur-[120px] pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10 md:pb-12 relative z-10">
+
+                <!-- Top Section -->
+                <div
+                    class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8 mb-10 sm:mb-12 md:mb-16 pb-8 sm:pb-10 md:pb-12 border-b border-white/10">
+
+                    <!-- Logo & Description -->
+                    <div class="max-w-md">
+                        <a href="/" class="inline-flex items-center gap-3 mb-3 sm:mb-4 group">
+                            <img src="logo.svg" alt="Providhy Logo"
+                                class="h-6 sm:h-7 md:h-8 w-auto brightness-0 invert group-hover:scale-105 transition-transform duration-300" />
+                        </a>
+                        <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                            Nepal's most intuitive cloud ERP for trading businesses. Inventory, billing, and accounting
+                            —
+                            all in one.
+                        </p>
+
+                        <!-- Trust Badges - Mobile -->
+                        <div class="flex items-center gap-4 mt-4 lg:hidden">
+                            <div class="flex items-center gap-1.5 text-white/40">
+                                <span class="iconify text-[#31BCBC]" data-icon="lucide:shield-check"></span>
+                                <span class="text-xs">IRD Compliant</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-white/40">
+                                <span class="iconify text-[#31BCBC]" data-icon="lucide:cloud"></span>
+                                <span class="text-xs">Cloud Secured</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="w-full lg:w-auto">
+                        <p class="text-sm text-white/60 mb-2 sm:mb-3">Subscribe to our newsletter</p>
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                            <div class="relative flex-1 sm:flex-none">
+                                <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+                                    data-icon="lucide:mail"></span>
+                                <input type="email" placeholder="Enter your email"
+                                    class="w-full sm:w-60 md:w-72 pl-11 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#31BCBC] focus:bg-white/[0.15] transition-all text-sm">
+                            </div>
+                            <button
+                                class="px-5 md:px-6 py-3 bg-white text-[#1D4F50] font-semibold rounded-xl hover:bg-[#31BCBC] hover:text-white transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap text-sm group shadow-lg shadow-black/10 hover:shadow-[#31BCBC]/20">
+                                <span>Subscribe</span>
+                                <span class="iconify group-hover:translate-x-0.5 transition-transform"
+                                    data-icon="lucide:arrow-right"></span>
+                            </button>
+                        </div>
+                        <p class="text-xs text-white/40 mt-2">No spam. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+
+                <!-- Links Grid -->
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 md:mb-16">
+
+                    <!-- Product -->
+                    <div>
+                        <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                            Product
+                        </h4>
+                        <ul class="space-y-2 sm:space-y-2.5">
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Inventory</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Billing</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Accounting</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Reports</a>
+                            </li>
+                            <li><a href="/pricing"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Company -->
+                    <div>
+                        <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                            Company
+                        </h4>
+                        <ul class="space-y-2 sm:space-y-2.5">
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">About
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Careers</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Partners</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Blog</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources -->
+                    <div>
+                        <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                            Resources
+                        </h4>
+                        <ul class="space-y-2 sm:space-y-2.5">
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Documentation</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Help
+                                    Center</a></li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Video
+                                    Tutorials</a></li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">API
+                                    Reference</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal -->
+                    <div>
+                        <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                            Legal
+                        </h4>
+                        <ul class="space-y-2 sm:space-y-2.5">
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Privacy
+                                    Policy</a></li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Terms
+                                    of Service</a></li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Security</a>
+                            </li>
+                            <li><a href="#"
+                                    class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Cookies</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1">
+                        <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                            Contact Us
+                        </h4>
+                        <ul class="space-y-3 sm:space-y-4">
+                            <li>
+                                <a href="tel:9851221467"
+                                    class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                    <div
+                                        class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                        <span class="iconify" data-icon="lucide:phone"></span>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                            +977 9851221467</p>
+                                        <p class="text-xs text-white/40">Mon-Sat, 9am-6pm</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@vidhypro.com"
+                                    class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                    <div
+                                        class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                        <span class="iconify" data-icon="lucide:mail"></span>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                            info@vidhypro.com</p>
+                                        <p class="text-xs text-white/40">24/7 Email Support</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                    <div
+                                        class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                        <span class="iconify" data-icon="lucide:map-pin"></span>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                            Kathmandu, Nepal</p>
+                                        <p class="text-xs text-white/40">View on Map</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div
+                    class="flex flex-col-reverse sm:flex-row justify-between items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
+
+                    <!-- Copyright -->
+                    <div class="text-xs sm:text-sm text-white/50 text-center sm:text-left">
+                        © 2025 Providhy ERP. Powered by
+                        <a href="#" class="text-white/70 hover:text-[#31BCBC] transition-colors">Vidhypro Crafts Pvt
+                            Ltd</a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex items-center gap-2">
+                        <a href="#"
+                            class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#31BCBC] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                            aria-label="Facebook">
+                            <span class="iconify text-base sm:text-lg" data-icon="lucide:facebook"></span>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                            aria-label="Instagram">
+                            <span class="iconify text-base sm:text-lg" data-icon="lucide:instagram"></span>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#0077b5] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                            aria-label="LinkedIn">
+                            <span class="iconify text-base sm:text-lg" data-icon="lucide:linkedin"></span>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                            aria-label="YouTube">
+                            <span class="iconify text-base sm:text-lg" data-icon="lucide:youtube"></span>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-black rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                            aria-label="Twitter/X">
+                            <span class="iconify text-base sm:text-lg" data-icon="simple-icons:x"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Large Brand Logo - Full Width Fancy Section -->
+            <div class="w-full border-t border-white/5 overflow-hidden select-none pointer-events-none relative">
+
+                <!-- Animated Gradient Background -->
+                <div class="absolute inset-0">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-transparent via-[#31BCBC]/10 to-transparent animate-shimmer">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#143939] via-transparent to-transparent"></div>
+                </div>
+
+                <!-- Floating Particles -->
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-[#31BCBC]/20 rounded-full animate-float-slow">
+                    </div>
+                    <div class="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-white/10 rounded-full animate-float-medium">
+                    </div>
+                    <div class="absolute bottom-1/4 left-1/2 w-1 h-1 bg-[#31BCBC]/30 rounded-full animate-float-fast">
+                    </div>
+                    <div class="absolute top-1/2 right-1/4 w-2 h-2 bg-white/5 rounded-full animate-float-slow"></div>
+                </div>
+
+                <!-- Full Width Logo Container -->
+                <div class="relative w-full flex items-center justify-center overflow-hidden py-4 sm:py-0"
+                    style="height: clamp(80px, 18vw, 280px);">
+
+                    <!-- Multiple Logo Layers for Depth Effect -->
+                    <!-- <div class="absolute inset-0 flex items-center justify-center opacity-[0.02] scale-125 blur-sm">
+                <img 
+                    src="logo.svg" 
+                    alt="" 
+                    class="w-[85%] sm:w-[80%] h-auto max-h-full object-contain"
+                    style="filter: brightness(0) invert(1);"
+                >
+            </div> -->
+
+                    <!-- Main Logo -->
+                    <img src="logo.svg" alt="Providhy"
+                        class="relative w-[80%] sm:w-[75%] md:w-[70%] lg:w-[60%] max-w-[800px] h-auto max-h-full object-contain opacity-[0.07] hover:opacity-[0.12] transition-opacity duration-700"
+                        style="filter: brightness(0) invert(1);">
+
+                    <!-- Scanline Effect -->
+                    <div class="absolute inset-0 pointer-events-none opacity-50"
+                        style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);">
+                    </div>
+
+                    <!-- Center Glow -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-1/2 h-1/2 bg-[#31BCBC]/5 rounded-full blur-3xl"></div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Gradient Fade -->
+                <div
+                    class="absolute bottom-0 left-0 right-0 h-8 sm:h-12 bg-gradient-to-t from-[#143939] to-transparent">
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- ============================================== -->
+        <!-- BACK TO TOP BUTTON -->
+        <!-- ============================================== -->
+        <button id="back-to-top"
+            class="fixed bottom-8 right-8 w-12 h-12 bg-[#1D4F50] hover:bg-[#31BCBC] text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 pointer-events-none z-40">
+            <span class="iconify text-xl" data-icon="lucide:arrow-up"></span>
+        </button>
+
+        <!-- ============================================== -->
+        <!-- VIDEO MODAL -->
+        <!-- ============================================== -->
+        <div id="video-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+            <div class="video-backdrop absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeVideoModal()"></div>
+            <div class="relative z-10 w-full max-w-4xl mx-4">
+                <button onclick="closeVideoModal()"
+                    class="absolute -top-12 right-0 text-white hover:text-orange-400 transition-colors">
+                    <span class="iconify text-3xl" data-icon="lucide:x"></span>
+                </button>
+                <div class="bg-black rounded-2xl overflow-hidden aspect-video">
+                    <iframe id="video-iframe" class="w-full h-full" src="" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- SCRIPTS -->
+        <!-- ============================================== -->
+        <script src="js/main.js"></script>
+
+
+    </body>
+
+</html>

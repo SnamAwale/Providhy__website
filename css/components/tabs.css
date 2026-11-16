@@ -1,0 +1,104 @@
+/* =============================================
+   MODULE TABS
+============================================= */
+
+/* --- Base Tab --- */
+.module-tab {
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* --- Inactive --- */
+.module-tab:not(.active) {
+    background: white;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.module-tab:not(.active):hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+}
+
+/* --- Active States (per module) --- */
+#tab-inventory.active {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+#tab-sales.active {
+    background: linear-gradient(135deg, #10b981, #14b8a6);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+#tab-purchase.active {
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+    transform: translateY(-2px);
+}
+
+#tab-accounting.active {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+    transform: translateY(-2px);
+}
+
+/* --- Tab Content --- */
+.module-content {
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.module-content.hidden {
+    display: none;
+}
+
+/* --- Tab Icons --- */
+.module-tab .iconify {
+    transition: transform 0.3s ease;
+}
+
+.module-tab.active .iconify {
+    transform: scale(1.1);
+}
+
+.module-tab:hover:not(.active) .iconify {
+    transform: scale(1.05);
+}
+
+
+/* ... all existing module-tab styles stay unchanged ... */
+
+/* =============================================
+   FEATURE TABS
+============================================= */
+
+/* ✅ NEW — from purchase page */
+.feature-tab.active {
+    background: linear-gradient(135deg, #ea580c, #f97316);
+    color: white;
+    border-color: transparent;
+}
+
+/* ... all existing module-tab and feature-tab styles stay ... */
+
+/* =============================================
+   GENERIC TABS
+============================================= */
+
+/* ✅ NEW — from styleguide page */
+.tab-btn.active {
+    color: #1D4F50;
+    border-color: #31BCBC;
+    background: white;
+}

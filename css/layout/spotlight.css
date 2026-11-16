@@ -1,0 +1,28 @@
+/* =============================================
+   SPOTLIGHT EFFECT
+============================================= */
+
+#spotlight {
+    background: radial-gradient(
+        600px circle at var(--x) var(--y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+/* =============================================
+   SPOTLIGHT EFFECT
+============================================= */
+
+#spotlight {
+    background: radial-gradient(
+        600px circle at var(--x) var(--y),
+        rgba(49, 188, 188, 0.06),
+        transparent 40%
+    );
+    z-index: 1;
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+}

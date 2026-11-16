@@ -1,0 +1,22 @@
+/* =============================================
+   SIDEBAR
+============================================= */
+
+.sidebar-link.active {
+    background: linear-gradient(to right, rgba(49, 188, 188, 0.1), transparent);
+    border-left-color: #31BCBC;
+    color: #1D4F50;
+    font-weight: 600;
+}
+
+/* ✅ NEW — Active indicator bar */
+.sidebar-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #31BCBC;
+    border-radius: 0 3px 3px 0;
+}

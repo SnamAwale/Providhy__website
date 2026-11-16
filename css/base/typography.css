@@ -1,0 +1,21 @@
+/* =============================================
+   TYPOGRAPHY & BODY
+============================================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ✅ NEW — Monospace font for code elements */
+code,
+pre,
+.font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', monospace;
+}
+
+/* ✅ NEW — Scroll margin for anchor sections */
+section[id] {
+    scroll-margin-top: 100px;
+}

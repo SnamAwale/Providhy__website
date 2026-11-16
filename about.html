@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Providhy ERP </title>
+    <meta name="description"
+        content="Providhy is Nepal's most intuitive cloud ERP for trading businesses. Manage inventory, billing, and accounting — all in one place.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts & Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-white text-slate-900 selection:bg-[#31BCBC]/20 selection:text-[#1D4F50] overflow-x-hidden">
+
+
+    <!-- Floating Capsule Navbar with Responsive Mobile Menu -->
+    <div class="fixed top-0 left-0 right-0 z-[90] flex flex-col items-center w-full pt-6 px-4 font-sans">
+        <nav
+            class="relative w-full max-w-5xl bg-white/80 backdrop-blur-lg rounded-full shadow-2xl shadow-[#1D4F50]/5 border border-[#1D4F50]/10 px-3 py-2.5 flex items-center justify-between transition-all duration-300 z-[90]">
+
+            <a href="/" class="flex items-center pl-3 group">
+                <img src="./logo.svg" alt="Providhy Logo"
+                    class="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+
+                <!-- Features Dropdown (Clickable + Hover) -->
+                <div class="relative group/features">
+                    <a href="./features.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                        Features
+                        <span class="iconify text-xs transition-transform group-hover/features:rotate-180"
+                            data-icon="lucide:chevron-down"></span>
+                    </a>
+
+                    <!-- Features Dropdown Panel -->
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/features:opacity-100 group-hover/features:visible transition-all duration-300 transform translate-y-2 group-hover/features:translate-y-0">
+                        <div
+                            class="w-[600px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Core
+                                        Modules</p>
+                                    <a href="./features.html"
+                                        class="text-xs font-medium text-[#31BCBC] hover:underline">View All Features
+                                        →</a>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <!-- Inventory -->
+                                    <a href="./inventory.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-colors group/item border border-transparent hover:border-blue-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:package"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-blue-600 transition-colors">
+                                                Inventory</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Stock tracking, godowns,
+                                                barcode & alerts</p>
+                                        </div>
+                                    </a>
+                                    <!-- Sales -->
+                                    <a href="./sales.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors group/item border border-transparent hover:border-emerald-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:receipt"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-emerald-600 transition-colors">
+                                                Sales & Billing</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">VAT invoices, quotations &
+                                                payments</p>
+                                        </div>
+                                    </a>
+                                    <!-- Purchase -->
+                                    <a href="./purchase.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-amber-50 transition-colors group/item border border-transparent hover:border-amber-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:truck"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-amber-600 transition-colors">
+                                                Purchase</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Orders, suppliers & goods
+                                                received</p>
+                                        </div>
+                                    </a>
+                                    <!-- Accounting -->
+                                    <a href="./accounting.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-colors group/item border border-transparent hover:border-purple-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl"
+                                                data-icon="lucide:calculator"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-purple-600 transition-colors">
+                                                Accounting</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Ledgers, reports & financial
+                                                statements</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Bottom CTA - Gradient Style -->
+                            <div
+                                class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-white" data-icon="lucide:play-circle"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">See it in action</p>
+                                        <p class="text-white/70 text-xs">Watch a 2-minute demo</p>
+                                    </div>
+                                </div>
+                                <button onclick="openVideoModal('home-demo')"
+                                    class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">
+                                    Watch Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./pricing.html"
+                    class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                    Pricing
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                </a>
+
+                <!-- Resources Dropdown (Clickable + Hover) -->
+                <div class="relative group/resources">
+                    <a href="./resources.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                        Resources
+                        <span class="iconify text-xs transition-transform group-hover/resources:rotate-180"
+                            data-icon="lucide:chevron-down"></span>
+                    </a>
+
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/resources:opacity-100 group-hover/resources:visible transition-all duration-300 transform translate-y-2 group-hover/resources:translate-y-0">
+                        <div
+                            class="w-[520px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <div class="grid grid-cols-2 gap-0">
+                                <div class="p-5 space-y-1">
+                                    <div class="flex items-center justify-between mb-3 px-3">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            Learn</p>
+                                    </div>
+                                    <a href="./documentation.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-blue-600 text-lg"
+                                                data-icon="lucide:book-open"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Documentation</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Detailed guides and references
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <a href="./tutorials.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-red-600 text-lg"
+                                                data-icon="lucide:play-circle"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Video Tutorials</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Step-by-step video guides</p>
+                                        </div>
+                                    </a>
+                                    <a href="./help.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-emerald-600 text-lg"
+                                                data-icon="lucide:life-buoy"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Help Center</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">FAQs and troubleshooting</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-5 space-y-1 bg-slate-50/50">
+                                    <div class="flex items-center justify-between mb-3 px-3">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            Explore</p>
+                                        <a href="./resources.html"
+                                            class="text-xs font-medium text-[#31BCBC] hover:underline">View All
+                                            →</a>
+                                    </div>
+                                    <a href="./blog.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-purple-600 text-lg"
+                                                data-icon="lucide:pen-line"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Blog</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Tips, news & insights</p>
+                                        </div>
+                                    </a>
+                                    <a href="./changelog.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-amber-600 text-lg"
+                                                data-icon="lucide:sparkles"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm flex items-center gap-2 group-hover/item:text-[#31BCBC] transition-colors">
+                                                What's New
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-amber-500 text-white text-[10px] font-bold rounded">v2.5</span>
+                                            </p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Latest features & updates</p>
+                                        </div>
+                                    </a>
+                                    <a href="./api.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-slate-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-slate-600 text-lg"
+                                                data-icon="lucide:code-2"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                API Reference</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">For developers</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Bottom CTA - Gradient Style (Consistent with Features) -->
+                            <div
+                                class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-white" data-icon="lucide:headphones"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">Need help?</p>
+                                        <p class="text-white/70 text-xs">Talk to our support team</p>
+                                    </div>
+                                </div>
+                                <a href="./contact.html"
+                                    class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">Contact
+                                    Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./contact.html"
+                    class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                    Contact
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-5 pr-1">
+                <a href="./login.html"
+                    class="text-sm font-semibold text-[#1D4F50] hover:text-[#31BCBC] transition-colors">Log in</a>
+                <a href="./signup.html"
+                    class="group relative inline-flex items-center justify-center p-[2px] overflow-hidden rounded-full shadow-md shadow-[#31BCBC]/20 hover:shadow-lg hover:shadow-[#31BCBC]/30 transition-all">
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-[#1D4F50] via-[#31BCBC] to-[#1D4F50] bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]"></span>
+                    <span
+                        class="relative flex items-center gap-2 rounded-full bg-white px-6 py-2 transition-all duration-300 group-hover:bg-opacity-95">
+                        <span class="text-sm font-bold text-[#1D4F50] group-hover:text-[#31BCBC] transition-colors">Get
+                            Started</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="md:hidden pr-2">
+                <button id="mobile-menu-btn"
+                    class="p-2 text-[#1D4F50] hover:bg-[#31BCBC]/10 rounded-full transition-colors">
+                    <span class="iconify w-6 h-6" data-icon="lucide:menu"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-[calc(100%+10px)] w-[calc(100%-2rem)] max-w-5xl bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-[#1D4F50]/10 border border-[#1D4F50]/10 p-6 flex-col gap-4 z-40">
+            <div class="flex flex-col gap-1">
+                <!-- Features - Clickable header + expandable -->
+                <details class="group">
+                    <summary
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                        <a href="./features.html" class="flex-1" onclick="event.stopPropagation();">Features</a>
+                        <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                            data-icon="lucide:chevron-down"></span>
+                    </summary>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="./inventory.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-blue-500" data-icon="lucide:package"></span>
+                            Inventory
+                        </a>
+                        <a href="./sales.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-emerald-500" data-icon="lucide:receipt"></span>
+                            Sales & Billing
+                        </a>
+                        <a href="./purchase.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-amber-500" data-icon="lucide:truck"></span>
+                            Purchase
+                        </a>
+                        <a href="./accounting.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-purple-500" data-icon="lucide:calculator"></span>
+                            Accounting
+                        </a>
+                        <a href="./features.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            View All Features
+                        </a>
+                    </div>
+                </details>
+
+                <a href="./pricing.html"
+                    class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Pricing</a>
+
+                <!-- Resources - Clickable header + expandable -->
+                <details class="group">
+                    <summary
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                        <a href="./resources.html" class="flex-1" onclick="event.stopPropagation();">Resources</a>
+                        <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                            data-icon="lucide:chevron-down"></span>
+                    </summary>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="./documentation.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-blue-500" data-icon="lucide:book-open"></span>
+                            Documentation
+                        </a>
+                        <a href="./tutorials.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-red-500" data-icon="lucide:play-circle"></span>
+                            Video Tutorials
+                        </a>
+                        <a href="./help.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-emerald-500" data-icon="lucide:life-buoy"></span>
+                            Help Center
+                        </a>
+                        <a href="./blog.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-purple-500" data-icon="lucide:pen-line"></span>
+                            Blog
+                        </a>
+                        <a href="./changelog.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-amber-500" data-icon="lucide:sparkles"></span>
+                            What's New
+                        </a>
+                        <a href="./api.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-slate-500" data-icon="lucide:code-2"></span>
+                            API Reference
+                        </a>
+                        <a href="./resources.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            View All Resources
+                        </a>
+                    </div>
+                </details>
+
+                <a href="./contact.html"
+                    class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Contact</a>
+            </div>
+            <hr class="border-[#1D4F50]/10">
+            <div class="flex flex-col gap-3">
+                <a href="./login.html"
+                    class="w-full py-3 text-center font-semibold text-[#1D4F50] border border-[#1D4F50]/20 rounded-xl hover:bg-slate-50 transition-colors">Log
+                    in</a>
+                <a href="./signup.html"
+                    class="w-full py-3 text-center font-bold text-white bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] rounded-xl hover:opacity-90 transition-opacity">Get
+                    Started</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- HERO SECTION -->
+    <!-- ============================================== -->
+    <header class="relative pt-32 pb-20 px-6 bg-gradient-to-b from-slate-50 via-white to-white overflow-hidden">
+
+        <!-- Background Decorations -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-[#31BCBC]/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#1D4F50]/5 rounded-full blur-3xl"></div>
+
+        <div class="relative max-w-5xl mx-auto">
+            <div class="text-center reveal">
+
+                <!-- Breadcrumb -->
+                <nav class="flex items-center justify-center gap-2 text-sm text-slate-500 mb-6">
+                    <a href="/" class="hover:text-[#31BCBC] transition-colors">Home</a>
+                    <span class="iconify text-slate-400" data-icon="lucide:chevron-right"></span>
+                    <span class="text-[#1D4F50] font-medium">About Us</span>
+                </nav>
+
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-[#31BCBC]/10 border border-[#31BCBC]/20 rounded-full text-sm text-[#1D4F50] font-medium mb-6">
+                    <span class="iconify" data-icon="lucide:heart"></span>
+                    <span>Built with passion in Nepal</span>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+                    Empowering Nepali Businesses<br>
+                    <span class="bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] bg-clip-text text-transparent">One
+                        Transaction at a Time</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-10">
+                    We're on a mission to simplify business management for trading companies across Nepal.
+                    Modern tools, local understanding, exceptional support.
+                </p>
+
+                <!-- Hero Image / Illustration -->
+                <div class="relative max-w-4xl mx-auto mt-12">
+                    <div class="bg-gradient-to-br from-[#1D4F50]/5 to-[#31BCBC]/10 rounded-3xl p-8 md:p-12">
+                        <div class="grid grid-cols-3 gap-4 md:gap-8">
+                            <div class="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 float-animation"
+                                style="animation-delay: 0s;">
+                                <div class="w-12 h-12 bg-[#31BCBC]/10 rounded-xl flex items-center justify-center mb-3">
+                                    <span class="iconify text-[#31BCBC] text-2xl" data-icon="lucide:users"></span>
+                                </div>
+                                <div class="text-2xl font-bold text-slate-900">500+</div>
+                                <div class="text-sm text-slate-500">Happy Customers</div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 float-animation"
+                                style="animation-delay: 0.2s;">
+                                <div class="w-12 h-12 bg-[#1D4F50]/10 rounded-xl flex items-center justify-center mb-3">
+                                    <span class="iconify text-[#1D4F50] text-2xl" data-icon="lucide:file-text"></span>
+                                </div>
+                                <div class="text-2xl font-bold text-slate-900">1M+</div>
+                                <div class="text-sm text-slate-500">Invoices Generated</div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 float-animation"
+                                style="animation-delay: 0.4s;">
+                                <div class="w-12 h-12 bg-[#31BCBC]/10 rounded-xl flex items-center justify-center mb-3">
+                                    <span class="iconify text-[#31BCBC] text-2xl" data-icon="lucide:trending-up"></span>
+                                </div>
+                                <div class="text-2xl font-bold text-slate-900">₹50B+</div>
+                                <div class="text-sm text-slate-500">Transactions Processed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ============================================== -->
+    <!-- OUR STORY SECTION -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Image Side -->
+                <div class="reveal-left">
+                    <div class="relative">
+                        <div
+                            class="absolute -top-4 -left-4 w-full h-full bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-3xl">
+                        </div>
+                        <div class="relative bg-slate-100 rounded-3xl overflow-hidden aspect-[4/3]">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+                                alt="Providhy Team" class="w-full h-full object-cover" />
+                            <!-- Overlay with quote -->
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                                <p class="text-white/90 italic text-lg">"Building software that understands Nepali
+                                    business"</p>
+                            </div>
+                        </div>
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-[#31BCBC] rounded-xl flex items-center justify-center">
+                                    <span class="iconify text-white text-2xl" data-icon="lucide:award"></span>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-slate-500">Founded</div>
+                                    <div class="font-bold text-slate-900">2022</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="reveal-right">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#31BCBC]/10 rounded-full text-sm text-[#1D4F50] font-medium mb-4">
+                        <span class="iconify" data-icon="lucide:book-open"></span>
+                        Our Story
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                        From Frustration to Innovation
+                    </h2>
+
+                    <div class="space-y-4 text-slate-600">
+                        <p>
+                            Providhy was born out of a simple observation: Nepali trading businesses deserved better
+                            tools.
+                            As entrepreneurs ourselves, we experienced firsthand the challenges of managing inventory,
+                            generating VAT-compliant invoices, and keeping track of finances with outdated software.
+                        </p>
+                        <p>
+                            In 2022, we set out to build something different—a modern, cloud-based ERP system designed
+                            specifically for the Nepali market. We understood the unique challenges: the need for
+                            Nepali calendar support, IRD-compliant billing, and software that works reliably even with
+                            inconsistent internet connectivity.
+                        </p>
+                        <p>
+                            Today, Providhy powers hundreds of businesses across Nepal, from small shops in Pokhara
+                            to large trading companies in Kathmandu. But we're just getting started.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 flex items-center gap-4">
+                        <a href="/contact"
+                            class="px-6 py-3 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-[#31BCBC]/30 transition-all">
+                            Get in Touch
+                        </a>
+                        <a href="#journey"
+                            class="px-6 py-3 text-[#1D4F50] font-semibold hover:text-[#31BCBC] transition-colors flex items-center gap-2">
+                            <span>Our Journey</span>
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- MISSION, VISION, VALUES -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-gradient-to-b from-slate-50 to-white">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#31BCBC]/10 rounded-full text-sm text-[#1D4F50] font-medium mb-4">
+                    <span class="iconify" data-icon="lucide:compass"></span>
+                    What Drives Us
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                    Our Mission, Vision & Values
+                </h2>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                    The principles that guide everything we do
+                </p>
+            </div>
+
+            <!-- Mission & Vision Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+                <!-- Mission -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm reveal">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-2xl flex items-center justify-center mb-6">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:target"></span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        To empower every trading business in Nepal with affordable, powerful, and easy-to-use
+                        business management tools that help them save time, reduce errors, and grow profitably.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm reveal">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-[#31BCBC] to-[#1D4F50] rounded-2xl flex items-center justify-center mb-6">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:eye"></span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        To become Nepal's most trusted business software partner, known for innovation,
+                        reliability, and an unwavering commitment to customer success. We envision a future
+                        where every Nepali business has access to world-class technology.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Core Values -->
+            <div class="reveal">
+                <h3 class="text-xl font-bold text-slate-900 text-center mb-8">Our Core Values</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Value 1 -->
+                    <div
+                        class="value-card bg-white rounded-2xl p-6 border border-slate-200 text-center hover:border-[#31BCBC] hover:shadow-lg hover:shadow-[#31BCBC]/10">
+                        <div class="w-12 h-12 bg-[#31BCBC]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <span class="iconify text-[#31BCBC] text-2xl" data-icon="lucide:heart-handshake"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Customer First</h4>
+                        <p class="text-sm text-slate-500">Every decision starts with our customers' needs</p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div
+                        class="value-card bg-white rounded-2xl p-6 border border-slate-200 text-center hover:border-[#31BCBC] hover:shadow-lg hover:shadow-[#31BCBC]/10">
+                        <div class="w-12 h-12 bg-[#1D4F50]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <span class="iconify text-[#1D4F50] text-2xl" data-icon="lucide:lightbulb"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Innovation</h4>
+                        <p class="text-sm text-slate-500">Constantly improving and pushing boundaries</p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div
+                        class="value-card bg-white rounded-2xl p-6 border border-slate-200 text-center hover:border-[#31BCBC] hover:shadow-lg hover:shadow-[#31BCBC]/10">
+                        <div class="w-12 h-12 bg-[#31BCBC]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <span class="iconify text-[#31BCBC] text-2xl" data-icon="lucide:shield-check"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Integrity</h4>
+                        <p class="text-sm text-slate-500">Honest, transparent, and ethical in all we do</p>
+                    </div>
+
+                    <!-- Value 4 -->
+                    <div
+                        class="value-card bg-white rounded-2xl p-6 border border-slate-200 text-center hover:border-[#31BCBC] hover:shadow-lg hover:shadow-[#31BCBC]/10">
+                        <div class="w-12 h-12 bg-[#1D4F50]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <span class="iconify text-[#1D4F50] text-2xl" data-icon="lucide:users"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Teamwork</h4>
+                        <p class="text-sm text-slate-500">Together we achieve more than alone</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- STATS SECTION -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC]">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
+
+                <!-- Stat 1 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
+                    <div class="text-white/70">Active Businesses</div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">15+</div>
+                    <div class="text-white/70">Team Members</div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">25+</div>
+                    <div class="text-white/70">Districts Covered</div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">99.9%</div>
+                    <div class="text-white/70">Uptime</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- TEAM SECTION -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#31BCBC]/10 rounded-full text-sm text-[#1D4F50] font-medium mb-4">
+                    <span class="iconify" data-icon="lucide:users"></span>
+                    The People Behind Providhy
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                    Meet Our Leadership Team
+                </h2>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                    Passionate individuals dedicated to building the best business software for Nepal
+                </p>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Team Member 1 -->
+                <div class="team-card group reveal">
+                    <div class="relative bg-slate-100 rounded-2xl overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                            alt="Rajesh Sharma"
+                            class="team-image w-full aspect-square object-cover transition-transform duration-500" />
+                        <div
+                            class="team-social absolute inset-0 bg-gradient-to-t from-[#1D4F50]/90 to-transparent flex items-end justify-center pb-6 opacity-0 transform translate-y-4 transition-all duration-300">
+                            <div class="flex items-center gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors">
+                                    <span class="iconify text-lg" data-icon="lucide:linkedin"></span>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors">
+                                    <span class="iconify text-lg" data-icon="lucide:twitter"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Rajesh Sharma</h3>
+                    <p class="text-[#31BCBC] text-sm font-medium">Founder & CEO</p>
+                    <p class="text-slate-500 text-sm mt-2">15+ years in software and business consulting</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card group reveal">
+                    <div class="relative bg-slate-100 rounded-2xl overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+                            alt="Anita Poudel"
+                            class="team-image w-full aspect-square object-cover transition-transform duration-500" />
+                        <div
+                            class="team-social absolute inset-0 bg-gradient-to-t from-[#1D4F50]/90 to-transparent flex items-end justify-center pb-6 opacity-0 transform translate-y-4 transition-all duration-300">
+                            <div class="flex items-center gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors">
+                                    <span class="iconify text-lg" data-icon="lucide:linkedin"></span>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors">
+                                    <span class="iconify text-lg" data-icon="lucide:twitter"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Anita Poudel</h3>
+                    <p class="text-[#31BCBC] text-sm font-medium">Co-Founder & CTO</p>
+                    <p class="text-slate-500 text-sm mt-2">Former tech lead at global fintech companies</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card group reveal">
+                    <div class="relative bg-slate-100 rounded-2xl overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+                            alt="Bikash Thapa"
+                            class="team-image w-full aspect-square object-cover transition-transform duration-500" />
+                        <div
+                            class="team-social absolute inset-0 bg-gradient-to-t from-[#1D4F50]/90 to-transparent flex items-end justify-center pb-6 opacity-0 transform translate-y-4 transition-all duration-300">
+                            <div class="flex items-center gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors">
+                                    <span class="iconify text-lg" data-icon="lucide:linkedin"></span>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors">
+                                    <span class="iconify text-lg" data-icon="lucide:twitter"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Bikash Thapa</h3>
+                    <p class="text-[#31BCBC] text-sm font-medium">Head of Product</p>
+                    <p class="text-slate-500 text-sm mt-2">Passionate about user experience design</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card group reveal">
+                    <div class="relative bg-slate-100 rounded-2xl overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+                            alt="Sunita Karki"
+                            class="team-image w-full aspect-square object-cover transition-transform duration-500" />
+                        <div
+                            class="team-social absolute inset-0 bg-gradient-to-t from-[#1D4F50]/90 to-transparent flex items-end justify-center pb-6 opacity-0 transform translate-y-4 transition-all duration-300">
+                            <div class="flex items-center gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors">
+                                    <span class="iconify text-lg" data-icon="lucide:linkedin"></span>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors">
+                                    <span class="iconify text-lg" data-icon="lucide:twitter"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">Sunita Karki</h3>
+                    <p class="text-[#31BCBC] text-sm font-medium">Head of Customer Success</p>
+                    <p class="text-slate-500 text-sm mt-2">Dedicated to making customers successful</p>
+                </div>
+
+            </div>
+
+            <!-- View All Team -->
+            <div class="text-center mt-12 reveal">
+                <a href="/team"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 text-slate-700 font-medium rounded-xl hover:bg-slate-200 transition-colors">
+                    <span>View Full Team</span>
+                    <span class="iconify" data-icon="lucide:arrow-right"></span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- JOURNEY / TIMELINE -->
+    <!-- ============================================== -->
+    <section id="journey" class="py-20 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16 reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#31BCBC]/10 rounded-full text-sm text-[#1D4F50] font-medium mb-4">
+                    <span class="iconify" data-icon="lucide:milestone"></span>
+                    Our Journey
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                    Milestones Along the Way
+                </h2>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                    From a small idea to Nepal's growing ERP solution
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="space-y-8 reveal">
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm ml-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="px-3 py-1 bg-[#31BCBC]/10 text-[#1D4F50] text-sm font-bold rounded-full">2022</span>
+                            <span class="text-slate-400 text-sm">Q1</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">The Beginning</h3>
+                        <p class="text-slate-600">
+                            Providhy was founded with a vision to modernize business management in Nepal.
+                            Started with a small team of 3 developers and a clear mission.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm ml-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="px-3 py-1 bg-[#31BCBC]/10 text-[#1D4F50] text-sm font-bold rounded-full">2022</span>
+                            <span class="text-slate-400 text-sm">Q3</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Beta Launch</h3>
+                        <p class="text-slate-600">
+                            Launched beta version with 10 pilot customers. Gathered invaluable feedback that
+                            shaped the product into what it is today.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm ml-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="px-3 py-1 bg-[#31BCBC]/10 text-[#1D4F50] text-sm font-bold rounded-full">2023</span>
+                            <span class="text-slate-400 text-sm">Q1</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Official Launch</h3>
+                        <p class="text-slate-600">
+                            Publicly launched Providhy ERP with full VAT compliance and Nepali calendar support.
+                            Reached 100 customers within 3 months.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm ml-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="px-3 py-1 bg-[#31BCBC]/10 text-[#1D4F50] text-sm font-bold rounded-full">2023</span>
+                            <span class="text-slate-400 text-sm">Q4</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Rapid Growth</h3>
+                        <p class="text-slate-600">
+                            Expanded team to 15 members. Launched mobile app and advanced inventory features.
+                            Crossed 300 active business customers.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm ml-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="px-3 py-1 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] text-white text-sm font-bold rounded-full">2024</span>
+                            <span class="text-slate-400 text-sm">Present</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">Scaling New Heights</h3>
+                        <p class="text-slate-600">
+                            500+ active customers across 25+ districts. Launched advanced analytics, multi-branch
+                            support, and API integrations. Preparing for international expansion.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Future -->
+                <div class="relative pl-8">
+                    <div
+                        class="bg-gradient-to-br from-[#1D4F50]/5 to-[#31BCBC]/10 rounded-2xl p-6 border border-[#31BCBC]/20 border-dashed ml-4">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span
+                                class="px-3 py-1 bg-[#31BCBC]/20 text-[#1D4F50] text-sm font-bold rounded-full">2025+</span>
+                            <span class="text-slate-400 text-sm">The Future</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-2">What's Next?</h3>
+                        <p class="text-slate-600">
+                            AI-powered insights, expanded integrations, regional expansion, and continuing our
+                            mission to empower every Nepali business with world-class tools.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- OFFICE / LOCATION -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Content Side -->
+                <div class="reveal-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#31BCBC]/10 rounded-full text-sm text-[#1D4F50] font-medium mb-4">
+                        <span class="iconify" data-icon="lucide:map-pin"></span>
+                        Our Office
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                        Located in the Heart of Kathmandu
+                    </h2>
+
+                    <p class="text-slate-600 mb-8">
+                        Our headquarters is located in Kathmandu, where our team works together to build
+                        amazing software. We believe in the power of in-person collaboration while also
+                        supporting flexible work arrangements.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-[#31BCBC]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="iconify text-[#31BCBC]" data-icon="lucide:building-2"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Headquarters</h4>
+                                <p class="text-slate-500 text-sm">Vidhypro Crafts Pvt. Ltd.<br>Kathmandu, Nepal</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-[#31BCBC]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="iconify text-[#31BCBC]" data-icon="lucide:clock"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Business Hours</h4>
+                                <p class="text-slate-500 text-sm">Sunday - Friday: 9:00 AM - 6:00 PM (NPT)<br>Saturday:
+                                    Closed</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-[#31BCBC]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="iconify text-[#31BCBC]" data-icon="lucide:phone"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Contact</h4>
+                                <p class="text-slate-500 text-sm">+977 9851221467<br>hello@providhy.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="/contact"
+                            class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-[#31BCBC]/30 transition-all">
+                            <span class="iconify" data-icon="lucide:mail"></span>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map Side -->
+                <div class="reveal-right">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl">
+                        <div class="aspect-[4/3] bg-slate-200">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31625951707!2d85.29111384863279!3d27.70895594442146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1705320000000!5m2!1sen!2snp"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="grayscale hover:grayscale-0 transition-all duration-500">
+                            </iframe>
+                        </div>
+                        <!-- Overlay Card -->
+                        <div
+                            class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-[#31BCBC] rounded-lg flex items-center justify-center">
+                                    <span class="iconify text-white text-xl" data-icon="lucide:navigation"></span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-slate-900">Providhy HQ</div>
+                                    <div class="text-sm text-slate-500">Kathmandu, Nepal</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- CAREERS CTA -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC]">
+        <div class="max-w-4xl mx-auto text-center reveal">
+
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm text-white/90 font-medium mb-6">
+                <span class="iconify" data-icon="lucide:briefcase"></span>
+                <span>We're Hiring!</span>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Join Our Growing Team
+            </h2>
+
+            <p class="text-lg text-white/80 max-w-2xl mx-auto mb-10">
+                We're always looking for talented individuals who share our passion for building
+                great software. If you want to make an impact and grow with us, we'd love to hear from you.
+            </p>
+
+            <!-- Open Positions Preview -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left border border-white/10">
+                    <div class="text-white font-semibold mb-1">Senior Backend Developer</div>
+                    <div class="text-white/60 text-sm">Engineering • Full-time</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left border border-white/10">
+                    <div class="text-white font-semibold mb-1">Product Designer</div>
+                    <div class="text-white/60 text-sm">Design • Full-time</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-left border border-white/10">
+                    <div class="text-white font-semibold mb-1">Customer Success Manager</div>
+                    <div class="text-white/60 text-sm">Support • Full-time</div>
+                </div>
+            </div>
+
+            <a href="/careers"
+                class="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#1D4F50] font-bold rounded-xl hover:shadow-xl hover:shadow-black/20 transition-all">
+                <span>View All Openings</span>
+                <span class="iconify" data-icon="lucide:arrow-right"></span>
+            </a>
+
+            <!-- Benefits Preview -->
+            <div class="mt-12 pt-12 border-t border-white/20">
+                <div class="text-white/70 text-sm mb-4">Why work with us?</div>
+                <div class="flex flex-wrap items-center justify-center gap-6">
+                    <div class="flex items-center gap-2 text-white/90">
+                        <span class="iconify text-white/60" data-icon="lucide:check-circle"></span>
+                        <span>Competitive Salary</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-white/90">
+                        <span class="iconify text-white/60" data-icon="lucide:check-circle"></span>
+                        <span>Flexible Hours</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-white/90">
+                        <span class="iconify text-white/60" data-icon="lucide:check-circle"></span>
+                        <span>Health Insurance</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-white/90">
+                        <span class="iconify text-white/60" data-icon="lucide:check-circle"></span>
+                        <span>Learning Budget</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- PARTNERS / TRUST SECTION -->
+    <!-- ============================================== -->
+    <section class="py-16 px-6 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center mb-10 reveal">
+                <p class="text-slate-500 text-sm uppercase tracking-wider">Trusted by businesses across Nepal</p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60 reveal">
+                <!-- Placeholder logos - replace with actual partner/client logos -->
+                <div class="w-32 h-12 bg-slate-300 rounded-lg flex items-center justify-center text-slate-500 text-xs">
+                    Partner Logo</div>
+                <div class="w-32 h-12 bg-slate-300 rounded-lg flex items-center justify-center text-slate-500 text-xs">
+                    Partner Logo</div>
+                <div class="w-32 h-12 bg-slate-300 rounded-lg flex items-center justify-center text-slate-500 text-xs">
+                    Partner Logo</div>
+                <div class="w-32 h-12 bg-slate-300 rounded-lg flex items-center justify-center text-slate-500 text-xs">
+                    Partner Logo</div>
+                <div class="w-32 h-12 bg-slate-300 rounded-lg flex items-center justify-center text-slate-500 text-xs">
+                    Partner Logo</div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- FINAL CTA -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div
+                class="bg-gradient-to-br from-slate-50 to-[#31BCBC]/5 rounded-3xl p-8 md:p-12 border border-slate-200 text-center reveal">
+
+                <div
+                    class="w-16 h-16 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="iconify text-white text-3xl" data-icon="lucide:rocket"></span>
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                    Ready to Transform Your Business?
+                </h2>
+
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-8">
+                    Join 500+ businesses already using Providhy to streamline their operations.
+                    Start your free trial today—no credit card required.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/signup"
+                        class="group relative inline-flex items-center justify-center p-[2px] overflow-hidden rounded-xl shadow-md shadow-[#31BCBC]/20 hover:shadow-lg hover:shadow-[#31BCBC]/30 transition-all">
+                        <span
+                            class="absolute inset-0 bg-gradient-to-r from-[#1D4F50] via-[#31BCBC] to-[#1D4F50] bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]"></span>
+                        <span
+                            class="relative flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] px-8 py-4 text-white font-bold">
+                            <span>Start Free Trial</span>
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                        </span>
+                    </a>
+                    <a href="/contact"
+                        class="px-8 py-4 text-[#1D4F50] font-semibold border border-[#1D4F50]/20 rounded-xl hover:bg-[#1D4F50]/5 transition-colors">
+                        Schedule a Demo
+                    </a>
+                </div>
+
+                <p class="text-sm text-slate-400 mt-6">
+                    Free 14-day trial • No credit card required • Cancel anytime
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- FOOTER -->
+    <!-- ============================================== -->
+    <footer class="bg-[#0C2425] text-white relative overflow-hidden">
+
+        <!-- Subtle Background Pattern -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+            </div>
+        </div>
+
+        <!-- Top Glow -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#31BCBC]/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10 md:pb-12 relative z-10">
+
+            <!-- Top Section -->
+            <div
+                class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8 mb-10 sm:mb-12 md:mb-16 pb-8 sm:pb-10 md:pb-12 border-b border-white/10">
+
+                <!-- Logo & Description -->
+                <div class="max-w-md">
+                    <a href="/" class="inline-flex items-center gap-3 mb-3 sm:mb-4 group">
+                        <img src="logo.svg" alt="Providhy Logo"
+                            class="h-6 sm:h-7 md:h-8 w-auto brightness-0 invert group-hover:scale-105 transition-transform duration-300" />
+                    </a>
+                    <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                        Nepal's most intuitive cloud ERP for trading businesses. Inventory, billing, and accounting
+                        —
+                        all in one.
+                    </p>
+
+                    <!-- Trust Badges - Mobile -->
+                    <div class="flex items-center gap-4 mt-4 lg:hidden">
+                        <div class="flex items-center gap-1.5 text-white/40">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:shield-check"></span>
+                            <span class="text-xs">IRD Compliant</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-white/40">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:cloud"></span>
+                            <span class="text-xs">Cloud Secured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="w-full lg:w-auto">
+                    <p class="text-sm text-white/60 mb-2 sm:mb-3">Subscribe to our newsletter</p>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                        <div class="relative flex-1 sm:flex-none">
+                            <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+                                data-icon="lucide:mail"></span>
+                            <input type="email" placeholder="Enter your email"
+                                class="w-full sm:w-60 md:w-72 pl-11 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#31BCBC] focus:bg-white/[0.15] transition-all text-sm">
+                        </div>
+                        <button
+                            class="px-5 md:px-6 py-3 bg-white text-[#1D4F50] font-semibold rounded-xl hover:bg-[#31BCBC] hover:text-white transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap text-sm group shadow-lg shadow-black/10 hover:shadow-[#31BCBC]/20">
+                            <span>Subscribe</span>
+                            <span class="iconify group-hover:translate-x-0.5 transition-transform"
+                                data-icon="lucide:arrow-right"></span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-white/40 mt-2">No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+
+            <!-- Links Grid -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 md:mb-16">
+
+                <!-- Product -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Product
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Inventory</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Billing</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Accounting</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Reports</a>
+                        </li>
+                        <li><a href="/pricing"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Company
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Careers</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Partners</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Blog</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Resources
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Documentation</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Help
+                                Center</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Video
+                                Tutorials</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">API
+                                Reference</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Legal
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Privacy
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Terms
+                                of Service</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Security</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1">
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Contact Us
+                    </h4>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li>
+                            <a href="tel:9851221467"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:phone"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        +977 9851221467</p>
+                                    <p class="text-xs text-white/40">Mon-Sat, 9am-6pm</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@vidhypro.com"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:mail"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        info@vidhypro.com</p>
+                                    <p class="text-xs text-white/40">24/7 Email Support</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:map-pin"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        Kathmandu, Nepal</p>
+                                    <p class="text-xs text-white/40">View on Map</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="flex flex-col-reverse sm:flex-row justify-between items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
+
+                <!-- Copyright -->
+                <div class="text-xs sm:text-sm text-white/50 text-center sm:text-left">
+                    © 2025 Providhy ERP. Powered by
+                    <a href="#" class="text-white/70 hover:text-[#31BCBC] transition-colors">Vidhypro Crafts Pvt
+                        Ltd</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-2">
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#31BCBC] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Facebook">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:facebook"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Instagram">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:instagram"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#0077b5] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="LinkedIn">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:linkedin"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="YouTube">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:youtube"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-black rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Twitter/X">
+                        <span class="iconify text-base sm:text-lg" data-icon="simple-icons:x"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Large Brand Logo - Full Width Fancy Section -->
+        <div class="w-full border-t border-white/5 overflow-hidden select-none pointer-events-none relative">
+
+            <!-- Animated Gradient Background -->
+            <div class="absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-[#31BCBC]/10 to-transparent animate-shimmer">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#143939] via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating Particles -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-[#31BCBC]/20 rounded-full animate-float-slow">
+                </div>
+                <div class="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-white/10 rounded-full animate-float-medium">
+                </div>
+                <div class="absolute bottom-1/4 left-1/2 w-1 h-1 bg-[#31BCBC]/30 rounded-full animate-float-fast">
+                </div>
+                <div class="absolute top-1/2 right-1/4 w-2 h-2 bg-white/5 rounded-full animate-float-slow"></div>
+            </div>
+
+            <!-- Full Width Logo Container -->
+            <div class="relative w-full flex items-center justify-center overflow-hidden py-4 sm:py-0"
+                style="height: clamp(80px, 18vw, 280px);">
+
+                <!-- Multiple Logo Layers for Depth Effect -->
+                <!-- <div class="absolute inset-0 flex items-center justify-center opacity-[0.02] scale-125 blur-sm">
+                <img 
+                    src="logo.svg" 
+                    alt="" 
+                    class="w-[85%] sm:w-[80%] h-auto max-h-full object-contain"
+                    style="filter: brightness(0) invert(1);"
+                >
+            </div> -->
+
+                <!-- Main Logo -->
+                <img src="logo.svg" alt="Providhy"
+                    class="relative w-[80%] sm:w-[75%] md:w-[70%] lg:w-[60%] max-w-[800px] h-auto max-h-full object-contain opacity-[0.07] hover:opacity-[0.12] transition-opacity duration-700"
+                    style="filter: brightness(0) invert(1);">
+
+                <!-- Scanline Effect -->
+                <div class="absolute inset-0 pointer-events-none opacity-50"
+                    style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);">
+                </div>
+
+                <!-- Center Glow -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-1/2 h-1/2 bg-[#31BCBC]/5 rounded-full blur-3xl"></div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Gradient Fade -->
+            <div class="absolute bottom-0 left-0 right-0 h-8 sm:h-12 bg-gradient-to-t from-[#143939] to-transparent">
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- BACK TO TOP BUTTON -->
+    <!-- ============================================== -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-[#1D4F50] hover:bg-[#31BCBC] text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 pointer-events-none z-40">
+        <span class="iconify text-xl" data-icon="lucide:arrow-up"></span>
+    </button>
+
+
+    <!-- ============================================== -->
+    <!-- SCRIPTS -->
+    <!-- ============================================== -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

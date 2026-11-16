@@ -1,0 +1,56 @@
+/* =============================================
+   INVENTORY PAGE
+============================================= */
+
+/* --- Page Theme Gradient --- */
+.inventory-gradient {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #0ea5e9 100%);
+}
+
+/* --- Spotlight Override (blue tint) --- */
+.inventory-page #spotlight {
+    background: radial-gradient(
+        600px circle at var(--x) var(--y),
+        rgba(59, 130, 246, 0.06),
+        transparent 40%
+    );
+}
+
+/* --- Barcode Scanner --- */
+.scanner-line {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    animation: scan-line 2s ease-in-out infinite;
+}
+
+/* --- Screenshot Frame --- */
+.screenshot-frame {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+/* --- Feature Card Override (bigger hover) --- */
+.inventory-page .feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.inventory-page .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (float, shimmer, scan-line,
+                                  float-delayed, slideUp)
+   - components/reveal.css      (scroll reveal + delays)
+   - components/cards.css       (feature-card base hover)
+   - components/toast.css       (toast notification)
+   - components/workflow.css    (flow-line)
+   - layout/spotlight.css       (base spotlight)
+   - utilities/shadows.css      (stat-glow)
+
+   Add inventory-page-only styles below
+   as the page grows.
+*/

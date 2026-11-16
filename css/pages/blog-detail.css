@@ -1,0 +1,17 @@
+/* =============================================
+   BLOG DETAIL PAGE — Specific Overrides
+============================================= */
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (shimmer)
+   - components/reveal.css      (scroll reveal)
+   - components/toc.css         (table of contents)
+   - components/progress.css    (reading progress bar)
+   - components/buttons.css     (share button hover)
+   - components/toast.css       (toast notification)
+   - layout/spotlight.css       (spotlight effect)
+
+   Add blog-detail-page-only styles below
+   as the page grows.
+*/

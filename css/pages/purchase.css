@@ -1,0 +1,40 @@
+/* =============================================
+   PURCHASE PAGE
+============================================= */
+
+/* --- Page Theme Gradients --- */
+.purchase-gradient {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+}
+
+.purchase-gradient-light {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+}
+
+/* --- Spotlight Override (orange tint) --- */
+.purchase-page #spotlight {
+    background: radial-gradient(
+        600px circle at var(--x) var(--y),
+        rgba(234, 88, 12, 0.06),
+        transparent 40%
+    );
+}
+
+/* --- Float Override (faster for purchase) --- */
+.purchase-page .animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (float, shimmer, pulse-ring,
+                                  bounce-right)
+   - components/reveal.css      (scroll reveal)
+   - components/cards.css       (feature-card hover)
+   - components/tabs.css        (feature-tab active)
+   - components/workflow.css    (workflow-connector)
+   - layout/spotlight.css       (base spotlight)
+
+   Add purchase-page-only styles below
+   as the page grows.
+*/

@@ -1,0 +1,35 @@
+/* =============================================
+   CODE BLOCKS
+============================================= */
+
+.code-block {
+    background: #0f172a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ✅ NEW — Pre element inside code block */
+.code-block pre {
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.8125rem;
+    line-height: 1.7;
+}
+
+.code-block code {
+    color: #e2e8f0;
+}
+
+
+/* =============================================
+   SYNTAX HIGHLIGHTING
+============================================= */
+
+/* ✅ NEW — Token colors */
+.token-tag      { color: #7dd3fc; }
+.token-attr     { color: #fbbf24; }
+.token-string   { color: #86efac; }
+.token-comment  { color: #64748b; }
+.token-keyword  { color: #c4b5fd; }
+.token-property { color: #93c5fd; }
+.token-value    { color: #fca5a5; }

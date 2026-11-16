@@ -1,0 +1,19 @@
+/* =============================================
+   DROPDOWN
+============================================= */
+
+#user-select {
+    min-width: 100px;
+}
+
+#user-select:focus {
+    box-shadow: 0 0 0 3px rgba(49, 188, 188, 0.2);
+}
+
+#user-dropdown-icon {
+    transition: transform 0.2s ease;
+}
+
+#user-dropdown-panel {
+    animation: dropdownFadeIn 0.2s ease;
+}

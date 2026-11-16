@@ -1,0 +1,21 @@
+/* =============================================
+   WORKFLOW
+============================================= */
+
+.workflow-line {
+    stroke-dasharray: 10;
+    animation: pulse-line 2s infinite;
+}
+
+/* ✅ NEW — from inventory page */
+.flow-line {
+    background: linear-gradient(90deg, #3b82f6, #31BCBC);
+    height: 2px;
+}
+
+/* ... existing styles stay unchanged ... */
+
+/* ✅ NEW — from purchase page */
+.workflow-connector {
+    background: linear-gradient(90deg, #ea580c, #f97316);
+}

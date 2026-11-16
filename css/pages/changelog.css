@@ -1,0 +1,17 @@
+/* =============================================
+   CHANGELOG PAGE — Specific Overrides
+============================================= */
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (float, shimmer, pulse-dot, slideUp)
+   - components/reveal.css      (scroll reveal)
+   - components/timeline.css    (timeline-line, timeline-dot)
+   - components/pills.css       (filter-pill active)
+   - components/badges.css      (version badges)
+   - components/toast.css       (toast notification)
+   - layout/spotlight.css       (spotlight effect)
+
+   Add changelog-page-only styles below
+   as the page grows.
+*/

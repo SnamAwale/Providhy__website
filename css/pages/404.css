@@ -1,0 +1,22 @@
+/* =============================================
+   404 PAGE
+============================================= */
+
+/* --- 404 Number Gradient Text --- */
+.number-404 {
+    background: linear-gradient(135deg, #1D4F50 0%, #31BCBC 50%, #1D4F50 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (float-rotate, float-reverse,
+                                  bounce-slow, pulse-glow, shimmer)
+   - layout/spotlight.css       (spotlight effect)
+
+   Add 404-page-only styles below
+   as the page grows.
+*/

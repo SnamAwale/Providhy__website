@@ -1,0 +1,12 @@
+/* =============================================
+   TEAM CARDS
+============================================= */
+
+.team-card:hover .team-image {
+    transform: scale(1.05);
+}
+
+.team-card:hover .team-social {
+    opacity: 1;
+    transform: translateY(0);
+}

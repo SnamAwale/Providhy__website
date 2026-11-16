@@ -1,0 +1,30 @@
+/* =============================================
+   CONTACT PAGE — Specific Overrides
+============================================= */
+
+/* Contact page uses a teal-tinted spotlight
+   instead of the default white one.
+   Override only if needed: */
+
+/*
+#spotlight {
+    background: radial-gradient(
+        600px circle at var(--x) var(--y),
+        rgba(49, 188, 188, 0.06),
+        transparent 40%
+    );
+}
+*/
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (blob, float, pulse-ring, shimmer)
+   - components/reveal.css      (scroll reveal + delays)
+   - components/forms.css       (form-input focus)
+   - layout/spotlight.css       (spotlight effect)
+   - layout/footer.css          (footer links)
+   - utilities/scrollbar.css    (global + hide scrollbar)
+
+   Add contact-page-only styles below
+   as the page grows.
+*/

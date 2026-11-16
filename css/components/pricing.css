@@ -1,0 +1,17 @@
+/* =============================================
+   PRICING
+============================================= */
+
+#user-input::-webkit-outer-spin-button,
+#user-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#user-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#delite-price {
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}

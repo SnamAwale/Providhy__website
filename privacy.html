@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Providhy ERP </title>
+    <meta name="description"
+        content="Providhy is Nepal's most intuitive cloud ERP for trading businesses. Manage inventory, billing, and accounting — all in one place.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts & Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-white text-slate-900 selection:bg-[#31BCBC]/20 selection:text-[#1D4F50] overflow-x-hidden">
+
+
+    <!-- Floating Capsule Navbar with Responsive Mobile Menu -->
+    <div class="fixed top-0 left-0 right-0 z-[90] flex flex-col items-center w-full pt-6 px-4 font-sans">
+        <nav
+            class="relative w-full max-w-5xl bg-white/80 backdrop-blur-lg rounded-full shadow-2xl shadow-[#1D4F50]/5 border border-[#1D4F50]/10 px-3 py-2.5 flex items-center justify-between transition-all duration-300 z-[90]">
+
+            <a href="/" class="flex items-center pl-3 group">
+                <img src="./logo.svg" alt="Providhy Logo"
+                    class="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+
+                <!-- Features Dropdown (Clickable + Hover) -->
+                <div class="relative group/features">
+                    <a href="./features.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                        Features
+                        <span class="iconify text-xs transition-transform group-hover/features:rotate-180"
+                            data-icon="lucide:chevron-down"></span>
+                    </a>
+
+                    <!-- Features Dropdown Panel -->
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/features:opacity-100 group-hover/features:visible transition-all duration-300 transform translate-y-2 group-hover/features:translate-y-0">
+                        <div
+                            class="w-[600px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Core
+                                        Modules</p>
+                                    <a href="./features.html"
+                                        class="text-xs font-medium text-[#31BCBC] hover:underline">View All Features
+                                        →</a>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <!-- Inventory -->
+                                    <a href="./inventory.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-colors group/item border border-transparent hover:border-blue-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:package"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-blue-600 transition-colors">
+                                                Inventory</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Stock tracking, godowns,
+                                                barcode & alerts</p>
+                                        </div>
+                                    </a>
+                                    <!-- Sales -->
+                                    <a href="./sales.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors group/item border border-transparent hover:border-emerald-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:receipt"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-emerald-600 transition-colors">
+                                                Sales & Billing</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">VAT invoices, quotations &
+                                                payments</p>
+                                        </div>
+                                    </a>
+                                    <!-- Purchase -->
+                                    <a href="./purchase.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-amber-50 transition-colors group/item border border-transparent hover:border-amber-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:truck"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-amber-600 transition-colors">
+                                                Purchase</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Orders, suppliers & goods
+                                                received</p>
+                                        </div>
+                                    </a>
+                                    <!-- Accounting -->
+                                    <a href="./accounting.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-colors group/item border border-transparent hover:border-purple-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl"
+                                                data-icon="lucide:calculator"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-purple-600 transition-colors">
+                                                Accounting</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Ledgers, reports & financial
+                                                statements</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Bottom CTA - Gradient Style -->
+                            <div
+                                class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-white" data-icon="lucide:play-circle"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">See it in action</p>
+                                        <p class="text-white/70 text-xs">Watch a 2-minute demo</p>
+                                    </div>
+                                </div>
+                                <button onclick="openVideoModal('home-demo')"
+                                    class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">
+                                    Watch Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./pricing.html"
+                    class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                    Pricing
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                </a>
+
+                <!-- Resources Dropdown (Clickable + Hover) -->
+                <div class="relative group/resources">
+                    <a href="./resources.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                        Resources
+                        <span class="iconify text-xs transition-transform group-hover/resources:rotate-180"
+                            data-icon="lucide:chevron-down"></span>
+                    </a>
+
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/resources:opacity-100 group-hover/resources:visible transition-all duration-300 transform translate-y-2 group-hover/resources:translate-y-0">
+                        <div
+                            class="w-[520px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <div class="grid grid-cols-2 gap-0">
+                                <div class="p-5 space-y-1">
+                                    <div class="flex items-center justify-between mb-3 px-3">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            Learn</p>
+                                    </div>
+                                    <a href="./documentation.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-blue-600 text-lg"
+                                                data-icon="lucide:book-open"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Documentation</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Detailed guides and references
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <a href="./tutorials.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-red-600 text-lg"
+                                                data-icon="lucide:play-circle"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Video Tutorials</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Step-by-step video guides</p>
+                                        </div>
+                                    </a>
+                                    <a href="./help.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-emerald-600 text-lg"
+                                                data-icon="lucide:life-buoy"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Help Center</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">FAQs and troubleshooting</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-5 space-y-1 bg-slate-50/50">
+                                    <div class="flex items-center justify-between mb-3 px-3">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            Explore</p>
+                                        <a href="./resources.html"
+                                            class="text-xs font-medium text-[#31BCBC] hover:underline">View All
+                                            →</a>
+                                    </div>
+                                    <a href="./blog.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-purple-600 text-lg"
+                                                data-icon="lucide:pen-line"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Blog</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Tips, news & insights</p>
+                                        </div>
+                                    </a>
+                                    <a href="./changelog.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-amber-600 text-lg"
+                                                data-icon="lucide:sparkles"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm flex items-center gap-2 group-hover/item:text-[#31BCBC] transition-colors">
+                                                What's New
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-amber-500 text-white text-[10px] font-bold rounded">v2.5</span>
+                                            </p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Latest features & updates</p>
+                                        </div>
+                                    </a>
+                                    <a href="./api.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-slate-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-slate-600 text-lg"
+                                                data-icon="lucide:code-2"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                API Reference</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">For developers</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Bottom CTA - Gradient Style (Consistent with Features) -->
+                            <div
+                                class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-white" data-icon="lucide:headphones"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">Need help?</p>
+                                        <p class="text-white/70 text-xs">Talk to our support team</p>
+                                    </div>
+                                </div>
+                                <a href="./contact.html"
+                                    class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">Contact
+                                    Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./contact.html"
+                    class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                    Contact
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-5 pr-1">
+                <a href="./login.html"
+                    class="text-sm font-semibold text-[#1D4F50] hover:text-[#31BCBC] transition-colors">Log in</a>
+                <a href="./signup.html"
+                    class="group relative inline-flex items-center justify-center p-[2px] overflow-hidden rounded-full shadow-md shadow-[#31BCBC]/20 hover:shadow-lg hover:shadow-[#31BCBC]/30 transition-all">
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-[#1D4F50] via-[#31BCBC] to-[#1D4F50] bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]"></span>
+                    <span
+                        class="relative flex items-center gap-2 rounded-full bg-white px-6 py-2 transition-all duration-300 group-hover:bg-opacity-95">
+                        <span class="text-sm font-bold text-[#1D4F50] group-hover:text-[#31BCBC] transition-colors">Get
+                            Started</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="md:hidden pr-2">
+                <button id="mobile-menu-btn"
+                    class="p-2 text-[#1D4F50] hover:bg-[#31BCBC]/10 rounded-full transition-colors">
+                    <span class="iconify w-6 h-6" data-icon="lucide:menu"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-[calc(100%+10px)] w-[calc(100%-2rem)] max-w-5xl bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-[#1D4F50]/10 border border-[#1D4F50]/10 p-6 flex-col gap-4 z-40">
+            <div class="flex flex-col gap-1">
+                <!-- Features - Clickable header + expandable -->
+                <details class="group">
+                    <summary
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                        <a href="./features.html" class="flex-1" onclick="event.stopPropagation();">Features</a>
+                        <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                            data-icon="lucide:chevron-down"></span>
+                    </summary>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="./inventory.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-blue-500" data-icon="lucide:package"></span>
+                            Inventory
+                        </a>
+                        <a href="./sales.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-emerald-500" data-icon="lucide:receipt"></span>
+                            Sales & Billing
+                        </a>
+                        <a href="./purchase.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-amber-500" data-icon="lucide:truck"></span>
+                            Purchase
+                        </a>
+                        <a href="./accounting.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-purple-500" data-icon="lucide:calculator"></span>
+                            Accounting
+                        </a>
+                        <a href="./features.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            View All Features
+                        </a>
+                    </div>
+                </details>
+
+                <a href="./pricing.html"
+                    class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Pricing</a>
+
+                <!-- Resources - Clickable header + expandable -->
+                <details class="group">
+                    <summary
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                        <a href="./resources.html" class="flex-1" onclick="event.stopPropagation();">Resources</a>
+                        <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                            data-icon="lucide:chevron-down"></span>
+                    </summary>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="./documentation.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-blue-500" data-icon="lucide:book-open"></span>
+                            Documentation
+                        </a>
+                        <a href="./tutorials.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-red-500" data-icon="lucide:play-circle"></span>
+                            Video Tutorials
+                        </a>
+                        <a href="./help.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-emerald-500" data-icon="lucide:life-buoy"></span>
+                            Help Center
+                        </a>
+                        <a href="./blog.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-purple-500" data-icon="lucide:pen-line"></span>
+                            Blog
+                        </a>
+                        <a href="./changelog.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-amber-500" data-icon="lucide:sparkles"></span>
+                            What's New
+                        </a>
+                        <a href="./api.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-slate-500" data-icon="lucide:code-2"></span>
+                            API Reference
+                        </a>
+                        <a href="./resources.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            View All Resources
+                        </a>
+                    </div>
+                </details>
+
+                <a href="./contact.html"
+                    class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Contact</a>
+            </div>
+            <hr class="border-[#1D4F50]/10">
+            <div class="flex flex-col gap-3">
+                <a href="./login.html"
+                    class="w-full py-3 text-center font-semibold text-[#1D4F50] border border-[#1D4F50]/20 rounded-xl hover:bg-slate-50 transition-colors">Log
+                    in</a>
+                <a href="./signup.html"
+                    class="w-full py-3 text-center font-bold text-white bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] rounded-xl hover:opacity-90 transition-opacity">Get
+                    Started</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- HEADER -->
+    <!-- ============================================== -->
+    <header class="pt-32 pb-12 px-6 bg-gradient-to-b from-slate-50 to-white">
+        <div class="max-w-4xl mx-auto text-center reveal">
+
+            <!-- Breadcrumb -->
+            <nav class="flex items-center justify-center gap-2 text-sm text-slate-500 mb-6">
+                <a href="/" class="hover:text-[#31BCBC] transition-colors">Home</a>
+                <span class="iconify text-slate-400" data-icon="lucide:chevron-right"></span>
+                <span class="text-[#1D4F50] font-medium">Privacy Policy</span>
+            </nav>
+
+            <div class="w-16 h-16 bg-[#31BCBC]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span class="iconify text-[#31BCBC] text-3xl" data-icon="lucide:shield-check"></span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Privacy Policy</h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-6">
+                Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+            </p>
+
+            <!-- Last Updated -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-sm text-slate-600">
+                <span class="iconify" data-icon="lucide:calendar"></span>
+                <span>Last updated: January 15, 2025</span>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ============================================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================================== -->
+    <main class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Table of Contents (Sidebar) -->
+                <aside class="lg:w-64 flex-shrink-0 reveal">
+                    <div class="lg:sticky lg:top-28 bg-slate-50 rounded-2xl p-6">
+                        <h3 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:list"></span>
+                            Contents
+                        </h3>
+                        <nav class="space-y-1" id="toc">
+                            <a href="#information-we-collect"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                1. Information We Collect
+                            </a>
+                            <a href="#how-we-use"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                2. How We Use Your Information
+                            </a>
+                            <a href="#data-sharing"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                3. Data Sharing & Disclosure
+                            </a>
+                            <a href="#data-security"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                4. Data Security
+                            </a>
+                            <a href="#data-retention"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                5. Data Retention
+                            </a>
+                            <a href="#your-rights"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                6. Your Rights
+                            </a>
+                            <a href="#cookies"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                7. Cookies & Tracking
+                            </a>
+                            <a href="#third-party"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                8. Third-Party Services
+                            </a>
+                            <a href="#children"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                9. Children's Privacy
+                            </a>
+                            <a href="#changes"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                10. Changes to This Policy
+                            </a>
+                            <a href="#contact"
+                                class="toc-link block px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-white rounded-lg transition-all">
+                                11. Contact Us
+                            </a>
+                        </nav>
+
+                        <!-- Download PDF -->
+                        <div class="mt-6 pt-6 border-t border-slate-200">
+                            <a href="#"
+                                class="flex items-center gap-2 text-sm text-[#31BCBC] font-medium hover:gap-3 transition-all">
+                                <span class="iconify" data-icon="lucide:download"></span>
+                                Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Content -->
+                <article class="flex-1 legal-content reveal">
+
+                    <!-- Introduction -->
+                    <div class="bg-[#31BCBC]/5 border border-[#31BCBC]/20 rounded-2xl p-6 mb-8">
+                        <p class="text-slate-700 mb-0">
+                            Vidhypro Crafts Pvt. Ltd. ("Providhy", "we", "us", or "our") operates the Providhy ERP
+                            platform. This Privacy Policy describes how we collect, use, and share information when you
+                            use our services, including our website at <a href="https://providhy.com">providhy.com</a>
+                            and our cloud-based ERP application.
+                        </p>
+                    </div>
+
+                    <!-- Section 1 -->
+                    <h2 id="information-we-collect">1. Information We Collect</h2>
+
+                    <h3>1.1 Information You Provide</h3>
+                    <p>We collect information you directly provide when you:</p>
+                    <ul>
+                        <li><strong>Create an account:</strong> Name, email address, phone number, company name, and
+                            password</li>
+                        <li><strong>Set up your business:</strong> Business address, PAN/VAT number, bank details, and
+                            fiscal year information</li>
+                        <li><strong>Use our services:</strong> Customer data, supplier data, product information,
+                            invoices, and financial records you create within the platform</li>
+                        <li><strong>Contact us:</strong> Messages, feedback, and support requests</li>
+                        <li><strong>Subscribe to updates:</strong> Email address for newsletters and product updates
+                        </li>
+                    </ul>
+
+                    <h3>1.2 Information Collected Automatically</h3>
+                    <p>When you use our services, we automatically collect:</p>
+                    <ul>
+                        <li><strong>Device information:</strong> Browser type, operating system, device type</li>
+                        <li><strong>Usage data:</strong> Pages visited, features used, time spent, clicks</li>
+                        <li><strong>Log data:</strong> IP address, access times, error logs</li>
+                        <li><strong>Location data:</strong> General location based on IP address</li>
+                    </ul>
+
+                    <h3>1.3 Information from Third Parties</h3>
+                    <p>We may receive information from:</p>
+                    <ul>
+                        <li>Payment processors when you subscribe to paid plans</li>
+                        <li>Analytics providers to understand service usage</li>
+                        <li>Business partners if you're referred through our partner program</li>
+                    </ul>
+
+                    <!-- Section 2 -->
+                    <h2 id="how-we-use">2. How We Use Your Information</h2>
+                    <p>We use your information to:</p>
+                    <ul>
+                        <li><strong>Provide our services:</strong> Operate, maintain, and improve the Providhy platform
+                        </li>
+                        <li><strong>Process transactions:</strong> Handle billing, payments, and subscription management
+                        </li>
+                        <li><strong>Communicate with you:</strong> Send service updates, security alerts, and support
+                            messages</li>
+                        <li><strong>Provide support:</strong> Respond to your questions and troubleshoot issues</li>
+                        <li><strong>Improve our services:</strong> Analyze usage patterns and develop new features</li>
+                        <li><strong>Ensure security:</strong> Detect, prevent, and address fraud and abuse</li>
+                        <li><strong>Legal compliance:</strong> Comply with applicable laws and regulations</li>
+                        <li><strong>Marketing:</strong> Send promotional content (with your consent)</li>
+                    </ul>
+
+                    <!-- Section 3 -->
+                    <h2 id="data-sharing">3. Data Sharing & Disclosure</h2>
+                    <p>We do <strong>not sell</strong> your personal information. We may share your information with:
+                    </p>
+
+                    <h3>3.1 Service Providers</h3>
+                    <p>Third-party companies that help us operate our services:</p>
+                    <ul>
+                        <li>Cloud hosting providers (for data storage)</li>
+                        <li>Payment processors (for subscription billing)</li>
+                        <li>Analytics providers (for usage insights)</li>
+                        <li>Email service providers (for communications)</li>
+                    </ul>
+
+                    <h3>3.2 Legal Requirements</h3>
+                    <p>We may disclose information if required by law, court order, or government request, or to:</p>
+                    <ul>
+                        <li>Protect our rights, property, or safety</li>
+                        <li>Prevent fraud or abuse</li>
+                        <li>Comply with legal obligations</li>
+                    </ul>
+
+                    <h3>3.3 Business Transfers</h3>
+                    <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as
+                        part of that transaction.</p>
+
+                    <!-- Section 4 -->
+                    <h2 id="data-security">4. Data Security</h2>
+                    <p>We implement industry-standard security measures to protect your data:</p>
+                    <ul>
+                        <li><strong>Encryption:</strong> All data is encrypted in transit (TLS/SSL) and at rest
+                            (AES-256)</li>
+                        <li><strong>Access controls:</strong> Strict access controls and authentication requirements
+                        </li>
+                        <li><strong>Regular audits:</strong> Periodic security assessments and vulnerability testing
+                        </li>
+                        <li><strong>Data backups:</strong> Regular automated backups with secure storage</li>
+                        <li><strong>Employee training:</strong> Security awareness training for all team members</li>
+                    </ul>
+
+                    <div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-4 my-6">
+                        <p class="text-amber-800 text-sm mb-0">
+                            <strong>Note:</strong> While we strive to protect your data, no method of transmission over
+                            the internet is 100% secure. We cannot guarantee absolute security.
+                        </p>
+                    </div>
+
+                    <!-- Section 5 -->
+                    <h2 id="data-retention">5. Data Retention</h2>
+                    <p>We retain your information for as long as:</p>
+                    <ul>
+                        <li>Your account is active</li>
+                        <li>Needed to provide you services</li>
+                        <li>Required by law (e.g., tax records, financial data)</li>
+                        <li>Necessary for legitimate business purposes</li>
+                    </ul>
+                    <p>After account deletion, we may retain certain data for up to 7 years as required by Nepali law
+                        for financial records, or as needed to resolve disputes.</p>
+
+                    <!-- Section 6 -->
+                    <h2 id="your-rights">6. Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li><strong>Access:</strong> Request a copy of your personal data</li>
+                        <li><strong>Correction:</strong> Update or correct inaccurate information</li>
+                        <li><strong>Deletion:</strong> Request deletion of your data (subject to legal requirements)
+                        </li>
+                        <li><strong>Export:</strong> Download your data in a portable format</li>
+                        <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
+                        <li><strong>Restrict:</strong> Limit how we process your data</li>
+                    </ul>
+                    <p>To exercise these rights, contact us at <a
+                            href="mailto:privacy@providhy.com">privacy@providhy.com</a>.</p>
+
+                    <!-- Section 7 -->
+                    <h2 id="cookies">7. Cookies & Tracking Technologies</h2>
+                    <p>We use cookies and similar technologies to:</p>
+                    <ul>
+                        <li><strong>Essential cookies:</strong> Enable core functionality (login, security)</li>
+                        <li><strong>Analytics cookies:</strong> Understand how you use our services</li>
+                        <li><strong>Preference cookies:</strong> Remember your settings and preferences</li>
+                        <li><strong>Marketing cookies:</strong> Deliver relevant advertisements (with consent)</li>
+                    </ul>
+                    <p>You can control cookies through your browser settings. Note that disabling certain cookies may
+                        affect functionality.</p>
+
+                    <!-- Section 8 -->
+                    <h2 id="third-party">8. Third-Party Services</h2>
+                    <p>Our services may integrate with or link to third-party services:</p>
+                    <ul>
+                        <li>Payment gateways (eSewa, Khalti, etc.)</li>
+                        <li>Cloud storage providers</li>
+                        <li>Communication tools</li>
+                    </ul>
+                    <p>These third parties have their own privacy policies. We encourage you to review them.</p>
+
+                    <!-- Section 9 -->
+                    <h2 id="children">9. Children's Privacy</h2>
+                    <p>Providhy is designed for business use and is not intended for children under 18. We do not
+                        knowingly collect information from children. If you believe we have collected such information,
+                        please contact us immediately.</p>
+
+                    <!-- Section 10 -->
+                    <h2 id="changes">10. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of significant changes
+                        by:</p>
+                    <ul>
+                        <li>Posting the updated policy on our website</li>
+                        <li>Sending an email notification</li>
+                        <li>Displaying a notice in the application</li>
+                    </ul>
+                    <p>Your continued use of our services after changes constitutes acceptance of the updated policy.
+                    </p>
+
+                    <!-- Section 11 -->
+                    <h2 id="contact">11. Contact Us</h2>
+                    <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
+
+                    <div class="bg-slate-50 rounded-2xl p-6 mt-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-slate-900 mb-2">Vidhypro Crafts Pvt. Ltd.</h4>
+                                <p class="text-slate-600 text-sm mb-0">
+                                    Kathmandu, Nepal<br>
+                                    <a href="mailto:privacy@providhy.com">privacy@providhy.com</a><br>
+                                    +977 9851221467
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 mb-2">Data Protection Officer</h4>
+                                <p class="text-slate-600 text-sm mb-0">
+                                    For data-related inquiries:<br>
+                                    <a href="mailto:dpo@providhy.com">dpo@providhy.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- ============================================== -->
+    <!-- RELATED LINKS -->
+    <!-- ============================================== -->
+    <section class="py-12 px-6 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 reveal">
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-1">Related Policies</h3>
+                    <p class="text-slate-500 text-sm">Review our other legal documents</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="/terms"
+                        class="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-medium rounded-xl hover:border-[#31BCBC] hover:text-[#31BCBC] transition-all flex items-center gap-2">
+                        <span class="iconify" data-icon="lucide:file-text"></span>
+                        Terms of Service
+                    </a>
+                    <a href="/security"
+                        class="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-medium rounded-xl hover:border-[#31BCBC] hover:text-[#31BCBC] transition-all flex items-center gap-2">
+                        <span class="iconify" data-icon="lucide:shield"></span>
+                        Security
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- FOOTER -->
+    <!-- ============================================== -->
+    <footer class="bg-[#0C2425] text-white relative overflow-hidden">
+
+        <!-- Subtle Background Pattern -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+            </div>
+        </div>
+
+        <!-- Top Glow -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#31BCBC]/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10 md:pb-12 relative z-10">
+
+            <!-- Top Section -->
+            <div
+                class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8 mb-10 sm:mb-12 md:mb-16 pb-8 sm:pb-10 md:pb-12 border-b border-white/10">
+
+                <!-- Logo & Description -->
+                <div class="max-w-md">
+                    <a href="/" class="inline-flex items-center gap-3 mb-3 sm:mb-4 group">
+                        <img src="logo.svg" alt="Providhy Logo"
+                            class="h-6 sm:h-7 md:h-8 w-auto brightness-0 invert group-hover:scale-105 transition-transform duration-300" />
+                    </a>
+                    <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                        Nepal's most intuitive cloud ERP for trading businesses. Inventory, billing, and accounting
+                        —
+                        all in one.
+                    </p>
+
+                    <!-- Trust Badges - Mobile -->
+                    <div class="flex items-center gap-4 mt-4 lg:hidden">
+                        <div class="flex items-center gap-1.5 text-white/40">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:shield-check"></span>
+                            <span class="text-xs">IRD Compliant</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-white/40">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:cloud"></span>
+                            <span class="text-xs">Cloud Secured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="w-full lg:w-auto">
+                    <p class="text-sm text-white/60 mb-2 sm:mb-3">Subscribe to our newsletter</p>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                        <div class="relative flex-1 sm:flex-none">
+                            <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+                                data-icon="lucide:mail"></span>
+                            <input type="email" placeholder="Enter your email"
+                                class="w-full sm:w-60 md:w-72 pl-11 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#31BCBC] focus:bg-white/[0.15] transition-all text-sm">
+                        </div>
+                        <button
+                            class="px-5 md:px-6 py-3 bg-white text-[#1D4F50] font-semibold rounded-xl hover:bg-[#31BCBC] hover:text-white transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap text-sm group shadow-lg shadow-black/10 hover:shadow-[#31BCBC]/20">
+                            <span>Subscribe</span>
+                            <span class="iconify group-hover:translate-x-0.5 transition-transform"
+                                data-icon="lucide:arrow-right"></span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-white/40 mt-2">No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+
+            <!-- Links Grid -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 md:mb-16">
+
+                <!-- Product -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Product
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Inventory</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Billing</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Accounting</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Reports</a>
+                        </li>
+                        <li><a href="/pricing"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Company
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Careers</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Partners</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Blog</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Resources
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Documentation</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Help
+                                Center</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Video
+                                Tutorials</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">API
+                                Reference</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Legal
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Privacy
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Terms
+                                of Service</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Security</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1">
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Contact Us
+                    </h4>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li>
+                            <a href="tel:9851221467"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:phone"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        +977 9851221467</p>
+                                    <p class="text-xs text-white/40">Mon-Sat, 9am-6pm</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@vidhypro.com"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:mail"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        info@vidhypro.com</p>
+                                    <p class="text-xs text-white/40">24/7 Email Support</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:map-pin"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        Kathmandu, Nepal</p>
+                                    <p class="text-xs text-white/40">View on Map</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="flex flex-col-reverse sm:flex-row justify-between items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
+
+                <!-- Copyright -->
+                <div class="text-xs sm:text-sm text-white/50 text-center sm:text-left">
+                    © 2025 Providhy ERP. Powered by
+                    <a href="#" class="text-white/70 hover:text-[#31BCBC] transition-colors">Vidhypro Crafts Pvt
+                        Ltd</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-2">
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#31BCBC] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Facebook">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:facebook"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Instagram">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:instagram"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#0077b5] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="LinkedIn">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:linkedin"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="YouTube">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:youtube"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-black rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Twitter/X">
+                        <span class="iconify text-base sm:text-lg" data-icon="simple-icons:x"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Large Brand Logo - Full Width Fancy Section -->
+        <div class="w-full border-t border-white/5 overflow-hidden select-none pointer-events-none relative">
+
+            <!-- Animated Gradient Background -->
+            <div class="absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-[#31BCBC]/10 to-transparent animate-shimmer">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#143939] via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating Particles -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-[#31BCBC]/20 rounded-full animate-float-slow">
+                </div>
+                <div class="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-white/10 rounded-full animate-float-medium">
+                </div>
+                <div class="absolute bottom-1/4 left-1/2 w-1 h-1 bg-[#31BCBC]/30 rounded-full animate-float-fast">
+                </div>
+                <div class="absolute top-1/2 right-1/4 w-2 h-2 bg-white/5 rounded-full animate-float-slow"></div>
+            </div>
+
+            <!-- Full Width Logo Container -->
+            <div class="relative w-full flex items-center justify-center overflow-hidden py-4 sm:py-0"
+                style="height: clamp(80px, 18vw, 280px);">
+
+                <!-- Multiple Logo Layers for Depth Effect -->
+                <!-- <div class="absolute inset-0 flex items-center justify-center opacity-[0.02] scale-125 blur-sm">
+                <img 
+                    src="logo.svg" 
+                    alt="" 
+                    class="w-[85%] sm:w-[80%] h-auto max-h-full object-contain"
+                    style="filter: brightness(0) invert(1);"
+                >
+            </div> -->
+
+                <!-- Main Logo -->
+                <img src="logo.svg" alt="Providhy"
+                    class="relative w-[80%] sm:w-[75%] md:w-[70%] lg:w-[60%] max-w-[800px] h-auto max-h-full object-contain opacity-[0.07] hover:opacity-[0.12] transition-opacity duration-700"
+                    style="filter: brightness(0) invert(1);">
+
+                <!-- Scanline Effect -->
+                <div class="absolute inset-0 pointer-events-none opacity-50"
+                    style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);">
+                </div>
+
+                <!-- Center Glow -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-1/2 h-1/2 bg-[#31BCBC]/5 rounded-full blur-3xl"></div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Gradient Fade -->
+            <div class="absolute bottom-0 left-0 right-0 h-8 sm:h-12 bg-gradient-to-t from-[#143939] to-transparent">
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- BACK TO TOP BUTTON -->
+    <!-- ============================================== -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-[#1D4F50] hover:bg-[#31BCBC] text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 pointer-events-none z-40">
+        <span class="iconify text-xl" data-icon="lucide:arrow-up"></span>
+    </button>
+    <!-- ============================================== -->
+    <!-- SCRIPTS -->
+    <!-- ============================================== -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

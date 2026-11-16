@@ -1,0 +1,19 @@
+/* =============================================
+   TABLE OF CONTENTS
+============================================= */
+
+/* ✅ NEW — Hover state (from docs page) */
+.toc-link:hover {
+    color: #31BCBC;
+}
+
+/* --- Blog Detail TOC (richer style) --- */
+.toc-link.active {
+    color: #31BCBC;
+    font-weight: 600;
+    background: rgba(49, 188, 188, 0.1);
+}
+
+.toc-link.active .toc-dot {
+    background: #31BCBC;
+}

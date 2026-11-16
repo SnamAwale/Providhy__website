@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Providhy ERP </title>
+    <meta name="description"
+        content="Providhy is Nepal's most intuitive cloud ERP for trading businesses. Manage inventory, billing, and accounting — all in one place.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts & Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-gray-50 text-slate-900 selection:bg-emerald-500/20 selection:text-emerald-700 overflow-x-hidden">
+
+    <!-- Spotlight -->
+    <div id="spotlight" class="fixed inset-0 pointer-events-none"></div>
+
+
+    <!-- Floating Capsule Navbar with Responsive Mobile Menu -->
+    <div class="fixed top-0 left-0 right-0 z-[90] flex flex-col items-center w-full pt-6 px-4 font-sans">
+        <nav
+            class="relative w-full max-w-5xl bg-white/80 backdrop-blur-lg rounded-full shadow-2xl shadow-[#1D4F50]/5 border border-[#1D4F50]/10 px-3 py-2.5 flex items-center justify-between transition-all duration-300 z-[90]">
+
+            <a href="/" class="flex items-center pl-3 group">
+                <img src="./logo.svg" alt="Providhy Logo"
+                    class="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+
+                <!-- Features Dropdown (Clickable + Hover) -->
+                <div class="relative group/features">
+                    <a href="./features.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                        Features
+                        <span class="iconify text-xs transition-transform group-hover/features:rotate-180"
+                            data-icon="lucide:chevron-down"></span>
+                    </a>
+
+                    <!-- Features Dropdown Panel -->
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/features:opacity-100 group-hover/features:visible transition-all duration-300 transform translate-y-2 group-hover/features:translate-y-0">
+                        <div
+                            class="w-[600px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Core
+                                        Modules</p>
+                                    <a href="./features.html"
+                                        class="text-xs font-medium text-[#31BCBC] hover:underline">View All Features
+                                        →</a>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <!-- Inventory -->
+                                    <a href="./inventory.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-colors group/item border border-transparent hover:border-blue-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:package"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-blue-600 transition-colors">
+                                                Inventory</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Stock tracking, godowns,
+                                                barcode & alerts</p>
+                                        </div>
+                                    </a>
+                                    <!-- Sales -->
+                                    <a href="./sales.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors group/item border border-transparent hover:border-emerald-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:receipt"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-emerald-600 transition-colors">
+                                                Sales & Billing</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">VAT invoices, quotations &
+                                                payments</p>
+                                        </div>
+                                    </a>
+                                    <!-- Purchase -->
+                                    <a href="./purchase.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-amber-50 transition-colors group/item border border-transparent hover:border-amber-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:truck"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-amber-600 transition-colors">
+                                                Purchase</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Orders, suppliers & goods
+                                                received</p>
+                                        </div>
+                                    </a>
+                                    <!-- Accounting -->
+                                    <a href="./accounting.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-colors group/item border border-transparent hover:border-purple-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl"
+                                                data-icon="lucide:calculator"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-purple-600 transition-colors">
+                                                Accounting</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Ledgers, reports & financial
+                                                statements</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Bottom CTA - Gradient Style -->
+                            <div
+                                class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-white" data-icon="lucide:play-circle"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">See it in action</p>
+                                        <p class="text-white/70 text-xs">Watch a 2-minute demo</p>
+                                    </div>
+                                </div>
+                                <button onclick="openVideoModal('home-demo')"
+                                    class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">
+                                    Watch Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./pricing.html"
+                    class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                    Pricing
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                </a>
+
+                <!-- Resources Dropdown (Clickable + Hover) -->
+                <div class="relative group/resources">
+                    <a href="./resources.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                        Resources
+                        <span class="iconify text-xs transition-transform group-hover/resources:rotate-180"
+                            data-icon="lucide:chevron-down"></span>
+                    </a>
+
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/resources:opacity-100 group-hover/resources:visible transition-all duration-300 transform translate-y-2 group-hover/resources:translate-y-0">
+                        <div
+                            class="w-[520px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <div class="grid grid-cols-2 gap-0">
+                                <div class="p-5 space-y-1">
+                                    <div class="flex items-center justify-between mb-3 px-3">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            Learn</p>
+                                    </div>
+                                    <a href="./documentation.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-blue-600 text-lg"
+                                                data-icon="lucide:book-open"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Documentation</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Detailed guides and references
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <a href="./tutorials.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-red-600 text-lg"
+                                                data-icon="lucide:play-circle"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Video Tutorials</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Step-by-step video guides</p>
+                                        </div>
+                                    </a>
+                                    <a href="./help.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-emerald-600 text-lg"
+                                                data-icon="lucide:life-buoy"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Help Center</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">FAQs and troubleshooting</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-5 space-y-1 bg-slate-50/50">
+                                    <div class="flex items-center justify-between mb-3 px-3">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            Explore</p>
+                                        <a href="./resources.html"
+                                            class="text-xs font-medium text-[#31BCBC] hover:underline">View All
+                                            →</a>
+                                    </div>
+                                    <a href="./blog.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-purple-600 text-lg"
+                                                data-icon="lucide:pen-line"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Blog</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Tips, news & insights</p>
+                                        </div>
+                                    </a>
+                                    <a href="./changelog.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-amber-600 text-lg"
+                                                data-icon="lucide:sparkles"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm flex items-center gap-2 group-hover/item:text-[#31BCBC] transition-colors">
+                                                What's New
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-amber-500 text-white text-[10px] font-bold rounded">v2.5</span>
+                                            </p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Latest features & updates</p>
+                                        </div>
+                                    </a>
+                                    <a href="./api.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-slate-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-slate-600 text-lg"
+                                                data-icon="lucide:code-2"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                API Reference</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">For developers</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Bottom CTA - Gradient Style (Consistent with Features) -->
+                            <div
+                                class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-white" data-icon="lucide:headphones"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">Need help?</p>
+                                        <p class="text-white/70 text-xs">Talk to our support team</p>
+                                    </div>
+                                </div>
+                                <a href="./contact.html"
+                                    class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">Contact
+                                    Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./contact.html"
+                    class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                    Contact
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-5 pr-1">
+                <a href="./login.html"
+                    class="text-sm font-semibold text-[#1D4F50] hover:text-[#31BCBC] transition-colors">Log in</a>
+                <a href="./signup.html"
+                    class="group relative inline-flex items-center justify-center p-[2px] overflow-hidden rounded-full shadow-md shadow-[#31BCBC]/20 hover:shadow-lg hover:shadow-[#31BCBC]/30 transition-all">
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-[#1D4F50] via-[#31BCBC] to-[#1D4F50] bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]"></span>
+                    <span
+                        class="relative flex items-center gap-2 rounded-full bg-white px-6 py-2 transition-all duration-300 group-hover:bg-opacity-95">
+                        <span class="text-sm font-bold text-[#1D4F50] group-hover:text-[#31BCBC] transition-colors">Get
+                            Started</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="md:hidden pr-2">
+                <button id="mobile-menu-btn"
+                    class="p-2 text-[#1D4F50] hover:bg-[#31BCBC]/10 rounded-full transition-colors">
+                    <span class="iconify w-6 h-6" data-icon="lucide:menu"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-[calc(100%+10px)] w-[calc(100%-2rem)] max-w-5xl bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-[#1D4F50]/10 border border-[#1D4F50]/10 p-6 flex-col gap-4 z-40">
+            <div class="flex flex-col gap-1">
+                <!-- Features - Clickable header + expandable -->
+                <details class="group">
+                    <summary
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                        <a href="./features.html" class="flex-1" onclick="event.stopPropagation();">Features</a>
+                        <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                            data-icon="lucide:chevron-down"></span>
+                    </summary>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="./inventory.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-blue-500" data-icon="lucide:package"></span>
+                            Inventory
+                        </a>
+                        <a href="./sales.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-emerald-500" data-icon="lucide:receipt"></span>
+                            Sales & Billing
+                        </a>
+                        <a href="./purchase.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-amber-500" data-icon="lucide:truck"></span>
+                            Purchase
+                        </a>
+                        <a href="./accounting.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-purple-500" data-icon="lucide:calculator"></span>
+                            Accounting
+                        </a>
+                        <a href="./features.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            View All Features
+                        </a>
+                    </div>
+                </details>
+
+                <a href="./pricing.html"
+                    class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Pricing</a>
+
+                <!-- Resources - Clickable header + expandable -->
+                <details class="group">
+                    <summary
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                        <a href="./resources.html" class="flex-1" onclick="event.stopPropagation();">Resources</a>
+                        <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                            data-icon="lucide:chevron-down"></span>
+                    </summary>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="./documentation.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-blue-500" data-icon="lucide:book-open"></span>
+                            Documentation
+                        </a>
+                        <a href="./tutorials.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-red-500" data-icon="lucide:play-circle"></span>
+                            Video Tutorials
+                        </a>
+                        <a href="./help.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-emerald-500" data-icon="lucide:life-buoy"></span>
+                            Help Center
+                        </a>
+                        <a href="./blog.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-purple-500" data-icon="lucide:pen-line"></span>
+                            Blog
+                        </a>
+                        <a href="./changelog.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-amber-500" data-icon="lucide:sparkles"></span>
+                            What's New
+                        </a>
+                        <a href="./api.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-slate-500" data-icon="lucide:code-2"></span>
+                            API Reference
+                        </a>
+                        <a href="./resources.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            View All Resources
+                        </a>
+                    </div>
+                </details>
+
+                <a href="./contact.html"
+                    class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Contact</a>
+            </div>
+            <hr class="border-[#1D4F50]/10">
+            <div class="flex flex-col gap-3">
+                <a href="./login.html"
+                    class="w-full py-3 text-center font-semibold text-[#1D4F50] border border-[#1D4F50]/20 rounded-xl hover:bg-slate-50 transition-colors">Log
+                    in</a>
+                <a href="./signup.html"
+                    class="w-full py-3 text-center font-bold text-white bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] rounded-xl hover:opacity-90 transition-opacity">Get
+                    Started</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- HERO SECTION -->
+    <!-- ============================================== -->
+    <section class="pt-32 pb-20 px-6 relative overflow-hidden">
+
+        <!-- Background Elements -->
+        <div class="absolute inset-0 sales-gradient-light opacity-50"></div>
+        <div
+            class="absolute top-20 right-0 w-96 h-96 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none animate-float">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none animate-float animation-delay-2000">
+        </div>
+
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Content -->
+                <div>
+                    <!-- Breadcrumb -->
+                    <nav class="reveal flex items-center gap-2 text-sm text-slate-500 mb-6">
+                        <a href="/features" class="hover:text-emerald-600 transition-colors">Features</a>
+                        <span class="iconify text-slate-400" data-icon="lucide:chevron-right"></span>
+                        <span class="text-emerald-600 font-medium">Sales & Invoicing</span>
+                    </nav>
+
+                    <!-- Badge -->
+                    <div
+                        class="reveal inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-700 text-sm font-medium mb-6">
+                        <span class="iconify" data-icon="lucide:shopping-cart"></span>
+                        <span>Billing Module</span>
+                    </div>
+
+                    <h1
+                        class="reveal text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1]">
+                        Simplify Sales,<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">
+                            Accelerate Growth.
+                        </span>
+                    </h1>
+
+                    <p class="reveal text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
+                        Create professional TAX invoices in seconds. Manage customers, track payments, and grow your
+                        sales, all from one powerful dashboard.
+                    </p>
+
+                    <!-- Key Stats -->
+                    <!-- <div class="reveal flex flex-wrap items-center gap-6 mb-8">
+                        <div class="flex items-center gap-2">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                <span class="iconify text-emerald-600 text-xl" data-icon="lucide:zap"></span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900">30 sec</p>
+                                <p class="text-xs text-slate-500">Invoice Creation</p>
+                            </div>
+                        </div>
+                        <div class="w-px h-10 bg-slate-200"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                <span class="iconify text-emerald-600 text-xl" data-icon="lucide:check-circle"></span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900">100%</p>
+                                <p class="text-xs text-slate-500">IRD Compliant</p>
+                            </div>
+                        </div>
+                        <div class="w-px h-10 bg-slate-200"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                <span class="iconify text-emerald-600 text-xl" data-icon="lucide:trending-up"></span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900">40%</p>
+                                <p class="text-xs text-slate-500">Faster Collections</p>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- CTAs -->
+                    <div class="reveal flex flex-col sm:flex-row items-start gap-4">
+                        <a href="/signup"
+                            class="w-full sm:w-auto px-8 py-4 sales-gradient text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all flex items-center justify-center gap-2">
+                            <span>Start Free Trial</span>
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                        </a>
+                        <button onclick="openVideoModal('sales-demo')"
+                            class="w-full sm:w-auto px-8 py-4 bg-white border-2 border-slate-200 text-slate-700 font-semibold rounded-xl hover:border-emerald-300 hover:text-emerald-600 transition-all flex items-center justify-center gap-2">
+                            <span class="iconify" data-icon="lucide:play-circle"></span>
+                            <span>Watch Demo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="reveal relative">
+                    <div class="relative">
+                        <!-- Main Invoice Preview -->
+                        <div
+                            class="bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <!-- Browser Header -->
+                            <div class="flex items-center gap-2 px-4 py-3 bg-slate-50 border-b border-slate-200">
+                                <div class="flex gap-1.5">
+                                    <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-amber-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                </div>
+                                <div class="flex-1 flex justify-center">
+                                    <div
+                                        class="px-4 py-1 bg-white rounded-lg text-xs text-slate-400 border border-slate-200">
+                                        providhy.com/sales
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Invoice Content -->
+                            <div class="p-6 bg-gradient-to-br from-slate-50 to-white">
+                                <!-- Header -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <div>
+                                        <h3 class="font-bold text-slate-900">New Invoice</h3>
+                                        <p class="text-xs text-slate-500">INV-2025-0156</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-lg">VAT
+                                            Bill</span>
+                                    </div>
+                                </div>
+
+                                <!-- Customer Info -->
+                                <div class="bg-slate-50 rounded-xl p-4 mb-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
+                                                <span class="iconify text-emerald-600" data-icon="lucide:user"></span>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900 text-sm">Himalayan Traders Pvt.
+                                                    Ltd.</p>
+                                                <p class="text-xs text-slate-500">PAN: 123456789</p>
+                                            </div>
+                                        </div>
+                                        <span class="iconify text-slate-400" data-icon="lucide:chevron-right"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Items -->
+                                <div class="space-y-2 mb-4">
+                                    <div
+                                        class="flex items-center justify-between py-2 px-3 bg-white rounded-lg border border-slate-100">
+                                        <div class="flex items-center gap-3">
+                                            <span class="text-slate-400 text-sm">1.</span>
+                                            <span class="text-sm text-slate-700">Samsung Galaxy S24</span>
+                                        </div>
+                                        <span class="font-semibold text-slate-900 text-sm">₹ 125,000</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-between py-2 px-3 bg-white rounded-lg border border-slate-100">
+                                        <div class="flex items-center gap-3">
+                                            <span class="text-slate-400 text-sm">2.</span>
+                                            <span class="text-sm text-slate-700">Phone Case Premium</span>
+                                        </div>
+                                        <span class="font-semibold text-slate-900 text-sm">₹ 1,500</span>
+                                    </div>
+                                </div>
+
+                                <!-- Totals -->
+                                <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-100">
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="text-slate-600">Subtotal</span>
+                                        <span class="text-slate-900">₹ 126,500</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm mb-2">
+                                        <span class="text-slate-600">VAT (13%)</span>
+                                        <span class="text-slate-900">₹ 16,445</span>
+                                    </div>
+                                    <div class="border-t border-emerald-200 pt-2 mt-2">
+                                        <div class="flex justify-between">
+                                            <span class="font-bold text-slate-900">Total</span>
+                                            <span class="font-bold text-emerald-600 text-lg">₹ 142,945</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="flex gap-2 mt-4">
+                                    <button
+                                        class="flex-1 py-2 bg-emerald-500 text-white text-sm font-medium rounded-lg flex items-center justify-center gap-1">
+                                        <span class="iconify" data-icon="lucide:printer"></span>
+                                        Print
+                                    </button>
+                                    <button
+                                        class="flex-1 py-2 bg-slate-100 text-slate-700 text-sm font-medium rounded-lg flex items-center justify-center gap-1">
+                                        <span class="iconify" data-icon="lucide:send"></span>
+                                        Email
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Elements -->
+                        <div
+                            class="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-3 border border-slate-200 animate-float">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
+                                    <span class="iconify text-emerald-600" data-icon="lucide:check-circle"></span>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-medium text-slate-900">Payment Received</p>
+                                    <p class="text-[10px] text-slate-500">NPR 85,000</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-3 border border-slate-200 animate-float animation-delay-1000">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <span class="iconify text-blue-600" data-icon="lucide:file-text"></span>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-medium text-slate-900">Invoice Sent</p>
+                                    <p class="text-[10px] text-slate-500">Via email & WhatsApp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- PAIN POINTS → SOLUTIONS -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white" id="pain-points-section">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Business, Without the Busywork. </h2>
+                <p class="text-lg text-slate-500">See how everyday billing tasks become faster, smarter, and effortless
+                    with Providhy. </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
+
+                <!-- Before -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
+                            <span class="iconify text-red-600 text-xl" data-icon="lucide:frown"></span>
+                        </div>
+                        <h3 class="font-bold text-slate-900">Before Providhy</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="pain-point flex items-start gap-3 text-slate-600 transition-all">
+                            <span class="iconify text-red-400 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:x-circle"></span>
+                            <span>Manual invoice calculations with errors</span>
+                        </li>
+                        <li class="pain-point flex items-start gap-3 text-slate-600 transition-all">
+                            <span class="iconify text-red-400 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:x-circle"></span>
+                            <span>No idea who owes you money</span>
+                        </li>
+                        <li class="pain-point flex items-start gap-3 text-slate-600 transition-all">
+                            <span class="iconify text-red-400 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:x-circle"></span>
+                            <span>VAT calculations done separately</span>
+                        </li>
+                        <li class="pain-point flex items-start gap-3 text-slate-600 transition-all">
+                            <span class="iconify text-red-400 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:x-circle"></span>
+                            <span>Compiling sales data for tax reports is a nightmare</span>
+                        </li>
+                        <li class="pain-point flex items-start gap-3 text-slate-600 transition-all">
+                            <span class="iconify text-red-400 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:x-circle"></span>
+                            <span>Stock doesn't update after sales</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- After -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 border border-emerald-200">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+                            <span class="iconify text-emerald-600 text-xl" data-icon="lucide:smile"></span>
+                        </div>
+                        <h3 class="font-bold text-slate-900">With Providhy</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="solution-point flex items-start gap-3 text-slate-700">
+                            <span class="iconify text-emerald-500 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span><strong>Auto-calculated invoices</strong> with zero errors</span>
+                        </li>
+                        <li class="solution-point flex items-start gap-3 text-slate-700">
+                            <span class="iconify text-emerald-500 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span><strong>Real-time receivables</strong> </span>
+                        </li>
+                        <li class="solution-point flex items-start gap-3 text-slate-700">
+                            <span class="iconify text-emerald-500 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span><strong>Automatic VAT calculation</strong> </span>
+                        </li>
+                        <li class="solution-point flex items-start gap-3 text-slate-700">
+                            <span class="iconify text-emerald-500 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span><strong>Tax-ready sales reports</strong> with ease</span>
+                        </li>
+                        <li class="solution-point flex items-start gap-3 text-slate-700">
+                            <span class="iconify text-emerald-500 text-xl mt-0.5 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span><strong>Instant stock deduction</strong> on every sale</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- KEY FEATURES GRID -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-12 reveal">
+                <span
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-medium rounded-full mb-4">
+                    <span class="iconify" data-icon="lucide:layers"></span>
+                    Complete Billing Solution
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Everything You Need to Sell & Get Paid
+                </h2>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                    Powerful features to manage your entire sales cycle
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+
+                <!-- Feature 1: Quick Invoicing -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/20">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:zap"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Quick Invoicing</h3>
+                    <p class="text-slate-500 mb-4">Create professional invoices in seconds with quick product search,
+                        easy item selection and smart auto-fill.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span
+                                class="iconify text-emerald-500" data-icon="lucide:check"></span>Product Quick Search
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span
+                                class="iconify text-emerald-500" data-icon="lucide:check"></span>Fast Item Selection
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span
+                                class="iconify text-emerald-500" data-icon="lucide:check"></span>Simple Workflow</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: VAT Billing -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-blue-500/20">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:percent"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">VAT Billing</h3>
+                    <p class="text-slate-500 mb-4">IRD-compliant VAT bills with automatic tax calculation and consistent
+                        billing format.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-blue-500"
+                                data-icon="lucide:check"></span>Auto VAT calculation</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-blue-500"
+                                data-icon="lucide:check"></span>IRD format compliance</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-blue-500"
+                                data-icon="lucide:check"></span>Consistent billing format</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Customer Management -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-purple-500/20">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:contact"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Customer Management</h3>
+                    <p class="text-slate-500 mb-4">Maintain complete customer records and view their full transaction
+                        and purchase history.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-purple-500"
+                                data-icon="lucide:check"></span>Customer Profile Management</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-purple-500"
+                                data-icon="lucide:check"></span>Purchase history</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-purple-500"
+                                data-icon="lucide:check"></span>Fast Customer Search</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 4: Payment Tracking -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-amber-500/20">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:wallet"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Payment Tracking</h3>
+                    <p class="text-slate-500 mb-4">Record payments and track receivables to stay on top of customer
+                        balances.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-amber-500"
+                                data-icon="lucide:check"></span>Partial payments</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-amber-500"
+                                data-icon="lucide:check"></span>Payment reminders</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-amber-500"
+                                data-icon="lucide:check"></span>Aging reports</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 5: Sales Returns -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-rose-500/20">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:package-x"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Sales Returns</h3>
+                    <p class="text-slate-500 mb-4">Manage returns and refunds while stock is updated automatically.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-rose-500"
+                                data-icon="lucide:check"></span>Credit notes</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-rose-500"
+                                data-icon="lucide:check"></span>Auto stock restore</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-rose-500"
+                                data-icon="lucide:check"></span>Clear Return Records</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 6: Sales Reports -->
+                <div
+                    class="feature-card bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-sky-500 rounded-2xl flex items-center justify-center mb-5 shadow-lg shadow-cyan-500/20">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:bar-chart-2"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Sales Reports</h3>
+                    <p class="text-slate-500 mb-4">Access all key sales documents and summaries, including quotations,
+                        orders, deliveries, returns, and sales records in one place.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-cyan-500"
+                                data-icon="lucide:check"></span>Quotation & Order Reports</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-cyan-500"
+                                data-icon="lucide:check"></span>Sales Book & History</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600"><span class="iconify text-cyan-500"
+                                data-icon="lucide:check"></span>Returns & Adjustments</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- INVOICE TYPES -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-12 reveal">
+                <span
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 text-slate-700 text-sm font-medium rounded-full mb-4">
+                    <span class="iconify" data-icon="lucide:layout-list"></span>
+                    Flexible Billing
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Streamline Every Stage of Your Sales
+                    Process </h2>
+                <p class="text-lg text-slate-500">Support for every billing scenario your business needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+
+                <!-- Sales Order -->
+                <div
+                    class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-emerald-200 text-center hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="iconify text-emerald-600 text-3xl" data-icon="lucide:clipboard-list"></span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Sales Order</h3>
+                    <p class="text-slate-500 text-sm">Record customer orders before billing or fulfillment</p>
+                    <span
+                        class="inline-block mt-3 px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">
+                        Order Management
+                    </span>
+                </div>
+
+                <!-- Quotations -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200 text-center hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="iconify text-blue-600 text-3xl" data-icon="lucide:pencil-ruler"></span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Quotations</h3>
+                    <p class="text-slate-500 text-sm">Create estimates and convert them into sales order easily</p>
+                    <span
+                        class="inline-block mt-3 px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
+                        Sales Estimation
+                    </span>
+                </div>
+
+                <!-- VAT Billing -->
+                <div
+                    class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200 text-center hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="iconify text-amber-600 text-3xl" data-icon="lucide:percent-circle"></span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">VAT Billing</h3>
+                    <p class="text-slate-500 text-sm">For registered businesses with PAN. Includes 13% VAT calculation.
+                    </p>
+                    <span
+                        class="inline-block mt-3 px-3 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">
+                        IRD Compliant
+                    </span>
+                </div>
+
+                <!-- Credit Note -->
+                <div
+                    class="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-6 border border-rose-200 text-center hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 bg-rose-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="iconify text-rose-600 text-3xl" data-icon="lucide:undo-2"></span>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Credit Note</h3>
+                    <p class="text-slate-500 text-sm">For returns, refunds, and invoice adjustments. Properly linked to
+                        the original invoice.</p>
+                    <span
+                        class="inline-block mt-3 px-3 py-1 bg-rose-100 text-rose-700 text-xs font-medium rounded-full">
+                        Returns & Refunds
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Additional Invoice Options -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+
+                <div class="flex items-center gap-4 p-5 bg-slate-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-200">
+                        <span class="iconify text-slate-600 text-xl" data-icon="lucide:calendar-clock"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Advance Invoice</h4>
+                        <p class="text-sm text-slate-500">For advance payments</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 p-5 bg-slate-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-200">
+                        <span class="iconify text-slate-600 text-xl" data-icon="lucide:truck"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Delivery Note</h4>
+                        <p class="text-sm text-slate-500">Confirm delivery of goods before billing</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 p-5 bg-slate-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-200">
+                        <span class="iconify text-slate-600 text-xl" data-icon="lucide:book-open"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">Sales Book</h4>
+                        <p class="text-sm text-slate-500">Complete record of all sales transactions</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- SALES WORKFLOW -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-slate-50" id="workflow-section">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16 reveal">
+                <span
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-slate-200 text-slate-700 text-sm font-medium rounded-full mb-4">
+                    <span class="iconify" data-icon="lucide:workflow"></span>
+                    Streamlined Workflow
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">From Sale to Settlement, Everything
+                    Simplified</h2>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                    A smooth journey from creating an invoice to receiving payment
+                </p>
+            </div>
+
+            <!-- Workflow Steps -->
+            <div class="relative reveal">
+
+                <!-- Connection Line (Desktop) -->
+                <div class="hidden lg:block absolute top-20 left-0 right-0 h-1 bg-slate-200 rounded-full">
+                    <div class="workflow-connector h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500"
+                        style="width: 0%; transition: width 1s ease;"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+
+                    <!-- Step 1: Select Customer -->
+                    <div class="workflow-step text-center">
+                        <div
+                            class="w-16 h-16 bg-white border-4 border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transition-all">
+                            <span class="iconify text-emerald-500 text-2xl" data-icon="lucide:contact-round"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Select Customer</h4>
+                        <p class="text-sm text-slate-500">Choose or add new customer</p>
+                    </div>
+
+                    <!-- Step 2: Add Products -->
+                    <div class="workflow-step text-center">
+                        <div
+                            class="w-16 h-16 bg-white border-4 border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transition-all">
+                            <span class="iconify text-emerald-500 text-2xl" data-icon="lucide:scan-barcode"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Add Products</h4>
+                        <p class="text-sm text-slate-500">Search items</p>
+                    </div>
+
+                    <!-- Step 3: Generate Invoice -->
+                    <div class="workflow-step text-center">
+                        <div
+                            class="w-16 h-16 bg-white border-4 border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transition-all">
+                            <span class="iconify text-emerald-500 text-2xl" data-icon="lucide:file-plus"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Generate Invoice</h4>
+                        <p class="text-sm text-slate-500">Auto VAT & numbering</p>
+                    </div>
+
+                    <!-- Step 4: Download Invoice -->
+                    <div class="workflow-step text-center">
+                        <div
+                            class="w-16 h-16 bg-white border-4 border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transition-all">
+                            <span class="iconify text-emerald-500 text-2xl" data-icon="lucide:file-down"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Download Invoice</h4>
+                        <p class="text-sm text-slate-500">Get a professional PDF to print</p>
+                    </div>
+
+                    <!-- Step 5: Collect Payment -->
+                    <div class="workflow-step text-center">
+                        <div
+                            class="w-16 h-16 bg-white border-4 border-emerald-200 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transition-all">
+                            <span class="iconify text-emerald-500 text-2xl" data-icon="lucide:hand-coins"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Collect Payment</h4>
+                        <p class="text-sm text-slate-500">Record & track</p>
+                    </div>
+
+                </div>
+
+                <!-- Automatic Updates Note -->
+                <div class="mt-12 text-center">
+                    <div
+                        class="inline-flex items-center gap-3 px-6 py-3 bg-emerald-50 border border-emerald-200 rounded-2xl">
+                        <span class="iconify text-emerald-500 text-xl" data-icon="lucide:sparkles"></span>
+                        <span class="text-slate-700">At every step, <strong class="text-emerald-600">inventory &
+                                accounts update automatically</strong></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- PRINTING & SHARING -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left: Content -->
+                <div class="reveal">
+                    <span
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 text-slate-700 text-sm font-medium rounded-full mb-4">
+                        <span class="iconify" data-icon="lucide:file-badge"></span>
+                        Invoice Output
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Professional Invoices</h2>
+                    <p class="text-lg text-slate-500 mb-8">
+                        Make every invoice look professional with your company name and logo. Generate clean,
+                        print-ready invoices for easy sharing and record-keeping.
+                    </p>
+
+                    <div class="space-y-4">
+
+                        <!-- Quick Print Option -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="iconify text-emerald-600 text-xl" data-icon="lucide:printer"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 mb-1">Quick Print Option</h4>
+                                <p class="text-slate-500 text-sm">Print invoices directly without extra steps.</p>
+                            </div>
+                        </div>
+
+                        <!-- Multiple Print Formats -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="iconify text-blue-600 text-xl" data-icon="lucide:layout-template"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 mb-1">Multiple Print Formats</h4>
+                                <p class="text-slate-500 text-sm">Generate print-ready PDFs perfectly formatted for A4
+                                    or A5.</p>
+                            </div>
+                        </div>
+
+                        <!-- Easy PDF Export -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="iconify text-green-600 text-xl" data-icon="lucide:file-down"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 mb-1">Easy PDF Export</h4>
+                                <p class="text-slate-500 text-sm">Download invoices instantly.</p>
+                            </div>
+                        </div>
+
+                        <!-- Clean Invoice Records -->
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="iconify text-purple-600 text-xl" data-icon="lucide:archive"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 mb-1">Clean Invoice Records</h4>
+                                <p class="text-slate-500 text-sm">Keep organized, print-ready records for easy reference
+                                    anytime.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Visual -->
+                <div class="reveal">
+                    <div class="relative">
+                        <div
+                            class="bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl p-8 border border-slate-300">
+                            <!-- Mock Invoice -->
+                            <div
+                                class="bg-white rounded-xl shadow-lg p-6 transform rotate-2 hover:rotate-0 transition-transform">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="w-12 h-12 bg-emerald-100 rounded-lg"></div>
+                                    <div class="text-right">
+                                        <p class="text-xs text-slate-400">Invoice #</p>
+                                        <p class="font-bold text-slate-900">INV-2025-0156</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-2 mb-4">
+                                    <div class="h-3 bg-slate-100 rounded w-3/4"></div>
+                                    <div class="h-3 bg-slate-100 rounded w-1/2"></div>
+                                </div>
+                                <div class="border-t border-slate-100 pt-4">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-slate-500">Total</span>
+                                        <span class="font-bold text-emerald-600">NPR 142,945</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Share Options -->
+                            <div class="flex items-center justify-center gap-4 mt-6">
+                                <div class="w-12 h-12 bg-white rounded-xl shadow flex items-center justify-center">
+                                    <span class="iconify text-slate-600 text-xl" data-icon="lucide:printer"></span>
+                                </div>
+                                <div class="w-12 h-12 bg-white rounded-xl shadow flex items-center justify-center">
+                                    <span class="iconify text-blue-600 text-xl"
+                                        data-icon="lucide:layout-template"></span>
+                                </div>
+                                <div class="w-12 h-12 bg-white rounded-xl shadow flex items-center justify-center">
+                                    <span class="iconify text-green-600 text-xl" data-icon="lucide:file-down"></span>
+                                </div>
+                                <div class="w-12 h-12 bg-white rounded-xl shadow flex items-center justify-center">
+                                    <span class="iconify text-slate-600 text-xl" data-icon="lucide:archive"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- NEPAL-SPECIFIC FEATURES -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-gradient-to-br from-emerald-500 to-teal-500 text-white">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center mb-12 reveal">
+                <span
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full mb-4">
+                    Nepal-Specific
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Built for Nepali Billing</h2>
+                <p class="text-lg text-white/80 max-w-2xl mx-auto">
+                    Features designed specifically for how businesses sell in Nepal
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+
+                <!-- Feature 1: Sales Register -->
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl" data-icon="lucide:notebook-tabs"></span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Sales Register</h3>
+                    <p class="text-white/70">Automatically generate a detailed, IRD-compliant sales register. Perfect
+                        for your official records and tax filing.</p>
+                </div>
+
+                <!-- Feature 2: Automatic VAT -->
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl" data-icon="lucide:percent-circle"></span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Automatic VAT</h3>
+                    <p class="text-white/70">13% VAT automatically calculated and applied. Support for both inclusive
+                        and exclusive pricing.</p>
+                </div>
+
+                <!-- Feature 3: Item-wise Tax Control -->
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl" data-icon="lucide:list-checks"></span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Item-wise Tax Control</h3>
+                    <p class="text-white/70">Apply tax on an item-by-item basis. This ensures accurate VAT totals even
+                        on invoices with mixed taxable and exempt goods.</p>
+                </div>
+
+                <!-- Feature 4: Invoice Numbering -->
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl" data-icon="lucide:between-horizontal-start"></span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Invoice Numbering</h3>
+                    <p class="text-white/70">IRD-compliant sequential invoice numbering with fiscal year prefix. No
+                        gaps, no duplicates.</p>
+                </div>
+
+                <!-- Feature 5: Nepali Calendar -->
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl" data-icon="lucide:calendar-days"></span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Nepali Calendar</h3>
+                    <p class="text-white/70">Full Bikram Sambat support. View sales reports and invoice dates in Nepali
+                        calendar format.</p>
+                </div>
+
+                <!-- Feature 6: Fiscal Year Reporting -->
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                        <span class="iconify text-2xl" data-icon="lucide:chart-bar-decreasing"></span>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Fiscal Year Reporting</h3>
+                    <p class="text-white/70">All reports, summaries, and numbering are built around Nepal's fiscal year
+                        (Shrawan-Asadh) for seamless accounting and compliance.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- INTEGRATION WITH OTHER MODULES -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center mb-12 reveal">
+                <span
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 text-slate-700 text-sm font-medium rounded-full mb-4">
+                    <span class="iconify" data-icon="lucide:plug-zap"></span>
+                    Seamless Integration
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Works Perfectly With Other Modules</h2>
+                <p class="text-lg text-slate-500">Sales isn't isolated — it's connected to your entire business</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+
+                <!-- Integration 1: Inventory -->
+                <a href="/features/inventory"
+                    class="group bg-blue-50 rounded-2xl p-6 border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:warehouse"></span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Inventory
+                            </h3>
+                            <p class="text-sm text-slate-500">Stock Management</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-blue-500" data-icon="lucide:arrow-right"></span>
+                            Stock deducts on invoice
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-blue-500" data-icon="lucide:arrow-right"></span>
+                            Real-time availability check
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-blue-500" data-icon="lucide:arrow-right"></span>
+                            Real-time stock report
+                        </li>
+                    </ul>
+                </a>
+
+                <!-- Integration 2: Purchase -->
+                <a href="/features/purchase"
+                    class="group bg-orange-50 rounded-2xl p-6 border border-orange-100 hover:border-orange-300 hover:shadow-xl transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:shopping-bag"></span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-orange-600 transition-colors">Purchase
+                            </h3>
+                            <p class="text-sm text-slate-500">Procurement</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-orange-500" data-icon="lucide:arrow-right"></span>
+                            Purchase Orders
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-orange-500" data-icon="lucide:arrow-right"></span>
+                            Purchase Book
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-orange-500" data-icon="lucide:arrow-right"></span>
+                            Aging Reports
+                        </li>
+                    </ul>
+                </a>
+
+                <!-- Integration 3: Accounting -->
+                <a href="/features/accounting"
+                    class="group bg-purple-50 rounded-2xl p-6 border border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/20">
+                            <span class="iconify text-white text-2xl" data-icon="lucide:landmark"></span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-purple-600 transition-colors">
+                                Accounting</h3>
+                            <p class="text-sm text-slate-500">Financial Management</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-purple-500" data-icon="lucide:arrow-right"></span>
+                            Auto journal entries
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-purple-500" data-icon="lucide:arrow-right"></span>
+                            Receivables always updated
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="iconify text-purple-500" data-icon="lucide:arrow-right"></span>
+                            Core financial statements
+                        </li>
+                    </ul>
+                </a>
+
+            </div>
+
+            <!-- Integration Visual -->
+            <div class="mt-12 reveal">
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                        <div class="flex items-center gap-3 px-4 py-2 bg-white rounded-xl border border-slate-200">
+                            <span class="iconify text-emerald-500 text-xl" data-icon="lucide:file-plus"></span>
+                            <span class="font-medium text-slate-900">Invoice Created</span>
+                        </div>
+                        <span class="iconify text-emerald-400 text-2xl hidden md:block animate-bounce-right"
+                            data-icon="lucide:arrow-right"></span>
+                        <span class="iconify text-emerald-400 text-2xl md:hidden" data-icon="lucide:arrow-down"></span>
+                        <div class="flex items-center gap-3 px-4 py-2 bg-white rounded-xl border border-slate-200">
+                            <span class="iconify text-blue-500 text-xl" data-icon="lucide:warehouse"></span>
+                            <span class="font-medium text-slate-900">Stock Deducted</span>
+                        </div>
+                        <span class="iconify text-emerald-400 text-2xl hidden md:block animate-bounce-right"
+                            data-icon="lucide:arrow-right"></span>
+                        <span class="iconify text-emerald-400 text-2xl md:hidden" data-icon="lucide:arrow-down"></span>
+                        <div class="flex items-center gap-3 px-4 py-2 bg-white rounded-xl border border-slate-200">
+                            <span class="iconify text-purple-500 text-xl" data-icon="lucide:landmark"></span>
+                            <span class="font-medium text-slate-900">Books Updated</span>
+                        </div>
+                    </div>
+                    <p class="text-center text-slate-500 mt-4 text-sm">Everything syncs automatically — no manual data
+                        entry</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- ============================================== -->
+    <!-- QUICK FEATURE LIST -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">All Sales Features at a Glance</h2>
+                <p class="text-lg text-slate-500">Everything included in the Sales module</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+
+                <!-- Column 1: Invoicing -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
+                            <span class="iconify text-emerald-600" data-icon="lucide:receipt-text"></span>
+                        </span>
+                        Invoicing
+                    </h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-emerald-400 text-xs" data-icon="lucide:check"></span>
+                            VAT bills
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-emerald-400 text-xs" data-icon="lucide:check"></span>
+                            Quotations
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-emerald-400 text-xs" data-icon="lucide:check"></span>
+                            Advance payment invoices
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-emerald-400 text-xs" data-icon="lucide:check"></span>
+                            Item-wise Tax Control
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-emerald-400 text-xs" data-icon="lucide:check"></span>
+                            Credit notes
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Customers -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span class="iconify text-blue-600" data-icon="lucide:contact-round"></span>
+                        </span>
+                        Customers
+                    </h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-blue-400 text-xs" data-icon="lucide:check"></span>
+                            Customer database
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-blue-400 text-xs" data-icon="lucide:check"></span>
+                            Credit Period Management
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-blue-400 text-xs" data-icon="lucide:check"></span>
+                            Customer groups
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-blue-400 text-xs" data-icon="lucide:check"></span>
+                            Purchase history
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-blue-400 text-xs" data-icon="lucide:check"></span>
+                            Balance tracking
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Payments -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center">
+                            <span class="iconify text-amber-600" data-icon="lucide:hand-coins"></span>
+                        </span>
+                        Payments
+                    </h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-amber-400 text-xs" data-icon="lucide:check"></span>
+                            Payment receipts
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-amber-400 text-xs" data-icon="lucide:check"></span>
+                            Partial payments
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-amber-400 text-xs" data-icon="lucide:check"></span>
+                            Multiple payment modes
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-amber-400 text-xs" data-icon="lucide:check"></span>
+                            Payment reminders
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-amber-400 text-xs" data-icon="lucide:check"></span>
+                            Aging reports
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-amber-400 text-xs" data-icon="lucide:check"></span>
+                            Advance payments
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Reports & More -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-8 h-8 bg-rose-100 rounded-lg flex items-center justify-center">
+                            <span class="iconify text-rose-600" data-icon="lucide:chart-no-axes-combined"></span>
+                        </span>
+                        Reports & More
+                    </h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-rose-400 text-xs" data-icon="lucide:check"></span>
+                            Sales Register Report
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-rose-400 text-xs" data-icon="lucide:check"></span>
+                            Customer Ledger
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-rose-400 text-xs" data-icon="lucide:check"></span>
+                            Product Reports
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-600">
+                            <span class="iconify text-rose-400 text-xs" data-icon="lucide:check"></span>
+                            Sales Book
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- CTA SECTION -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-gradient-to-br from-slate-900 to-slate-800">
+        <div class="max-w-4xl mx-auto text-center reveal">
+
+            <div class="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span class="iconify text-emerald-400 text-3xl" data-icon="lucide:shopping-cart"></span>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Supercharge Your Sales?
+            </h2>
+
+            <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
+                Simplify invoicing and improve your payment flow with Providhy.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="/signup"
+                    class="w-full sm:w-auto px-8 py-4 sales-gradient text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-emerald-500/30 transition-all flex items-center justify-center gap-2">
+                    <span>14-day trial</span>
+                    <span class="iconify" data-icon="lucide:arrow-right"></span>
+                </a>
+                <a href="/contact"
+                    class="w-full sm:w-auto px-8 py-4 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2 border border-slate-600">
+                    <span class="iconify" data-icon="lucide:calendar"></span>
+                    <span>Book a Demo</span>
+                </a>
+            </div>
+
+            <p class="text-slate-500 text-sm mt-6">
+                Data Migration Assistance • Free setup assistance • Cancel anytime
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- EXPLORE OTHER MODULES -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Explore Other Modules</h2>
+                <p class="text-slate-500">Discover how all modules work together</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+
+                <!-- Inventory -->
+                <a href="/features/inventory"
+                    class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:warehouse"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        Inventory</h3>
+                    <p class="text-slate-500 text-sm mb-4">Real-time stock tracking across multiple locations</p>
+                    <span
+                        class="text-blue-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Learn more <span class="iconify" data-icon="lucide:arrow-right"></span>
+                    </span>
+                </a>
+
+                <!-- Purchase -->
+                <a href="/features/purchase"
+                    class="group bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 border border-orange-100 hover:border-orange-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:shopping-bag"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">
+                        Purchase</h3>
+                    <p class="text-slate-500 text-sm mb-4">Supplier management and procurement</p>
+                    <span
+                        class="text-orange-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Learn more <span class="iconify" data-icon="lucide:arrow-right"></span>
+                    </span>
+                </a>
+
+                <!-- Accounting -->
+                <a href="/features/accounting"
+                    class="group bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-6 border border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
+                        <span class="iconify text-white text-2xl" data-icon="lucide:landmark"></span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
+                        Accounting</h3>
+                    <p class="text-slate-500 text-sm mb-4">Complete financial management solution</p>
+                    <span
+                        class="text-purple-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Learn more <span class="iconify" data-icon="lucide:arrow-right"></span>
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- FOOTER -->
+    <!-- ============================================== -->
+    <footer class="bg-[#0C2425] text-white relative overflow-hidden">
+
+        <!-- Subtle Background Pattern -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+            </div>
+        </div>
+
+        <!-- Top Glow -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#31BCBC]/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10 md:pb-12 relative z-10">
+
+            <!-- Top Section -->
+            <div
+                class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8 mb-10 sm:mb-12 md:mb-16 pb-8 sm:pb-10 md:pb-12 border-b border-white/10">
+
+                <!-- Logo & Description -->
+                <div class="max-w-md">
+                    <a href="/" class="inline-flex items-center gap-3 mb-3 sm:mb-4 group">
+                        <img src="logo.svg" alt="Providhy Logo"
+                            class="h-6 sm:h-7 md:h-8 w-auto brightness-0 invert group-hover:scale-105 transition-transform duration-300" />
+                    </a>
+                    <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                        Providhy is a cloud ERP built for Nepali businesses, bringing clarity to operations, confidence
+                        to decisions, and control to drive sustainable business growth.
+                    </p>
+
+                    <!-- Trust Badges - Mobile -->
+                    <div class="flex items-center gap-4 mt-4 lg:hidden">
+                        <div class="flex items-center gap-1.5 text-white/40">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:shield-check"></span>
+                            <span class="text-xs">IRD Compliant</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-white/40">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:cloud"></span>
+                            <span class="text-xs">Cloud Secured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="w-full lg:w-auto">
+                    <p class="text-sm text-white/60 mb-2 sm:mb-3">Subscribe to our newsletter</p>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                        <div class="relative flex-1 sm:flex-none">
+                            <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+                                data-icon="lucide:mail"></span>
+                            <input type="email" placeholder="Enter your email"
+                                class="w-full sm:w-60 md:w-72 pl-11 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#31BCBC] focus:bg-white/[0.15] transition-all text-sm">
+                        </div>
+                        <button
+                            class="px-5 md:px-6 py-3 bg-white text-[#1D4F50] font-semibold rounded-xl hover:bg-[#31BCBC] hover:text-white transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap text-sm group shadow-lg shadow-black/10 hover:shadow-[#31BCBC]/20">
+                            <span>Subscribe</span>
+                            <span class="iconify group-hover:translate-x-0.5 transition-transform"
+                                data-icon="lucide:arrow-right"></span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-white/40 mt-2">No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+
+            <!-- Links Grid -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 md:mb-16">
+
+                <!-- Product -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Product
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Inventory</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Billing</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Accounting</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Reports</a>
+                        </li>
+                        <li><a href="/pricing"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Company
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Careers</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Partners</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Blog</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Resources
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Documentation</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Help
+                                Center</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Video
+                                Tutorials</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">API
+                                Reference</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Legal
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Privacy
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Terms
+                                of Service</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Security</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1">
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Contact Us
+                    </h4>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li>
+                            <a href="tel:9851221467"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:phone"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        +977 9851221467</p>
+                                    <p class="text-xs text-white/40">Mon-Sat, 9am-6pm</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@vidhypro.com"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:mail"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        info@vidhypro.com</p>
+                                    <p class="text-xs text-white/40">24/7 Email Support</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:map-pin"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        Kathmandu, Nepal</p>
+                                    <p class="text-xs text-white/40">View on Map</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="flex flex-col-reverse sm:flex-row justify-between items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
+
+                <!-- Copyright -->
+                <div class="text-xs sm:text-sm text-white/50 text-center sm:text-left">
+                    © 2026 Providhy ERP. Powered by
+                    <a href="#" class="text-white/70 hover:text-[#31BCBC] transition-colors">Vidhypro Crafts Pvt
+                        Ltd</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-2">
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#31BCBC] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Facebook">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:facebook"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Instagram">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:instagram"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#0077b5] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="LinkedIn">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:linkedin"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="YouTube">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:youtube"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-black rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Twitter/X">
+                        <span class="iconify text-base sm:text-lg" data-icon="simple-icons:x"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Large Brand Logo - Full Width Fancy Section -->
+        <div class="w-full border-t border-white/5 overflow-hidden select-none pointer-events-none relative">
+
+            <!-- Animated Gradient Background -->
+            <div class="absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-[#31BCBC]/10 to-transparent animate-shimmer">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#143939] via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating Particles -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-[#31BCBC]/20 rounded-full animate-float-slow">
+                </div>
+                <div class="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-white/10 rounded-full animate-float-medium">
+                </div>
+                <div class="absolute bottom-1/4 left-1/2 w-1 h-1 bg-[#31BCBC]/30 rounded-full animate-float-fast">
+                </div>
+                <div class="absolute top-1/2 right-1/4 w-2 h-2 bg-white/5 rounded-full animate-float-slow"></div>
+            </div>
+
+            <!-- Full Width Logo Container -->
+            <div class="relative w-full flex items-center justify-center overflow-hidden py-4 sm:py-0"
+                style="height: clamp(80px, 18vw, 280px);">
+
+                <!-- Multiple Logo Layers for Depth Effect -->
+                <!-- <div class="absolute inset-0 flex items-center justify-center opacity-[0.02] scale-125 blur-sm">
+                <img 
+                    src="logo.svg" 
+                    alt="" 
+                    class="w-[85%] sm:w-[80%] h-auto max-h-full object-contain"
+                    style="filter: brightness(0) invert(1);"
+                >
+            </div> -->
+
+                <!-- Main Logo -->
+                <img src="logo.svg" alt="Providhy"
+                    class="relative w-[80%] sm:w-[75%] md:w-[70%] lg:w-[60%] max-w-[800px] h-auto max-h-full object-contain opacity-[0.07] hover:opacity-[0.12] transition-opacity duration-700"
+                    style="filter: brightness(0) invert(1);">
+
+                <!-- Scanline Effect -->
+                <div class="absolute inset-0 pointer-events-none opacity-50"
+                    style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);">
+                </div>
+
+                <!-- Center Glow -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-1/2 h-1/2 bg-[#31BCBC]/5 rounded-full blur-3xl"></div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Gradient Fade -->
+            <div class="absolute bottom-0 left-0 right-0 h-8 sm:h-12 bg-gradient-to-t from-[#143939] to-transparent">
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- BACK TO TOP BUTTON -->
+    <!-- ============================================== -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-[#1D4F50] hover:bg-[#31BCBC] text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 pointer-events-none z-40">
+        <span class="iconify text-xl" data-icon="lucide:arrow-up"></span>
+    </button>
+
+    <!-- ============================================== -->
+    <!-- VIDEO MODAL -->
+    <!-- ============================================== -->
+    <div id="video-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <div class="video-backdrop absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeVideoModal()"></div>
+        <div class="relative z-10 w-full max-w-4xl mx-4">
+            <button onclick="closeVideoModal()"
+                class="absolute -top-12 right-0 text-white hover:text-orange-400 transition-colors">
+                <span class="iconify text-3xl" data-icon="lucide:x"></span>
+            </button>
+            <div class="bg-black rounded-2xl overflow-hidden aspect-video">
+                <iframe id="video-iframe" class="w-full h-full" src="" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- SCRIPTS -->
+    <!-- ============================================== -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

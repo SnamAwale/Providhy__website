@@ -1,0 +1,13 @@
+/* =============================================
+   FOOTER
+============================================= */
+
+footer a {
+    position: relative;
+}
+
+footer a:focus-visible {
+    outline: 2px solid #31BCBC;
+    outline-offset: 2px;
+    border-radius: 4px;
+}

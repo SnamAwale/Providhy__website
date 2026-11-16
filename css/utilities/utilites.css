@@ -1,0 +1,11 @@
+/* =============================================
+   CARDS
+============================================= */
+
+.value-card {
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}

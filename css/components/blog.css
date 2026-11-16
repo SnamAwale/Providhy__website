@@ -1,0 +1,11 @@
+/* =============================================
+   BLOG CARDS
+============================================= */
+
+.blog-card:hover .blog-image {
+    transform: scale(1.05);
+}
+
+.blog-card:hover .read-more {
+    gap: 0.75rem;
+}

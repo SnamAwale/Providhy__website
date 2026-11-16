@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Providhy ERP </title>
+    <meta name="description"
+        content="Providhy is Nepal's most intuitive cloud ERP for trading businesses. Manage inventory, billing, and accounting — all in one place.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Fonts & Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-white text-slate-900 selection:bg-[#31BCBC]/20 selection:text-[#1D4F50] overflow-x-hidden">
+
+    <!-- Reading Progress Bar -->
+    <div class="fixed top-0 left-0 right-0 h-1 bg-slate-100 z-[60]">
+        <div id="reading-progress" class="h-full bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] w-0"></div>
+    </div>
+
+    <!-- Spotlight -->
+    <div id="spotlight" class="fixed inset-0 pointer-events-none"></div>
+
+
+    <!-- Floating Capsule Navbar with Responsive Mobile Menu -->
+    <div class="fixed top-0 left-0 right-0 z-[90] flex flex-col items-center w-full pt-6 px-4 font-sans">
+        <nav
+            class="relative w-full max-w-5xl bg-white/80 backdrop-blur-lg rounded-full shadow-2xl shadow-[#1D4F50]/5 border border-[#1D4F50]/10 px-3 py-2.5 flex items-center justify-between transition-all duration-300 z-[90]">
+
+            <a href="/" class="flex items-center pl-3 group">
+                <img src="./logo.svg" alt="Providhy Logo"
+                    class="h-6 w-auto object-contain group-hover:scale-105 transition-transform" />
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+
+                <!-- Features Dropdown (Clickable + Hover) -->
+                <div class="relative group/features">
+                    <a href="./features.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                        Features
+                        <span class="iconify text-xs transition-transform group-hover/features:rotate-180"
+                            data-icon="lucide:chevron-down"></span>
+                    </a>
+
+                    <!-- Features Dropdown Panel -->
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/features:opacity-100 group-hover/features:visible transition-all duration-300 transform translate-y-2 group-hover/features:translate-y-0">
+                        <div
+                            class="w-[600px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Core
+                                        Modules</p>
+                                    <a href="./features.html"
+                                        class="text-xs font-medium text-[#31BCBC] hover:underline">View All Features
+                                        →</a>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <!-- Inventory -->
+                                    <a href="./inventory.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-blue-50 transition-colors group/item border border-transparent hover:border-blue-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:package"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-blue-600 transition-colors">
+                                                Inventory</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Stock tracking, godowns,
+                                                barcode & alerts</p>
+                                        </div>
+                                    </a>
+                                    <!-- Sales -->
+                                    <a href="./sales.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors group/item border border-transparent hover:border-emerald-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:receipt"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-emerald-600 transition-colors">
+                                                Sales & Billing</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">VAT invoices, quotations &
+                                                payments</p>
+                                        </div>
+                                    </a>
+                                    <!-- Purchase -->
+                                    <a href="./purchase.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-amber-50 transition-colors group/item border border-transparent hover:border-amber-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl" data-icon="lucide:truck"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-amber-600 transition-colors">
+                                                Purchase</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Orders, suppliers & goods
+                                                received</p>
+                                        </div>
+                                    </a>
+                                    <!-- Accounting -->
+                                    <a href="./accounting.html"
+                                        class="flex items-start gap-4 p-4 rounded-xl hover:bg-purple-50 transition-colors group/item border border-transparent hover:border-purple-100">
+                                        <div
+                                            class="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/20 group-hover/item:scale-110 transition-transform">
+                                            <span class="iconify text-white text-xl"
+                                                data-icon="lucide:calculator"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 group-hover/item:text-purple-600 transition-colors">
+                                                Accounting</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Ledgers, reports & financial
+                                                statements</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Bottom CTA - Gradient Style -->
+                            <div
+                                class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-white" data-icon="lucide:play-circle"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">See it in action</p>
+                                        <p class="text-white/70 text-xs">Watch a 2-minute demo</p>
+                                    </div>
+                                </div>
+                                <button onclick="openVideoModal('home-demo')"
+                                    class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">
+                                    Watch Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./pricing.html"
+                    class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                    Pricing
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                </a>
+
+                <!-- Resources Dropdown (Clickable + Hover) -->
+                <div class="relative group/resources">
+                    <a href="./resources.html"
+                        class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative flex items-center gap-1 py-2">
+                        Resources
+                        <span class="iconify text-xs transition-transform group-hover/resources:rotate-180"
+                            data-icon="lucide:chevron-down"></span>
+                    </a>
+
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover/resources:opacity-100 group-hover/resources:visible transition-all duration-300 transform translate-y-2 group-hover/resources:translate-y-0">
+                        <div
+                            class="w-[520px] bg-white rounded-2xl shadow-2xl shadow-slate-900/10 border border-slate-200 overflow-hidden">
+                            <div class="grid grid-cols-2 gap-0">
+                                <div class="p-5 space-y-1">
+                                    <div class="flex items-center justify-between mb-3 px-3">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            Learn</p>
+                                    </div>
+                                    <a href="./documentation.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-blue-600 text-lg"
+                                                data-icon="lucide:book-open"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Documentation</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Detailed guides and references
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <a href="./tutorials.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-red-600 text-lg"
+                                                data-icon="lucide:play-circle"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Video Tutorials</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Step-by-step video guides</p>
+                                        </div>
+                                    </a>
+                                    <a href="./help.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-emerald-600 text-lg"
+                                                data-icon="lucide:life-buoy"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Help Center</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">FAQs and troubleshooting</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-5 space-y-1 bg-slate-50/50">
+                                    <div class="flex items-center justify-between mb-3 px-3">
+                                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                                            Explore</p>
+                                        <a href="./resources.html"
+                                            class="text-xs font-medium text-[#31BCBC] hover:underline">View All
+                                            →</a>
+                                    </div>
+                                    <a href="./blog.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-purple-600 text-lg"
+                                                data-icon="lucide:pen-line"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                Blog</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Tips, news & insights</p>
+                                        </div>
+                                    </a>
+                                    <a href="./changelog.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-amber-600 text-lg"
+                                                data-icon="lucide:sparkles"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm flex items-center gap-2 group-hover/item:text-[#31BCBC] transition-colors">
+                                                What's New
+                                                <span
+                                                    class="px-1.5 py-0.5 bg-amber-500 text-white text-[10px] font-bold rounded">v2.5</span>
+                                            </p>
+                                            <p class="text-xs text-slate-500 mt-0.5">Latest features & updates</p>
+                                        </div>
+                                    </a>
+                                    <a href="./api.html"
+                                        class="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/item">
+                                        <div
+                                            class="w-10 h-10 bg-slate-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <span class="iconify text-slate-600 text-lg"
+                                                data-icon="lucide:code-2"></span>
+                                        </div>
+                                        <div>
+                                            <p
+                                                class="font-semibold text-slate-900 text-sm group-hover/item:text-[#31BCBC] transition-colors">
+                                                API Reference</p>
+                                            <p class="text-xs text-slate-500 mt-0.5">For developers</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Bottom CTA - Gradient Style (Consistent with Features) -->
+                            <div
+                                class="px-5 py-4 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                                        <span class="iconify text-white" data-icon="lucide:headphones"></span>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-medium text-sm">Need help?</p>
+                                        <p class="text-white/70 text-xs">Talk to our support team</p>
+                                    </div>
+                                </div>
+                                <a href="./contact.html"
+                                    class="px-4 py-2 bg-white text-[#1D4F50] text-sm font-semibold rounded-lg hover:bg-white/90 transition-colors">Contact
+                                    Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="./contact.html"
+                    class="text-sm font-medium text-slate-500 hover:text-[#31BCBC] transition-colors relative group">
+                    Contact
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#31BCBC] transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-5 pr-1">
+                <a href="./login.html"
+                    class="text-sm font-semibold text-[#1D4F50] hover:text-[#31BCBC] transition-colors">Log in</a>
+                <a href="./signup.html"
+                    class="group relative inline-flex items-center justify-center p-[2px] overflow-hidden rounded-full shadow-md shadow-[#31BCBC]/20 hover:shadow-lg hover:shadow-[#31BCBC]/30 transition-all">
+                    <span
+                        class="absolute inset-0 bg-gradient-to-r from-[#1D4F50] via-[#31BCBC] to-[#1D4F50] bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]"></span>
+                    <span
+                        class="relative flex items-center gap-2 rounded-full bg-white px-6 py-2 transition-all duration-300 group-hover:bg-opacity-95">
+                        <span class="text-sm font-bold text-[#1D4F50] group-hover:text-[#31BCBC] transition-colors">Get
+                            Started</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="md:hidden pr-2">
+                <button id="mobile-menu-btn"
+                    class="p-2 text-[#1D4F50] hover:bg-[#31BCBC]/10 rounded-full transition-colors">
+                    <span class="iconify w-6 h-6" data-icon="lucide:menu"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-[calc(100%+10px)] w-[calc(100%-2rem)] max-w-5xl bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-[#1D4F50]/10 border border-[#1D4F50]/10 p-6 flex-col gap-4 z-40">
+            <div class="flex flex-col gap-1">
+                <!-- Features - Clickable header + expandable -->
+                <details class="group">
+                    <summary
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                        <a href="./features.html" class="flex-1" onclick="event.stopPropagation();">Features</a>
+                        <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                            data-icon="lucide:chevron-down"></span>
+                    </summary>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="./inventory.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-blue-500" data-icon="lucide:package"></span>
+                            Inventory
+                        </a>
+                        <a href="./sales.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-emerald-500" data-icon="lucide:receipt"></span>
+                            Sales & Billing
+                        </a>
+                        <a href="./purchase.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-amber-500" data-icon="lucide:truck"></span>
+                            Purchase
+                        </a>
+                        <a href="./accounting.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-purple-500" data-icon="lucide:calculator"></span>
+                            Accounting
+                        </a>
+                        <a href="./features.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            View All Features
+                        </a>
+                    </div>
+                </details>
+
+                <a href="./pricing.html"
+                    class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Pricing</a>
+
+                <!-- Resources - Clickable header + expandable -->
+                <details class="group">
+                    <summary
+                        class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl cursor-pointer flex items-center justify-between list-none">
+                        <a href="./resources.html" class="flex-1" onclick="event.stopPropagation();">Resources</a>
+                        <span class="iconify text-slate-400 group-open:rotate-180 transition-transform"
+                            data-icon="lucide:chevron-down"></span>
+                    </summary>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="./documentation.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-blue-500" data-icon="lucide:book-open"></span>
+                            Documentation
+                        </a>
+                        <a href="./tutorials.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-red-500" data-icon="lucide:play-circle"></span>
+                            Video Tutorials
+                        </a>
+                        <a href="./help.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-emerald-500" data-icon="lucide:life-buoy"></span>
+                            Help Center
+                        </a>
+                        <a href="./blog.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-purple-500" data-icon="lucide:pen-line"></span>
+                            Blog
+                        </a>
+                        <a href="./changelog.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-amber-500" data-icon="lucide:sparkles"></span>
+                            What's New
+                        </a>
+                        <a href="./api.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-slate-600 hover:bg-slate-50 rounded-xl">
+                            <span class="iconify text-slate-500" data-icon="lucide:code-2"></span>
+                            API Reference
+                        </a>
+                        <a href="./resources.html"
+                            class="flex items-center gap-3 px-4 py-2.5 text-[#31BCBC] font-medium hover:bg-[#31BCBC]/5 rounded-xl">
+                            <span class="iconify" data-icon="lucide:arrow-right"></span>
+                            View All Resources
+                        </a>
+                    </div>
+                </details>
+
+                <a href="./contact.html"
+                    class="px-4 py-3 text-lg font-medium text-[#1D4F50] hover:bg-slate-50 rounded-xl">Contact</a>
+            </div>
+            <hr class="border-[#1D4F50]/10">
+            <div class="flex flex-col gap-3">
+                <a href="./login.html"
+                    class="w-full py-3 text-center font-semibold text-[#1D4F50] border border-[#1D4F50]/20 rounded-xl hover:bg-slate-50 transition-colors">Log
+                    in</a>
+                <a href="./signup.html"
+                    class="w-full py-3 text-center font-bold text-white bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] rounded-xl hover:opacity-90 transition-opacity">Get
+                    Started</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- ARTICLE HEADER -->
+    <!-- ============================================== -->
+    <header class="pt-28 pb-8 max-w-4xl mx-auto px-6 reveal">
+
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-6">
+            <a href="/blog" class="hover:text-[#31BCBC] transition-colors">Blog</a>
+            <span class="iconify text-slate-400" data-icon="lucide:chevron-right"></span>
+            <span class="text-slate-400">Inventory Management</span>
+        </nav>
+
+        <!-- Category & Reading Time -->
+        <div class="flex flex-wrap items-center gap-3 mb-6">
+            <a href="/blog?category=inventory"
+                class="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-semibold rounded-full hover:bg-emerald-200 transition-colors">
+                Inventory Management
+            </a>
+            <span class="text-slate-400">•</span>
+            <span class="text-slate-500 text-sm flex items-center gap-1.5">
+                <span class="iconify" data-icon="lucide:clock"></span>
+                5 min read
+            </span>
+            <span class="text-slate-400">•</span>
+            <span class="text-slate-500 text-sm">Jan 15, 2025</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 leading-tight mb-8">
+            5 Ways to Reduce Inventory Costs in Your Business
+        </h1>
+
+        <!-- Author & Share -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pb-8 border-b border-slate-200">
+            <div class="flex items-center gap-4">
+                <div
+                    class="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    PS
+                </div>
+                <div>
+                    <p class="font-semibold text-slate-900">Prabin Sharma</p>
+                    <p class="text-slate-500 text-sm">Business Operations Expert</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-slate-500 text-sm mr-2">Share:</span>
+                <a href="#"
+                    class="share-btn w-10 h-10 bg-slate-100 hover:bg-blue-500 hover:text-white rounded-xl flex items-center justify-center text-slate-500 transition-all"
+                    aria-label="Share on Facebook">
+                    <span class="iconify" data-icon="lucide:facebook"></span>
+                </a>
+                <a href="#"
+                    class="share-btn w-10 h-10 bg-slate-100 hover:bg-sky-500 hover:text-white rounded-xl flex items-center justify-center text-slate-500 transition-all"
+                    aria-label="Share on Twitter">
+                    <span class="iconify" data-icon="lucide:twitter"></span>
+                </a>
+                <a href="#"
+                    class="share-btn w-10 h-10 bg-slate-100 hover:bg-blue-700 hover:text-white rounded-xl flex items-center justify-center text-slate-500 transition-all"
+                    aria-label="Share on LinkedIn">
+                    <span class="iconify" data-icon="lucide:linkedin"></span>
+                </a>
+                <button onclick="copyLink()"
+                    class="share-btn w-10 h-10 bg-slate-100 hover:bg-slate-200 rounded-xl flex items-center justify-center text-slate-500 transition-all"
+                    aria-label="Copy link">
+                    <span class="iconify" data-icon="lucide:link"></span>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Featured Image -->
+    <div class="max-w-5xl mx-auto px-6 mb-12 reveal">
+        <div class="aspect-[21/9] bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl overflow-hidden relative">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <span class="iconify text-white/10 text-[300px]" data-icon="lucide:package"></span>
+            </div>
+            <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                <span class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-xl text-white text-sm font-medium">
+                    Featured Article
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- MAIN CONTENT AREA -->
+    <!-- ============================================== -->
+    <div class="max-w-6xl mx-auto px-6 pb-16">
+        <div class="flex flex-col lg:flex-row gap-12">
+
+            <!-- Sidebar (Left on Desktop) -->
+            <aside class="lg:w-64 flex-shrink-0 order-2 lg:order-1">
+                <div class="lg:sticky lg:top-28 space-y-6">
+
+                    <!-- Reading Progress -->
+                    <div class="bg-white rounded-2xl border border-slate-200 p-5 reveal">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-sm font-medium text-slate-700">Reading Progress</span>
+                            <span id="progress-percent" class="text-sm font-bold text-[#31BCBC]">0%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                            <div id="progress-bar"
+                                class="h-full bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] rounded-full transition-all duration-300"
+                                style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Navigation -->
+                    <div class="bg-white rounded-2xl border border-slate-200 p-5 reveal">
+                        <h4 class="text-sm font-bold text-slate-900 mb-4 flex items-center gap-2">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:list"></span>
+                            Jump to Section
+                        </h4>
+                        <nav class="space-y-1" id="quick-nav">
+                            <a href="#understand-inventory"
+                                class="toc-link flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-slate-50 rounded-lg transition-colors">
+                                <span class="toc-dot w-1.5 h-1.5 bg-slate-300 rounded-full flex-shrink-0"></span>
+                                Turnover Ratio
+                            </a>
+                            <a href="#abc-analysis"
+                                class="toc-link flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-slate-50 rounded-lg transition-colors">
+                                <span class="toc-dot w-1.5 h-1.5 bg-slate-300 rounded-full flex-shrink-0"></span>
+                                ABC Analysis
+                            </a>
+                            <a href="#reorder-points"
+                                class="toc-link flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-slate-50 rounded-lg transition-colors">
+                                <span class="toc-dot w-1.5 h-1.5 bg-slate-300 rounded-full flex-shrink-0"></span>
+                                Reorder Points
+                            </a>
+                            <a href="#dead-stock"
+                                class="toc-link flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-slate-50 rounded-lg transition-colors">
+                                <span class="toc-dot w-1.5 h-1.5 bg-slate-300 rounded-full flex-shrink-0"></span>
+                                Dead Stock
+                            </a>
+                            <a href="#technology"
+                                class="toc-link flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:text-[#31BCBC] hover:bg-slate-50 rounded-lg transition-colors">
+                                <span class="toc-dot w-1.5 h-1.5 bg-slate-300 rounded-full flex-shrink-0"></span>
+                                Technology
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-2xl p-6 text-white reveal">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                            <span class="iconify text-2xl" data-icon="lucide:package"></span>
+                        </div>
+                        <h4 class="font-bold mb-2">Try Providhy Free</h4>
+                        <p class="text-white/70 text-sm mb-4">Experience smart inventory management with our 14-day free
+                            trial.</p>
+                        <a href="/signup"
+                            class="block w-full py-2.5 bg-white text-[#1D4F50] font-semibold rounded-xl text-center text-sm hover:bg-slate-100 transition-colors">
+                            Start Free Trial
+                        </a>
+                    </div>
+
+                </div>
+            </aside>
+
+            <!-- Article Content (Right on Desktop) -->
+            <article class="flex-1 order-1 lg:order-2 reveal" id="article-content">
+
+                <!-- Lead Paragraph -->
+                <p class="text-xl text-slate-600 leading-relaxed mb-8 font-medium">
+                    Effective inventory management is the backbone of any successful trading business. Yet many
+                    businesses lose thousands of rupees annually due to poor stock control, overstocking, or stockouts.
+                    In this comprehensive guide, we'll explore five proven strategies to optimize your inventory and
+                    significantly reduce costs.
+                </p>
+
+                <!-- Section 1 -->
+                <h2 id="understand-inventory"
+                    class="text-2xl font-bold text-slate-900 mt-12 mb-4 flex items-center gap-3 scroll-mt-32">
+                    <span
+                        class="w-10 h-10 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-xl flex items-center justify-center text-white text-sm font-bold flex-shrink-0">1</span>
+                    Understand Your Inventory Turnover Ratio
+                </h2>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    The inventory turnover ratio is one of the most critical metrics for any trading business. It
+                    measures how many times your inventory is sold and replaced over a specific period. A higher ratio
+                    indicates efficient inventory management, while a lower ratio suggests overstocking or weak sales.
+                </p>
+
+                <!-- Formula Box -->
+                <div class="bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] rounded-2xl p-6 my-8 text-white">
+                    <p class="text-white/70 text-sm mb-2">Formula</p>
+                    <p class="text-xl font-mono font-bold">
+                        Inventory Turnover = Cost of Goods Sold ÷ Average Inventory
+                    </p>
+                </div>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    For example, if your annual COGS is NPR 50,00,000 and your average inventory value is NPR 10,00,000,
+                    your turnover ratio is 5. This means you sell and restock your entire inventory five times per year.
+                </p>
+
+                <!-- Info Box -->
+                <div class="bg-blue-50 border-l-4 border-blue-500 rounded-r-xl p-5 my-8">
+                    <div class="flex items-start gap-3">
+                        <span class="iconify text-blue-500 text-xl flex-shrink-0 mt-0.5"
+                            data-icon="lucide:lightbulb"></span>
+                        <div>
+                            <p class="font-semibold text-blue-900 mb-1">Pro Tip</p>
+                            <p class="text-blue-800 text-sm">
+                                Industry benchmarks vary, but most trading businesses aim for a turnover ratio between
+                                4-6. Track this monthly to identify trends and seasonal patterns.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <h2 id="abc-analysis"
+                    class="text-2xl font-bold text-slate-900 mt-12 mb-4 flex items-center gap-3 scroll-mt-32">
+                    <span
+                        class="w-10 h-10 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-xl flex items-center justify-center text-white text-sm font-bold flex-shrink-0">2</span>
+                    Implement ABC Analysis
+                </h2>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    ABC analysis is a categorization technique based on the Pareto principle (80/20 rule). It helps you
+                    prioritize inventory management efforts by classifying products into three categories:
+                </p>
+
+                <!-- ABC Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+                    <div class="bg-emerald-50 rounded-xl p-5 border border-emerald-200">
+                        <div
+                            class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center text-white font-bold mb-3">
+                            A</div>
+                        <h4 class="font-bold text-emerald-900 mb-2">High-Value Items</h4>
+                        <p class="text-emerald-700 text-sm">~20% of items contributing to ~80% of revenue. Requires
+                            tight control and frequent review.</p>
+                    </div>
+                    <div class="bg-amber-50 rounded-xl p-5 border border-amber-200">
+                        <div
+                            class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center text-white font-bold mb-3">
+                            B</div>
+                        <h4 class="font-bold text-amber-900 mb-2">Medium-Value Items</h4>
+                        <p class="text-amber-700 text-sm">~30% of items contributing to ~15% of revenue. Moderate
+                            control needed.</p>
+                    </div>
+                    <div class="bg-slate-100 rounded-xl p-5 border border-slate-200">
+                        <div
+                            class="w-10 h-10 bg-slate-500 rounded-lg flex items-center justify-center text-white font-bold mb-3">
+                            C</div>
+                        <h4 class="font-bold text-slate-900 mb-2">Low-Value Items</h4>
+                        <p class="text-slate-600 text-sm">~50% of items contributing to ~5% of revenue. Simple controls
+                            sufficient.</p>
+                    </div>
+                </div>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    By focusing your attention on Category A items, you can maximize the impact of your inventory
+                    management efforts while minimizing time spent on low-value products.
+                </p>
+
+                <!-- Image with Caption -->
+                <figure class="my-10">
+                    <div
+                        class="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-200">
+                        <div class="text-center">
+                            <span class="iconify text-slate-300 text-6xl mb-4" data-icon="lucide:bar-chart-3"></span>
+                            <p class="text-slate-400 text-sm">ABC Analysis Chart Placeholder</p>
+                        </div>
+                    </div>
+                    <figcaption class="text-center text-sm text-slate-500 mt-3 italic">
+                        Figure 1: Typical ABC analysis distribution showing the concentration of value in Category A
+                        items.
+                    </figcaption>
+                </figure>
+
+                <!-- Section 3 -->
+                <h2 id="reorder-points"
+                    class="text-2xl font-bold text-slate-900 mt-12 mb-4 flex items-center gap-3 scroll-mt-32">
+                    <span
+                        class="w-10 h-10 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-xl flex items-center justify-center text-white text-sm font-bold flex-shrink-0">3</span>
+                    Set Up Automatic Reorder Points
+                </h2>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    One of the most effective ways to prevent stockouts while avoiding overstocking is to establish
+                    automatic reorder points for each product. A reorder point is the inventory level at which a new
+                    order should be placed.
+                </p>
+
+                <!-- Formula Box -->
+                <div class="bg-slate-900 rounded-2xl p-6 my-8 text-white font-mono">
+                    <p class="text-slate-400 text-sm mb-2">// Reorder Point Formula</p>
+                    <p class="text-lg">
+                        <span class="text-emerald-400">Reorder Point</span> = <span class="text-blue-400">(Daily Sales ×
+                            Lead Time)</span> + <span class="text-amber-400">Safety Stock</span>
+                    </p>
+                </div>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Let's break this down with a practical example:
+                </p>
+
+                <!-- Example Box -->
+                <div class="bg-slate-50 rounded-2xl p-6 my-8 border border-slate-200">
+                    <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="iconify text-[#31BCBC]" data-icon="lucide:calculator"></span>
+                        Practical Example
+                    </h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center py-2 border-b border-slate-200">
+                            <span class="text-slate-600">Average daily sales</span>
+                            <span class="font-semibold text-slate-900">10 units</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-200">
+                            <span class="text-slate-600">Supplier lead time</span>
+                            <span class="font-semibold text-slate-900">7 days</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-slate-200">
+                            <span class="text-slate-600">Safety stock (buffer)</span>
+                            <span class="font-semibold text-slate-900">20 units</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 bg-emerald-50 -mx-6 px-6 rounded-lg">
+                            <span class="font-semibold text-emerald-700">Reorder Point</span>
+                            <span class="font-bold text-emerald-700">(10 × 7) + 20 = 90 units</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    With modern ERP software like Providhy, you can set these reorder points and receive automatic
+                    alerts when stock levels drop below the threshold — eliminating the guesswork and reducing human
+                    error.
+                </p>
+
+                <!-- Section 4 -->
+                <h2 id="dead-stock"
+                    class="text-2xl font-bold text-slate-900 mt-12 mb-4 flex items-center gap-3 scroll-mt-32">
+                    <span
+                        class="w-10 h-10 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-xl flex items-center justify-center text-white text-sm font-bold flex-shrink-0">4</span>
+                    Identify and Eliminate Dead Stock
+                </h2>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Dead stock — inventory that hasn't sold for an extended period — ties up capital and storage space.
+                    Regularly identifying and addressing dead stock is crucial for maintaining a healthy inventory.
+                </p>
+
+                <!-- Warning Box -->
+                <div class="bg-red-50 border-l-4 border-red-500 rounded-r-xl p-5 my-8">
+                    <div class="flex items-start gap-3">
+                        <span class="iconify text-red-500 text-xl flex-shrink-0 mt-0.5"
+                            data-icon="lucide:alert-triangle"></span>
+                        <div>
+                            <p class="font-semibold text-red-900 mb-1">The True Cost of Dead Stock</p>
+                            <p class="text-red-800 text-sm">
+                                Beyond the purchase cost, dead stock incurs storage costs, insurance, potential
+                                obsolescence, and opportunity cost of capital. A product sitting for 6 months can cost
+                                25-30% of its value in hidden expenses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Here are strategies to deal with dead stock:
+                </p>
+
+                <!-- Checklist -->
+                <ul class="space-y-3 my-6">
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="w-6 h-6 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="iconify text-emerald-600 text-sm" data-icon="lucide:check"></span>
+                        </span>
+                        <span class="text-slate-600"><strong class="text-slate-900">Bundle with fast-moving
+                                products</strong> — Create combo offers that include dead stock items</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="w-6 h-6 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="iconify text-emerald-600 text-sm" data-icon="lucide:check"></span>
+                        </span>
+                        <span class="text-slate-600"><strong class="text-slate-900">Offer discounts or clearance
+                                sales</strong> — Recover some capital rather than none</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="w-6 h-6 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="iconify text-emerald-600 text-sm" data-icon="lucide:check"></span>
+                        </span>
+                        <span class="text-slate-600"><strong class="text-slate-900">Return to suppliers</strong> —
+                            Negotiate return policies for slow-moving items</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="w-6 h-6 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="iconify text-emerald-600 text-sm" data-icon="lucide:check"></span>
+                        </span>
+                        <span class="text-slate-600"><strong class="text-slate-900">Donate for tax benefits</strong> —
+                            Get tax deductions while helping the community</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="w-6 h-6 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="iconify text-emerald-600 text-sm" data-icon="lucide:check"></span>
+                        </span>
+                        <span class="text-slate-600"><strong class="text-slate-900">Use as gifts or incentives</strong>
+                            — Add value to customer purchases</span>
+                    </li>
+                </ul>
+
+                <!-- Section 5 -->
+                <h2 id="technology"
+                    class="text-2xl font-bold text-slate-900 mt-12 mb-4 flex items-center gap-3 scroll-mt-32">
+                    <span
+                        class="w-10 h-10 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-xl flex items-center justify-center text-white text-sm font-bold flex-shrink-0">5</span>
+                    Leverage Technology for Real-Time Tracking
+                </h2>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Manual inventory tracking using spreadsheets is error-prone and time-consuming. Modern cloud-based
+                    ERP systems provide real-time visibility into your inventory across all locations, enabling faster
+                    and better decisions.
+                </p>
+
+                <!-- Feature Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+                    <div
+                        class="bg-white rounded-xl p-5 border border-slate-200 hover:border-[#31BCBC] hover:shadow-lg transition-all">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                            <span class="iconify text-blue-600 text-xl" data-icon="lucide:scan-barcode"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Barcode Scanning</h4>
+                        <p class="text-slate-500 text-sm">Eliminate manual entry errors with quick barcode-based stock
+                            updates.</p>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl p-5 border border-slate-200 hover:border-[#31BCBC] hover:shadow-lg transition-all">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
+                            <span class="iconify text-purple-600 text-xl" data-icon="lucide:bell-ring"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Low Stock Alerts</h4>
+                        <p class="text-slate-500 text-sm">Get notified automatically when items fall below reorder
+                            points.</p>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl p-5 border border-slate-200 hover:border-[#31BCBC] hover:shadow-lg transition-all">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mb-3">
+                            <span class="iconify text-emerald-600 text-xl" data-icon="lucide:git-branch"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Multi-Location Sync</h4>
+                        <p class="text-slate-500 text-sm">Track inventory across multiple godowns and branches in
+                            real-time.</p>
+                    </div>
+                    <div
+                        class="bg-white rounded-xl p-5 border border-slate-200 hover:border-[#31BCBC] hover:shadow-lg transition-all">
+                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-3">
+                            <span class="iconify text-amber-600 text-xl" data-icon="lucide:line-chart"></span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-1">Demand Forecasting</h4>
+                        <p class="text-slate-500 text-sm">Use historical data to predict future demand and optimize
+                            ordering.</p>
+                    </div>
+                </div>
+
+                <!-- Quote Block -->
+                <blockquote class="relative my-10 pl-6 border-l-4 border-[#31BCBC]">
+                    <p class="text-xl text-slate-700 italic leading-relaxed mb-4">
+                        "After implementing Providhy's inventory management system, we reduced our carrying costs by 32%
+                        and virtually eliminated stockouts. The real-time visibility changed how we make purchasing
+                        decisions."
+                    </p>
+                    <footer class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                            RS
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-900">Ramesh Shrestha</p>
+                            <p class="text-sm text-slate-500">Owner, Himalayan Traders, Kathmandu</p>
+                        </div>
+                    </footer>
+                </blockquote>
+
+                <!-- Conclusion -->
+                <h2 id="conclusion" class="text-2xl font-bold text-slate-900 mt-12 mb-4 scroll-mt-32">
+                    Conclusion
+                </h2>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Reducing inventory costs isn't about cutting corners — it's about working smarter. By understanding
+                    your turnover ratio, implementing ABC analysis, setting up automatic reorder points, eliminating
+                    dead stock, and leveraging technology, you can significantly improve your bottom line while
+                    maintaining optimal stock levels.
+                </p>
+
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Start with one strategy at a time, measure the results, and gradually implement others. The
+                    cumulative effect of these improvements can transform your inventory management from a cost center
+                    into a competitive advantage.
+                </p>
+
+                <!-- Key Takeaways -->
+                <div class="bg-gradient-to-br from-[#1D4F50] to-[#31BCBC] rounded-2xl p-6 my-10 text-white">
+                    <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
+                        <span class="iconify" data-icon="lucide:key"></span>
+                        Key Takeaways
+                    </h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2">
+                            <span class="iconify text-emerald-300 mt-1 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span>Track your inventory turnover ratio monthly to identify trends</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="iconify text-emerald-300 mt-1 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span>Focus your efforts on Category A items for maximum impact</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="iconify text-emerald-300 mt-1 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span>Automate reorder points to prevent stockouts and overstocking</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="iconify text-emerald-300 mt-1 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span>Review and address dead stock at least quarterly</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="iconify text-emerald-300 mt-1 flex-shrink-0"
+                                data-icon="lucide:check-circle"></span>
+                            <span>Invest in modern inventory management software for real-time control</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap items-center gap-2 mt-10 pt-8 border-t border-slate-200">
+                    <span class="text-sm font-medium text-slate-700 mr-2">Tags:</span>
+                    <a href="/blog/tag/inventory"
+                        class="px-3 py-1.5 bg-slate-100 hover:bg-[#31BCBC]/10 hover:text-[#31BCBC] text-slate-600 text-sm rounded-lg transition-colors">
+                        Inventory
+                    </a>
+                    <a href="/blog/tag/cost-reduction"
+                        class="px-3 py-1.5 bg-slate-100 hover:bg-[#31BCBC]/10 hover:text-[#31BCBC] text-slate-600 text-sm rounded-lg transition-colors">
+                        Cost Reduction
+                    </a>
+                    <a href="/blog/tag/business-tips"
+                        class="px-3 py-1.5 bg-slate-100 hover:bg-[#31BCBC]/10 hover:text-[#31BCBC] text-slate-600 text-sm rounded-lg transition-colors">
+                        Business Tips
+                    </a>
+                    <a href="/blog/tag/erp"
+                        class="px-3 py-1.5 bg-slate-100 hover:bg-[#31BCBC]/10 hover:text-[#31BCBC] text-slate-600 text-sm rounded-lg transition-colors">
+                        ERP
+                    </a>
+                </div>
+
+                <!-- Share Section -->
+                <div
+                    class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-8 pt-8 border-t border-slate-200">
+                    <div>
+                        <p class="text-sm font-medium text-slate-700 mb-2">Share this article</p>
+                        <div class="flex items-center gap-2">
+                            <a href="#"
+                                class="w-10 h-10 bg-[#1877F2] hover:bg-[#1877F2]/90 rounded-xl flex items-center justify-center text-white transition-colors"
+                                title="Share on Facebook">
+                                <span class="iconify" data-icon="lucide:facebook"></span>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-[#1DA1F2] hover:bg-[#1DA1F2]/90 rounded-xl flex items-center justify-center text-white transition-colors"
+                                title="Share on Twitter">
+                                <span class="iconify" data-icon="lucide:twitter"></span>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-[#0A66C2] hover:bg-[#0A66C2]/90 rounded-xl flex items-center justify-center text-white transition-colors"
+                                title="Share on LinkedIn">
+                                <span class="iconify" data-icon="lucide:linkedin"></span>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-[#25D366] hover:bg-[#25D366]/90 rounded-xl flex items-center justify-center text-white transition-colors"
+                                title="Share on WhatsApp">
+                                <span class="iconify" data-icon="lucide:message-circle"></span>
+                            </a>
+                            <button onclick="copyLink()"
+                                class="w-10 h-10 bg-slate-200 hover:bg-slate-300 rounded-xl flex items-center justify-center text-slate-700 transition-colors"
+                                title="Copy link">
+                                <span class="iconify" data-icon="lucide:link"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <button class="flex items-center gap-2 text-slate-500 hover:text-rose-500 transition-colors">
+                            <span class="iconify text-xl" data-icon="lucide:heart"></span>
+                            <span class="text-sm">124 likes</span>
+                        </button>
+                        <button class="flex items-center gap-2 text-slate-500 hover:text-[#31BCBC] transition-colors">
+                            <span class="iconify text-xl" data-icon="lucide:bookmark"></span>
+                            <span class="text-sm">Save</span>
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- AUTHOR BIO -->
+    <!-- ============================================== -->
+    <section class="py-12 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+
+            <div class="reveal bg-white rounded-2xl border border-slate-200 p-8">
+                <div class="flex flex-col sm:flex-row items-start gap-6">
+
+                    <!-- Avatar -->
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                        PS
+                    </div>
+
+                    <!-- Info -->
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-lg">Prabin Sharma</h3>
+                                <p class="text-sm text-[#31BCBC]">Business Operations Expert</p>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-xl transition-colors">
+                                <span class="iconify" data-icon="lucide:user-plus"></span>
+                                Follow
+                            </a>
+                        </div>
+                        <p class="text-slate-600 mb-4">
+                            Prabin is a business operations consultant with over 10 years of experience helping SMEs
+                            optimize their processes. He specializes in inventory management, supply chain optimization,
+                            and ERP implementation for trading businesses in Nepal.
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <a href="#" class="text-slate-400 hover:text-[#1DA1F2] transition-colors">
+                                <span class="iconify text-xl" data-icon="lucide:twitter"></span>
+                            </a>
+                            <a href="#" class="text-slate-400 hover:text-[#0A66C2] transition-colors">
+                                <span class="iconify text-xl" data-icon="lucide:linkedin"></span>
+                            </a>
+                            <a href="#" class="text-slate-400 hover:text-slate-700 transition-colors">
+                                <span class="iconify text-xl" data-icon="lucide:globe"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- RELATED POSTS -->
+    <!-- ============================================== -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-10 reveal">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Related Articles</h2>
+                <a href="/blog"
+                    class="hidden sm:flex items-center gap-2 text-[#31BCBC] font-semibold hover:gap-3 transition-all">
+                    View all
+                    <span class="iconify" data-icon="lucide:arrow-right"></span>
+                </a>
+            </div>
+
+            <!-- Related Posts Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+
+                <!-- Related Post 1 -->
+                <a href="/blog/understanding-vat-nepal" class="group">
+                    <div
+                        class="aspect-[16/10] bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl mb-5 overflow-hidden flex items-center justify-center">
+                        <span class="iconify text-purple-400/50 text-6xl group-hover:scale-110 transition-transform"
+                            data-icon="lucide:calculator"></span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-500 mb-3">
+                        <span>Jan 10, 2025</span>
+                        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                        <span>8 min read</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#31BCBC] transition-colors">
+                        Understanding VAT in Nepal: A Complete Guide for SMEs
+                    </h3>
+                    <p class="text-slate-500 text-sm line-clamp-2">
+                        Everything you need to know about VAT registration, filing, and compliance in Nepal.
+                    </p>
+                </a>
+
+                <!-- Related Post 2 -->
+                <a href="/blog/cloud-erp-transforming-business" class="group">
+                    <div
+                        class="aspect-[16/10] bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl mb-5 overflow-hidden flex items-center justify-center">
+                        <span class="iconify text-amber-400/50 text-6xl group-hover:scale-110 transition-transform"
+                            data-icon="lucide:cloud"></span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-500 mb-3">
+                        <span>Jan 5, 2025</span>
+                        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                        <span>6 min read</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#31BCBC] transition-colors">
+                        How Cloud ERP is Transforming Nepali Businesses
+                    </h3>
+                    <p class="text-slate-500 text-sm line-clamp-2">
+                        Real stories of digital transformation from trading businesses across Nepal.
+                    </p>
+                </a>
+
+                <!-- Related Post 3 -->
+                <a href="/blog/barcode-system-guide" class="group">
+                    <div
+                        class="aspect-[16/10] bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl mb-5 overflow-hidden flex items-center justify-center">
+                        <span class="iconify text-cyan-400/50 text-6xl group-hover:scale-110 transition-transform"
+                            data-icon="lucide:scan-barcode"></span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-slate-500 mb-3">
+                        <span>Dec 28, 2024</span>
+                        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#31BCBC] transition-colors">
+                        Setting Up a Barcode System for Your Store
+                    </h3>
+                    <p class="text-slate-500 text-sm line-clamp-2">
+                        A practical guide to implementing barcode scanning in your retail business.
+                    </p>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- COMMENTS SECTION -->
+    <!-- ============================================== -->
+    <section class="py-16 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto">
+
+            <div class="reveal">
+
+                <!-- Header -->
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                        <span class="iconify text-[#31BCBC]" data-icon="lucide:message-square"></span>
+                        Comments
+                        <span class="text-lg font-normal text-slate-400">(12)</span>
+                    </h2>
+                    <select
+                        class="px-3 py-2 bg-white border border-slate-200 rounded-xl text-sm text-slate-600 focus:outline-none focus:border-[#31BCBC]">
+                        <option>Newest First</option>
+                        <option>Oldest First</option>
+                        <option>Most Liked</option>
+                    </select>
+                </div>
+
+                <!-- Comment Form -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-6 mb-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center flex-shrink-0">
+                            <span class="iconify text-slate-400" data-icon="lucide:user"></span>
+                        </div>
+                        <div class="flex-1">
+                            <textarea placeholder="Share your thoughts..." rows="3"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-[#31BCBC] focus:ring-2 focus:ring-[#31BCBC]/10 resize-none transition-all"></textarea>
+                            <div class="flex items-center justify-between mt-3">
+                                <p class="text-xs text-slate-400">
+                                    <a href="/login" class="text-[#31BCBC] hover:underline">Sign in</a> to post a
+                                    comment
+                                </p>
+                                <button
+                                    class="px-5 py-2 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC] text-white font-semibold rounded-xl text-sm hover:shadow-lg hover:shadow-[#31BCBC]/20 transition-all">
+                                    Post Comment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments List -->
+                <div class="space-y-6">
+
+                    <!-- Comment 1 -->
+                    <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                                SK
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div>
+                                        <span class="font-semibold text-slate-900">Sunil Karki</span>
+                                        <span class="text-slate-400 text-sm ml-2">• 2 hours ago</span>
+                                    </div>
+                                    <button class="text-slate-400 hover:text-slate-600">
+                                        <span class="iconify" data-icon="lucide:more-horizontal"></span>
+                                    </button>
+                                </div>
+                                <p class="text-slate-600 mb-3">
+                                    This is exactly what I needed! We've been struggling with overstocking for months.
+                                    The ABC analysis tip is gold - will implement this next week. Thanks Prabin!
+                                </p>
+                                <div class="flex items-center gap-4 text-sm">
+                                    <button
+                                        class="flex items-center gap-1.5 text-slate-400 hover:text-rose-500 transition-colors">
+                                        <span class="iconify" data-icon="lucide:heart"></span>
+                                        <span>8</span>
+                                    </button>
+                                    <button
+                                        class="flex items-center gap-1.5 text-slate-400 hover:text-[#31BCBC] transition-colors">
+                                        <span class="iconify" data-icon="lucide:reply"></span>
+                                        <span>Reply</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reply -->
+                        <div class="ml-14 mt-4 pt-4 border-t border-slate-100">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 bg-gradient-to-br from-purple-500 to-violet-500 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+                                    PS
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="font-semibold text-slate-900">Prabin Sharma</span>
+                                        <span
+                                            class="px-1.5 py-0.5 bg-[#31BCBC]/10 text-[#31BCBC] text-[10px] font-bold rounded">AUTHOR</span>
+                                        <span class="text-slate-400 text-sm">• 1 hour ago</span>
+                                    </div>
+                                    <p class="text-slate-600 mb-3">
+                                        Glad you found it helpful, Sunil! ABC analysis is a game-changer. Let me know if
+                                        you need any help with the implementation. 👍
+                                    </p>
+                                    <div class="flex items-center gap-4 text-sm">
+                                        <button
+                                            class="flex items-center gap-1.5 text-slate-400 hover:text-rose-500 transition-colors">
+                                            <span class="iconify" data-icon="lucide:heart"></span>
+                                            <span>3</span>
+                                        </button>
+                                        <button
+                                            class="flex items-center gap-1.5 text-slate-400 hover:text-[#31BCBC] transition-colors">
+                                            <span class="iconify" data-icon="lucide:reply"></span>
+                                            <span>Reply</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comment 2 -->
+                    <div class="bg-white rounded-2xl border border-slate-200 p-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                                AM
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <div>
+                                        <span class="font-semibold text-slate-900">Anita Maharjan</span>
+                                        <span class="text-slate-400 text-sm ml-2">• 5 hours ago</span>
+                                    </div>
+                                    <button class="text-slate-400 hover:text-slate-600">
+                                        <span class="iconify" data-icon="lucide:more-horizontal"></span>
+                                    </button>
+                                </div>
+                                <p class="text-slate-600 mb-3">
+                                    Great article! Quick question - what's a good inventory turnover ratio for a small
+                                    hardware store? We're currently at around 3.5 and wondering if that's healthy.
+                                </p>
+                                <div class="flex items-center gap-4 text-sm">
+                                    <button
+                                        class="flex items-center gap-1.5 text-slate-400 hover:text-rose-500 transition-colors">
+                                        <span class="iconify" data-icon="lucide:heart"></span>
+                                        <span>5</span>
+                                    </button>
+                                    <button
+                                        class="flex items-center gap-1.5 text-slate-400 hover:text-[#31BCBC] transition-colors">
+                                        <span class="iconify" data-icon="lucide:reply"></span>
+                                        <span>Reply</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Load More Comments -->
+                <div class="text-center mt-8">
+                    <button
+                        class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 text-slate-700 font-medium rounded-xl hover:border-[#31BCBC] hover:text-[#31BCBC] transition-all">
+                        <span class="iconify" data-icon="lucide:message-square-plus"></span>
+                        Load More Comments
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- NEWSLETTER CTA -->
+    <!-- ============================================== -->
+    <section class="py-20 px-6 bg-gradient-to-r from-[#1D4F50] to-[#31BCBC]">
+        <div class="max-w-4xl mx-auto text-center reveal">
+
+            <div class="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span class="iconify text-white text-3xl" data-icon="lucide:mail"></span>
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Get more tips like this
+            </h2>
+
+            <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter and receive weekly business tips, product updates, and exclusive content
+                directly in your inbox.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full sm:flex-1 px-5 py-4 bg-white/10 backdrop-blur border border-white/20 rounded-xl text-white placeholder:text-white/50 focus:outline-none focus:border-white/50 focus:bg-white/20 transition-all">
+                <button
+                    class="w-full sm:w-auto px-8 py-4 bg-white text-[#1D4F50] font-semibold rounded-xl hover:bg-slate-100 transition-colors flex items-center justify-center gap-2">
+                    Subscribe
+                    <span class="iconify" data-icon="lucide:arrow-right"></span>
+                </button>
+            </div>
+
+            <p class="text-white/50 text-sm mt-4">
+                Join 2,500+ business owners. Unsubscribe anytime.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- FOOTER -->
+    <!-- ============================================== -->
+    <footer class="bg-[#0C2425] text-white relative overflow-hidden">
+
+        <!-- Subtle Background Pattern -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+            </div>
+        </div>
+
+        <!-- Top Glow -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#31BCBC]/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-10 md:pb-12 relative z-10">
+
+            <!-- Top Section -->
+            <div
+                class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8 mb-10 sm:mb-12 md:mb-16 pb-8 sm:pb-10 md:pb-12 border-b border-white/10">
+
+                <!-- Logo & Description -->
+                <div class="max-w-md">
+                    <a href="/" class="inline-flex items-center gap-3 mb-3 sm:mb-4 group">
+                        <img src="logo.svg" alt="Providhy Logo"
+                            class="h-6 sm:h-7 md:h-8 w-auto brightness-0 invert group-hover:scale-105 transition-transform duration-300" />
+                    </a>
+                    <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                        Nepal's most intuitive cloud ERP for trading businesses. Inventory, billing, and accounting
+                        —
+                        all in one.
+                    </p>
+
+                    <!-- Trust Badges - Mobile -->
+                    <div class="flex items-center gap-4 mt-4 lg:hidden">
+                        <div class="flex items-center gap-1.5 text-white/40">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:shield-check"></span>
+                            <span class="text-xs">IRD Compliant</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-white/40">
+                            <span class="iconify text-[#31BCBC]" data-icon="lucide:cloud"></span>
+                            <span class="text-xs">Cloud Secured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="w-full lg:w-auto">
+                    <p class="text-sm text-white/60 mb-2 sm:mb-3">Subscribe to our newsletter</p>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                        <div class="relative flex-1 sm:flex-none">
+                            <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+                                data-icon="lucide:mail"></span>
+                            <input type="email" placeholder="Enter your email"
+                                class="w-full sm:w-60 md:w-72 pl-11 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#31BCBC] focus:bg-white/[0.15] transition-all text-sm">
+                        </div>
+                        <button
+                            class="px-5 md:px-6 py-3 bg-white text-[#1D4F50] font-semibold rounded-xl hover:bg-[#31BCBC] hover:text-white transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap text-sm group shadow-lg shadow-black/10 hover:shadow-[#31BCBC]/20">
+                            <span>Subscribe</span>
+                            <span class="iconify group-hover:translate-x-0.5 transition-transform"
+                                data-icon="lucide:arrow-right"></span>
+                        </button>
+                    </div>
+                    <p class="text-xs text-white/40 mt-2">No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+
+            <!-- Links Grid -->
+            <div
+                class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 mb-10 sm:mb-12 md:mb-16">
+
+                <!-- Product -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Product
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Inventory</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Billing</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Accounting</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Reports</a>
+                        </li>
+                        <li><a href="/pricing"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Company
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Careers</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Partners</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Blog</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Resources
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Documentation</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Help
+                                Center</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Video
+                                Tutorials</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">API
+                                Reference</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Legal
+                    </h4>
+                    <ul class="space-y-2 sm:space-y-2.5">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Privacy
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Terms
+                                of Service</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Security</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-span-2 sm:col-span-2 md:col-span-4 lg:col-span-1">
+                    <h4 class="text-white font-semibold mb-3 sm:mb-4 md:mb-5 text-sm flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-[#31BCBC] rounded-full"></span>
+                        Contact Us
+                    </h4>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li>
+                            <a href="tel:9851221467"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:phone"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        +977 9851221467</p>
+                                    <p class="text-xs text-white/40">Mon-Sat, 9am-6pm</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@vidhypro.com"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:mail"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        info@vidhypro.com</p>
+                                    <p class="text-xs text-white/40">24/7 Email Support</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center gap-3 text-white/60 hover:text-white transition-all duration-300 group">
+                                <div
+                                    class="w-10 h-10 bg-white/10 group-hover:bg-[#31BCBC] group-hover:scale-110 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                                    <span class="iconify" data-icon="lucide:map-pin"></span>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-white font-medium text-sm group-hover:text-[#31BCBC] transition-colors">
+                                        Kathmandu, Nepal</p>
+                                    <p class="text-xs text-white/40">View on Map</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="flex flex-col-reverse sm:flex-row justify-between items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
+
+                <!-- Copyright -->
+                <div class="text-xs sm:text-sm text-white/50 text-center sm:text-left">
+                    © 2025 Providhy ERP. Powered by
+                    <a href="#" class="text-white/70 hover:text-[#31BCBC] transition-colors">Vidhypro Crafts Pvt
+                        Ltd</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-2">
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#31BCBC] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Facebook">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:facebook"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Instagram">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:instagram"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-[#0077b5] rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="LinkedIn">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:linkedin"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-red-600 rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="YouTube">
+                        <span class="iconify text-base sm:text-lg" data-icon="lucide:youtube"></span>
+                    </a>
+                    <a href="#"
+                        class="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 hover:bg-black rounded-xl flex items-center justify-center text-white/60 hover:text-white hover:scale-110 hover:-translate-y-0.5 transition-all duration-300"
+                        aria-label="Twitter/X">
+                        <span class="iconify text-base sm:text-lg" data-icon="simple-icons:x"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Large Brand Logo - Full Width Fancy Section -->
+        <div class="w-full border-t border-white/5 overflow-hidden select-none pointer-events-none relative">
+
+            <!-- Animated Gradient Background -->
+            <div class="absolute inset-0">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-[#31BCBC]/10 to-transparent animate-shimmer">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#143939] via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating Particles -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-[#31BCBC]/20 rounded-full animate-float-slow">
+                </div>
+                <div class="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-white/10 rounded-full animate-float-medium">
+                </div>
+                <div class="absolute bottom-1/4 left-1/2 w-1 h-1 bg-[#31BCBC]/30 rounded-full animate-float-fast">
+                </div>
+                <div class="absolute top-1/2 right-1/4 w-2 h-2 bg-white/5 rounded-full animate-float-slow"></div>
+            </div>
+
+            <!-- Full Width Logo Container -->
+            <div class="relative w-full flex items-center justify-center overflow-hidden py-4 sm:py-0"
+                style="height: clamp(80px, 18vw, 280px);">
+
+                <!-- Multiple Logo Layers for Depth Effect -->
+                <!-- <div class="absolute inset-0 flex items-center justify-center opacity-[0.02] scale-125 blur-sm">
+                <img 
+                    src="logo.svg" 
+                    alt="" 
+                    class="w-[85%] sm:w-[80%] h-auto max-h-full object-contain"
+                    style="filter: brightness(0) invert(1);"
+                >
+            </div> -->
+
+                <!-- Main Logo -->
+                <img src="logo.svg" alt="Providhy"
+                    class="relative w-[80%] sm:w-[75%] md:w-[70%] lg:w-[60%] max-w-[800px] h-auto max-h-full object-contain opacity-[0.07] hover:opacity-[0.12] transition-opacity duration-700"
+                    style="filter: brightness(0) invert(1);">
+
+                <!-- Scanline Effect -->
+                <div class="absolute inset-0 pointer-events-none opacity-50"
+                    style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);">
+                </div>
+
+                <!-- Center Glow -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-1/2 h-1/2 bg-[#31BCBC]/5 rounded-full blur-3xl"></div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Gradient Fade -->
+            <div class="absolute bottom-0 left-0 right-0 h-8 sm:h-12 bg-gradient-to-t from-[#143939] to-transparent">
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- BACK TO TOP BUTTON -->
+    <!-- ============================================== -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-[#1D4F50] hover:bg-[#31BCBC] text-white rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 pointer-events-none z-40">
+        <span class="iconify text-xl" data-icon="lucide:arrow-up"></span>
+    </button>
+
+
+    <!-- ============================================== -->
+    <!-- SCRIPTS -->
+    <!-- ============================================== -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

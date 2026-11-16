@@ -1,0 +1,22 @@
+/* =============================================
+   SECURITY / PRIVACY PAGE
+============================================= */
+
+/* --- Softer reveal for security page --- */
+.security-page .reveal {
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (shimmer, float particles, pulse-ring)
+   - components/reveal.css      (scroll reveal + a11y)
+   - components/legal.css       (legal content typography)
+   - components/toc.css         (table of contents)
+   - components/badges.css      (security badge pulse)
+   - layout/footer.css          (footer links)
+
+   Add security-page-only styles below
+   as the page grows.
+*/

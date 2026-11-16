@@ -1,0 +1,108 @@
+/* =============================================
+   REVEAL ON SCROLL
+============================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Delays */
+.reveal.delay-100,
+.reveal-left.delay-100,
+.reveal-right.delay-100 { transition-delay: 100ms; }
+
+.reveal.delay-200,
+.reveal-left.delay-200,
+.reveal-right.delay-200 { transition-delay: 200ms; }
+
+.reveal.delay-300,
+.reveal-left.delay-300,
+.reveal-right.delay-300 { transition-delay: 300ms; }
+
+.reveal.delay-400,
+.reveal-left.delay-400,
+.reveal-right.delay-400 { transition-delay: 400ms; }
+
+.reveal.delay-500,
+.reveal-left.delay-500,
+.reveal-right.delay-500 { transition-delay: 500ms; }
+
+.reveal.delay-600,
+.reveal-left.delay-600,
+.reveal-right.delay-600 { transition-delay: 600ms; }
+
+
+/* =============================================
+   3D TILT
+============================================= */
+
+.tilt-container {
+    perspective: 1200px;
+}
+
+.tilt-target {
+    transform: rotateX(15deg) scale(0.9);
+    opacity: 0.7;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+}
+
+.tilt-target.active {
+    transform: rotateX(0deg) scale(1);
+    opacity: 1;
+}
+
+
+/* =============================================
+   ACCESSIBILITY
+============================================= */
+
+/* ✅ NEW — Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .tilt-target {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ✅ NEW — No-JS fallback */
+.no-js .reveal,
+.no-js .reveal-left,
+.no-js .reveal-right,
+.no-js .tilt-target {
+    opacity: 1;
+    transform: none;
+}

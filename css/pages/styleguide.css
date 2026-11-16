@@ -1,0 +1,20 @@
+/* =============================================
+   STYLE GUIDE / DESIGN SYSTEM PAGE
+============================================= */
+
+/*
+   All shared styles already loaded via:
+   - base/typography.css        (code/pre fonts, section scroll)
+   - abstracts/animations.css   (float, shimmer, pulse-ring)
+   - components/reveal.css      (scroll reveal)
+   - components/sidebar.css     (sidebar active + ::before)
+   - components/code.css        (code blocks + syntax tokens)
+   - components/buttons.css     (copy button)
+   - components/tabs.css        (tab-btn active)
+   - components/swatch.css      (color swatches)
+   - components/preview.css     (component preview)
+   - utilities/scrollbar.css    (hide-scrollbar)
+
+   Add styleguide-page-only styles below
+   as the page grows.
+*/

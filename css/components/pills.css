@@ -1,0 +1,17 @@
+/* =============================================
+   PILLS
+============================================= */
+
+/* --- Category Pills (Blog) --- */
+.category-pill.active {
+    background: linear-gradient(to right, #1D4F50, #31BCBC);
+    color: white;
+    border-color: transparent;
+}
+
+/* ✅ NEW — Filter Pills (Changelog) --- */
+.filter-pill.active {
+    background: linear-gradient(to right, #1D4F50, #31BCBC);
+    color: white;
+    border-color: transparent;
+}

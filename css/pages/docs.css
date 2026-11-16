@@ -1,0 +1,24 @@
+/* =============================================
+   DOCS PAGE — Specific Overrides
+============================================= */
+
+/* --- TOC Override (lighter style for docs) --- */
+.docs-page .toc-link.active {
+    color: #31BCBC;
+    font-weight: 500;
+    background: transparent;
+}
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (blob, shimmer)
+   - components/reveal.css      (scroll reveal + delays)
+   - components/sidebar.css     (sidebar active state)
+   - components/code.css        (code block styling)
+   - components/toc.css         (toc hover + active)
+   - layout/spotlight.css       (spotlight effect)
+   - utilities/scrollbar.css    (docs sidebar scrollbar)
+
+   Add docs-page-only styles below
+   as the page grows.
+*/

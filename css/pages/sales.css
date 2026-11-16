@@ -1,0 +1,23 @@
+/* =============================================
+   SALES PAGE
+============================================= */
+
+.sales-gradient {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.sales-gradient-light {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.sales-page #spotlight {
+    background: radial-gradient(
+        600px circle at var(--x) var(--y),
+        rgba(16, 185, 129, 0.06),
+        transparent 40%
+    );
+}
+
+.sales-page .animate-float {
+    animation: float 3s ease-in-out infinite;
+}

@@ -1,0 +1,26 @@
+/* =============================================
+   FEATURES PAGE — Specific Overrides
+============================================= */
+
+/* --- Float Override (faster for features) --- */
+.features-page .animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/*
+   All shared styles already loaded via:
+   - abstracts/animations.css   (blob, float, shimmer, pulse-line,
+                                  flow, fadeInUp, play-pulse)
+   - components/reveal.css      (scroll reveal + delays)
+   - components/tabs.css        (module tabs + content)
+   - components/workflow.css    (workflow line animation)
+   - components/cards.css       (feature card hover)
+   - components/table.css       (comparison check/cross)
+   - layout/spotlight.css       (spotlight effect)
+   - layout/footer.css         (footer links)
+   - utilities/scrollbar.css    (hide scrollbar)
+   - utilities/text.css         (stat-number gradient)
+
+   Add features-page-only styles below
+   as the page grows.
+*/
